@@ -39,15 +39,19 @@ docker --version
 docker compose version
 ```
 
-### 2. Transferir Arquivos
+### 2. Clonar o Repositorio
 
-**Opcao A - Via Git (se disponivel):**
 ```bash
-git clone <repositorio> /opt/sci-argos-docs
+# Clonar o repositorio do GitHub
+git clone https://github.com/walingsonCostaUnemat/doc_sci.git /opt/sci-argos-docs
+
+# Acessar a pasta do projeto
 cd /opt/sci-argos-docs
 ```
 
-**Opcao B - Via SCP/SFTP:**
+**Alternativas (caso nao tenha Git instalado):**
+
+**Via SCP/SFTP:**
 ```bash
 # No computador local (Windows):
 scp -r sci-argos-docs usuario@servidor:/opt/
@@ -56,10 +60,14 @@ scp -r sci-argos-docs usuario@servidor:/opt/
 cd /opt/sci-argos-docs
 ```
 
-**Opcao C - Via arquivo ZIP:**
+**Via arquivo ZIP (download do GitHub):**
 ```bash
-# Transferir o ZIP para o servidor e extrair
-unzip sci-argos-docs.zip -d /opt/
+# Baixar o ZIP diretamente do GitHub
+wget https://github.com/walingsonCostaUnemat/doc_sci/archive/refs/heads/main.zip
+
+# Extrair
+unzip main.zip -d /opt/
+mv /opt/doc_sci-main /opt/sci-argos-docs
 cd /opt/sci-argos-docs
 ```
 
@@ -155,8 +163,8 @@ cd /opt/sci-argos-docs
 # Parar servico
 docker compose down
 
-# Atualizar arquivos (git pull ou transferir novos arquivos)
-git pull  # se usar git
+# Atualizar arquivos do repositorio
+git pull origin main
 
 # Rebuild e iniciar
 docker compose build --no-cache

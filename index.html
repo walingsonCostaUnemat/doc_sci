@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCI-ARGOS - Documentation Hub | CBMMT</title>
+    <meta name="description" content="Sistema de Comando de Incidentes - Documentação para o Corpo de Bombeiros Militar de Mato Grosso" />
+    <script>
+      // Aplicar tema antes do carregamento para evitar flash
+      (function() {
+        const stored = localStorage.getItem('sci-argos-theme');
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const isDark = stored === 'dark' || (stored === 'system' && systemDark) || (!stored && systemDark);
+        if (isDark) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

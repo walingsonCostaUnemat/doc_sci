@@ -1,0 +1,43 @@
+# =============================================================================
+# SCI-ARGOS Documentation Hub - Docker Compose
+# CBMMT - Corpo de Bombeiros Militar do Mato Grosso
+# =============================================================================
+#
+# USO:
+#   Desenvolvimento: docker-compose up -d
+#   Producao:        docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+#
+# =============================================================================
+
+version: '3.8'
+
+services:
+  sci-argos-docs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sci-argos-docs
+    image: cbmmt/sci-argos-docs:latest
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:80/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    environment:
+      - TZ=America/Cuiaba
+    labels:
+      - "app.name=sci-argos-docs"
+      - "app.description=SCI-ARGOS Documentation Hub"
+      - "app.maintainer=CBMMT"
+
+# =============================================================================
+# Configuracao de rede (opcional - para integracao com outros servicos)
+# =============================================================================
+networks:
+  default:
+    name: cbmmt-network
+    driver: bridge

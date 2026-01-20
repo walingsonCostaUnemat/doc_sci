@@ -1,0 +1,28 @@
+# =============================================================================
+# SCI-ARGOS Documentation Hub - Docker Compose (Producao)
+# CBMMT - Corpo de Bombeiros Militar do Mato Grosso
+# =============================================================================
+#
+# Arquivo de override para producao
+# Uso: docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+#
+# =============================================================================
+
+version: '3.8'
+
+services:
+  sci-argos-docs:
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 256M
+        reservations:
+          cpus: '0.25'
+          memory: 64M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

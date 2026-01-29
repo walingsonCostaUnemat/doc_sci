@@ -376,13 +376,34 @@ A Estrutura Organizacional de Resposta e a forma como o incidente e organizado p
 
 ---
 
-### Os 5 Elementos Funcionais
+### Os Elementos Funcionais do SCI
 
-O SCI e composto por **5 elementos funcionais** que cobrem todas as necessidades de gestao de um incidente:
+O SCI e composto pelo **Comando**, o **Staff do Comando** e o **Staff Geral (4 Secoes)**, que juntos cobrem todas as necessidades de gestao de um incidente:
+
+#### Comando
 
 | Elemento | Responsavel | Funcao Principal |
 |----------|-------------|------------------|
 | **Comando** | Comandante do Incidente (CI) | Direcao geral e tomada de decisao |
+
+#### Staff do Comando
+
+O Staff do Comando e composto por **tres posicoes individuais** que se reportam diretamente ao CI. Cada funcao e desempenhada por **uma unica pessoa**:
+
+| Posicao | Funcao Principal |
+|---------|------------------|
+| **Oficial de Seguranca (OSeg)** | Monitorar seguranca, autoridade para parar operacoes inseguras |
+| **Oficial de Informacao Publica (OIP)** | Comunicacao com midia e publico |
+| **Oficial de Ligacao (OLig)** | Contato com outras agencias e instituicoes |
+
+> **Diferenca fundamental:** O Staff do Comando e composto por **funcoes individuais** (uma pessoa por posicao), diferente das Secoes que sao **escalonaveis** e compostas por multiplas pessoas trabalhando em conjunto.
+
+#### Staff Geral (Secoes)
+
+As Secoes sao **estruturas escalonaveis**, compostas por varias pessoas que desempenham a funcao em conjunto, podendo ser subdivididas em Divisoes, Grupos e Unidades conforme a demanda:
+
+| Secao | Responsavel | Funcao Principal |
+|-------|-------------|------------------|
 | **Operacoes** | Chefe de Operacoes (CSOp) | Execucao tatica das acoes |
 | **Planejamento** | Chefe de Planejamento (CSPlan) | Coleta de informacoes e planejamento |
 | **Logistica** | Chefe de Logistica (CSLog) | Suporte e recursos |
@@ -413,8 +434,8 @@ A estrutura se adapta ao tamanho do incidente:
 | Nivel | Titulo | Funcao |
 |-------|--------|--------|
 | Comando | Comandante | Responsavel geral |
-| Secao | Chefe | Coordena uma area funcional |
-| Ramo | Diretor | Subdivisao de Secao |
+| Staff do Comando | Oficial | Funcao individual (OSeg, OIP, OLig) |
+| Secao | Chefe | Coordena uma area funcional (escalonavel) |
 | Divisao/Grupo | Supervisor | Area geografica ou funcional |
 | Unidade | Lider | Tarefa especifica |
 
@@ -464,7 +485,7 @@ O Comandante do Incidente tem autoridade para:
 A transferencia de comando ocorre quando:
 
 - Chega um oficial mais qualificado
-- Mudanca de turno operacional
+- Mudanca de ciclo operacional
 - Incidente muda de jurisdicao
 - Complexidade exige mudanca
 

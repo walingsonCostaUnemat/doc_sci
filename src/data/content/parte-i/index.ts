@@ -248,7 +248,32 @@ O Sistema de Comando de Incidentes (SCI) e uma **ferramenta de gerenciamento pad
 4. **Comunicacoes integradas** entre todas as partes
 5. **Rastreamento efetivo** de recursos humanos e materiais
 6. **Documentacao completa** de acoes e decisoes
-7. **Seguranca** como prioridade maxima`,
+7. **Seguranca** como prioridade maxima
+
+---
+
+### O SCI no CBMMT
+
+O Corpo de Bombeiros Militar do Mato Grosso (CBMMT) adota o SCI como ferramenta principal de gestao de incidentes, com foco especial na **resposta a incendios florestais**, dado o contexto ambiental do estado.
+
+**Por que o SCI e essencial para o CBMMT:**
+
+- O Mato Grosso abrange tres biomas criticos: **Amazonia, Cerrado e Pantanal**
+- As Temporadas de Incendio Florestal (TIF) exigem coordenacao de **multiplas agencias** (ICMBio, IBAMA, SEMA, Defesa Civil, Forcas Armadas)
+- Incidentes de grande porte demandam **Comando Unificado** interinstitucional
+- A dispersao geografica das unidades exige **padronizacao de procedimentos**
+
+**Aplicacao especifica em incendio florestal:**
+
+O SCI e aplicado pelo CBMMT de forma integrada ao **Plano Operativo de Temporada de Incendio Florestal (POTIF)**, que estabelece:
+
+- Niveis de resposta escalonados (1 a 4) com ativacao progressiva de recursos
+- Estrutura de Salas de Situacao (SSC/SSD) para monitoramento e coordenacao
+- Integracao com a plataforma **ARGOS** para gestao operacional digital
+- Mobilizacao de Instalacoes de Resposta Tatica (IRTs) em areas estrategicas
+- Protocolos de deteccao, classificacao e resposta rapida a focos de calor
+
+> **NOTA:** Embora o foco principal no CBMMT seja incendio florestal, o SCI e aplicavel a qualquer tipo de incidente atendido pela corporacao, incluindo operacoes de busca e salvamento, desastres naturais e apoio a defesa civil.`,
   diagrams: [diagramOQueESci],
 };
 

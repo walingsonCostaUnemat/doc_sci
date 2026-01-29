@@ -12,32 +12,32 @@ const diagramCicloP: Diagram = {
   id: 'ciclo-p-completo',
   title: 'Ciclo de Planejamento Operacional ("Ciclo P")',
   type: 'flowchart',
-  description: 'Visao completa das 14 fases do Ciclo P',
+  description: 'Visão completa das 14 fases do Ciclo P',
   code: `flowchart TB
     subgraph base["BASE (Resposta Inicial)"]
         direction TB
-        F1["1. Resposta Inicial<br/>e Avaliacao"]
+        F1["1. Resposta Inicial<br/>e Avaliação"]
         F2["2. Briefing do Incidente<br/>(SCI 201)"]
-        F3["3. Briefing Representante<br/>Instituicao"]
-        F4["4. Reuniao Inicial<br/>Comando Unificado"]
+        F3["3. Briefing Representante<br/>Instituição"]
+        F4["4. Reunião Inicial<br/>Comando Unificado"]
     end
 
     subgraph centro["CENTRO (Desenvolvimento)"]
         direction TB
         F5["5. Estabelecimento<br/>Objetivos (SCI 202)"]
-        F6["6. Reuniao Staff<br/>Comando/Geral"]
-        F7["7. Preparacao<br/>Reuniao Tatica"]
-        F8["8. REUNIAO<br/>TATICA"]
-        F9["9. Preparacao<br/>Reuniao Planejamento"]
-        F10["10. REUNIAO DE<br/>PLANEJAMENTO"]
+        F6["6. Reunião Staff<br/>Comando/Geral"]
+        F7["7. Preparação<br/>Reunião Tática"]
+        F8["8. REUNIÃO<br/>TÁTICA"]
+        F9["9. Preparação<br/>Reunião Planejamento"]
+        F10["10. REUNIÃO DE<br/>PLANEJAMENTO"]
     end
 
-    subgraph impl["IMPLEMENTACAO"]
+    subgraph impl["IMPLEMENTAÇÃO"]
         direction TB
-        F11["11. Preparacao e<br/>Aprovacao PAI"]
-        F12["12. Briefing Periodo<br/>Operacional"]
-        F13["13. Execucao<br/>do PAI"]
-        F14["14. Avaliacao<br/>de Progresso"]
+        F11["11. Preparação e<br/>Aprovação PAI"]
+        F12["12. Briefing Período<br/>Operacional"]
+        F13["13. Execução<br/>do PAI"]
+        F14["14. Avaliação<br/>de Progresso"]
     end
 
     F1 --> F2
@@ -53,7 +53,7 @@ const diagramCicloP: Diagram = {
     F11 --> F12
     F12 --> F13
     F13 --> F14
-    F14 -.->|Proximo Periodo| F5
+    F14 -.->|Próximo Período| F5
 
     classDef baseStyle fill:#FEF3C7,stroke:#D97706,color:#92400E
     classDef centroStyle fill:#DBEAFE,stroke:#2563EB,color:#1E40AF
@@ -68,11 +68,11 @@ const diagramCicloP: Diagram = {
 
 const diagramPeriodoOperacional: Diagram = {
   id: 'periodo-operacional',
-  title: 'Ciclo de Periodos Operacionais',
+  title: 'Ciclo de Períodos Operacionais',
   type: 'gantt',
-  description: 'Exemplo de periodos operacionais diurno/noturno',
+  description: 'Exemplo de períodos operacionais diurno/noturno',
   code: `gantt
-    title Ciclo de Periodos Operacionais - 3 Dias
+    title Ciclo de Períodos Operacionais - 3 Dias
     dateFormat HH:mm
     axisFormat %H:%M
 
@@ -86,14 +86,14 @@ const diagramPeriodoOperacional: Diagram = {
 
     section Dia 3
     PO5 - Diurno           :active, po5, 06:00, 12h
-    PO6 - Desmobilizacao   :done, po6, after po5, 12h`
+    PO6 - Desmobilização   :done, po6, after po5, 12h`
 };
 
 const diagramObjetivosSmart: Diagram = {
   id: 'objetivos-smart',
-  title: 'Caracteristicas SMART de Objetivos',
+  title: 'Características SMART de Objetivos',
   type: 'flowchart',
-  description: 'Criterios para objetivos efetivos',
+  description: 'Critérios para objetivos efetivos',
   code: `flowchart TB
     subgraph SMART["OBJETIVOS SMART"]
         direction TB
@@ -101,31 +101,31 @@ const diagramObjetivosSmart: Diagram = {
 
     subgraph S["S - SPECIFIC"]
         S1["Claro e detalhado"]
-        S2["Nao ambiguo"]
+        S2["Não ambíguo"]
         S3["Todos entendem"]
     end
 
     subgraph M["M - MEASURABLE"]
-        M1["Verificavel"]
-        M2["Quantificavel"]
+        M1["Verificável"]
+        M2["Quantificável"]
         M3["Indicadores claros"]
     end
 
     subgraph A["A - ACHIEVABLE"]
         A1["Realista"]
-        A2["Recursos disponiveis"]
+        A2["Recursos disponíveis"]
         A3["Tempo adequado"]
     end
 
     subgraph R["R - RELEVANT"]
-        R1["Contribui resolucao"]
-        R2["Alinha estrategia"]
+        R1["Contribui resolução"]
+        R2["Alinha estratégia"]
         R3["Prioridades certas"]
     end
 
     subgraph T["T - TIME-BOUND"]
         T1["Prazo definido"]
-        T2["Periodo especifico"]
+        T2["Período específico"]
         T3["Deadline claro"]
     end
 
@@ -150,42 +150,42 @@ const diagramObjetivosSmart: Diagram = {
 
 const diagramReuniaoTatica: Diagram = {
   id: 'reuniao-tatica',
-  title: 'Fluxo da Reuniao Tatica',
+  title: 'Fluxo da Reunião Tática',
   type: 'flowchart',
-  description: 'Etapas e participantes da Reuniao Tatica',
+  description: 'Etapas e participantes da Reunião Tática',
   code: `flowchart TB
     subgraph PARTICIPANTES["PARTICIPANTES"]
         P1["CSOp<br/>(Conduz)"]
-        P2["OSeg<br/>Seguranca"]
+        P2["OSeg<br/>Segurança"]
         P3["CSPlan<br/>Planejamento"]
-        P4["CSLog<br/>Logistica"]
+        P4["CSLog<br/>Logística"]
     end
 
     subgraph ABERTURA["1. ABERTURA (CSOp)"]
-        A1["Situacao Atual"]
-        A2["Revisao Objetivos CI"]
+        A1["Situação Atual"]
+        A2["Revisão Objetivos CI"]
     end
 
-    subgraph TATICAS["2. APRESENTACAO TATICAS (CSOp)"]
+    subgraph TATICAS["2. APRESENTAÇÃO TÁTICAS (CSOp)"]
         T1["Proposta por objetivo"]
-        T2["Recursos necessarios"]
-        T3["Divisoes/Grupos"]
+        T2["Recursos necessários"]
+        T3["Divisões/Grupos"]
     end
 
-    subgraph AVALIACAO["3. AVALIACAO (Todos)"]
+    subgraph AVALIACAO["3. AVALIAÇÃO (Todos)"]
         AV1["OSeg: Riscos identificados"]
-        AV2["CSLog: Viabilidade logistica"]
+        AV2["CSLog: Viabilidade logística"]
         AV3["CSPlan: Disponibilidade recursos"]
     end
 
-    subgraph FINALIZACAO["4. FINALIZACAO"]
+    subgraph FINALIZACAO["4. FINALIZAÇÃO"]
         F1["OSeg preenche SCI 215A"]
         F2["CSOp finaliza SCI 215"]
     end
 
     subgraph PRODUTOS["PRODUTOS FINAIS"]
         PR1["SCI 215<br/>Matriz Operacional"]
-        PR2["SCI 215A<br/>Analise Riscos"]
+        PR2["SCI 215A<br/>Análise Riscos"]
     end
 
     PARTICIPANTES --> ABERTURA
@@ -211,34 +211,34 @@ const diagramReuniaoTatica: Diagram = {
 
 const diagramReuniaoPlanejamento: Diagram = {
   id: 'reuniao-planejamento',
-  title: 'Agenda da Reuniao de Planejamento',
+  title: 'Agenda da Reunião de Planejamento',
   type: 'flowchart',
-  description: 'Estrutura completa da reuniao formal',
+  description: 'Estrutura completa da reunião formal',
   code: `flowchart TB
     subgraph abertura["ABERTURA (7 min)"]
         A1["1. Abertura<br/>CSPlan - 2min"]
-        A2["2. Briefing Seguranca<br/>OSeg - 5min"]
+        A2["2. Briefing Segurança<br/>OSeg - 5min"]
     end
 
-    subgraph situacao["SITUACAO (15 min)"]
-        S1["3. Situacao Atual<br/>CSPlan - 10min"]
+    subgraph situacao["SITUAÇÃO (15 min)"]
+        S1["3. Situação Atual<br/>CSPlan - 10min"]
         S2["4. Objetivos<br/>CI - 5min"]
     end
 
     subgraph operacional["OPERACIONAL (35 min)"]
         O1["5. Plano Operacional<br/>CSOp - 20-30min"]
-        O2["6. Plano Medico<br/>CSLog - 5min"]
+        O2["6. Plano Médico<br/>CSLog - 5min"]
     end
 
     subgraph suporte["SUPORTE (20 min)"]
-        L1["7. Comunicacoes<br/>CSLog - 5min"]
-        L2["8. Logistica<br/>CSLog - 10min"]
-        L3["9. Admin/Financas<br/>CSAdmin - 5min"]
+        L1["7. Comunicações<br/>CSLog - 5min"]
+        L2["8. Logística<br/>CSLog - 10min"]
+        L3["9. Admin/Finanças<br/>CSAdmin - 5min"]
     end
 
     subgraph fechamento["FECHAMENTO (15 min)"]
-        F1["10. Questoes<br/>Todos - 10min"]
-        F2["11. Aprovacao<br/>CI - 5min"]
+        F1["10. Questões<br/>Todos - 10min"]
+        F2["11. Aprovação<br/>CI - 5min"]
     end
 
     abertura --> situacao
@@ -263,26 +263,26 @@ const diagramBriefingOperacional: Diagram = {
   id: 'briefing-operacional',
   title: 'Agenda do Briefing Operacional',
   type: 'flowchart',
-  description: 'Estrutura do briefing antes do periodo operacional',
+  description: 'Estrutura do briefing antes do período operacional',
   code: `flowchart LR
     subgraph abertura["ABERTURA"]
         B1["1. Abertura<br/>2min"]
-        B2["2. Situacao<br/>5min"]
+        B2["2. Situação<br/>5min"]
         B3["3. Objetivos<br/>3min"]
     end
 
-    subgraph seguranca["SEGURANCA"]
+    subgraph seguranca["SEGURANÇA"]
         S1["4. LCES<br/>5-10min"]
     end
 
-    subgraph atribuicoes["ATRIBUICOES"]
-        A1["5. Por Divisao<br/>15-20min"]
-        A2["6. Comunicacoes<br/>3min"]
-        A3["7. Logistica<br/>5min"]
+    subgraph atribuicoes["ATRIBUIÇÕES"]
+        A1["5. Por Divisão<br/>15-20min"]
+        A2["6. Comunicações<br/>3min"]
+        A3["7. Logística<br/>5min"]
     end
 
     subgraph fechamento["FECHAMENTO"]
-        F1["8. Horarios<br/>2min"]
+        F1["8. Horários<br/>2min"]
         F2["9. Perguntas<br/>5-10min"]
         F3["10. Encerramento<br/>2min"]
     end
@@ -304,27 +304,27 @@ const diagramBriefingOperacional: Diagram = {
 
 const diagramExecucaoPai: Diagram = {
   id: 'execucao-pai',
-  title: 'Fluxo de Execucao e Avaliacao',
+  title: 'Fluxo de Execução e Avaliação',
   type: 'flowchart',
-  description: 'Ciclo de execucao do PAI durante periodo operacional',
+  description: 'Ciclo de execução do PAI durante período operacional',
   code: `flowchart TB
-    subgraph execucao["EXECUCAO DO PAI"]
-        E1["Inicio do Periodo<br/>Operacional"]
-        E2["Recursos em<br/>Posicao"]
-        E3["Operacoes Conforme<br/>Plano"]
-        E4["Ajustes<br/>Necessarios"]
+    subgraph execucao["EXECUÇÃO DO PAI"]
+        E1["Início do Período<br/>Operacional"]
+        E2["Recursos em<br/>Posição"]
+        E3["Operações Conforme<br/>Plano"]
+        E4["Ajustes<br/>Necessários"]
     end
 
     subgraph monitoramento["MONITORAMENTO"]
-        M1["Check-ins<br/>Periodicos"]
-        M2["Atualizacao<br/>Mapas"]
-        M3["Comunicacao<br/>CI-SSC"]
+        M1["Check-ins<br/>Periódicos"]
+        M2["Atualização<br/>Mapas"]
+        M3["Comunicação<br/>CI-SSC"]
     end
 
-    subgraph avaliacao["AVALIACAO"]
-        A1["Objetivos<br/>Alcancados?"]
-        A2["Licoes<br/>Aprendidas"]
-        A3["Relatorio<br/>Fim Periodo"]
+    subgraph avaliacao["AVALIAÇÃO"]
+        A1["Objetivos<br/>Alcançados?"]
+        A2["Lições<br/>Aprendidas"]
+        A3["Relatório<br/>Fim Período"]
     end
 
     E1 --> E2
@@ -340,7 +340,7 @@ const diagramExecucaoPai: Diagram = {
     E3 --> A1
     A1 --> A2
     A2 --> A3
-    A3 -.->|Proximo Ciclo P| E1
+    A3 -.->|Próximo Ciclo P| E1
 
     classDef execStyle fill:#DBEAFE,stroke:#2563EB,color:#1E40AF
     classDef monStyle fill:#FEF3C7,stroke:#D97706,color:#92400E
@@ -355,32 +355,32 @@ const diagramFormulariosPai: Diagram = {
   id: 'formularios-pai',
   title: 'Estrutura do PAI Completo',
   type: 'flowchart',
-  description: 'Formularios que compoem o Plano de Acao do Incidente',
+  description: 'Formulários que compõem o Plano de Ação do Incidente',
   code: `flowchart TB
-    subgraph pai["PLANO DE ACAO DO INCIDENTE (PAI)"]
+    subgraph pai["PLANO DE AÇÃO DO INCIDENTE (PAI)"]
         direction TB
 
         subgraph essenciais["ESSENCIAIS"]
-            P1["CAPA<br/>Identificacao"]
+            P1["CAPA<br/>Identificação"]
             P2["SCI 202<br/>Objetivos"]
-            P3["SCI 203<br/>Organizacao"]
-            P4["SCI 204<br/>Atribuicoes<br/>(por Divisao)"]
+            P3["SCI 203<br/>Organização"]
+            P4["SCI 204<br/>Atribuições<br/>(por Divisão)"]
         end
 
-        subgraph comunicacao["COMUNICACAO"]
-            P5["SCI 205<br/>Radio"]
+        subgraph comunicacao["COMUNICAÇÃO"]
+            P5["SCI 205<br/>Rádio"]
             P6["SCI 205A<br/>Lista Contatos"]
         end
 
-        subgraph seguranca["SEGURANCA"]
-            P7["SCI 206<br/>Plano Medico"]
+        subgraph seguranca["SEGURANÇA"]
+            P7["SCI 206<br/>Plano Médico"]
             P8["SCI 207<br/>Organograma"]
-            P9["SCI 208<br/>Plano Seguranca"]
+            P9["SCI 208<br/>Plano Segurança"]
         end
 
         subgraph planejamento["PLANEJAMENTO (Ref)"]
             P10["SCI 215<br/>Matriz Operacional"]
-            P11["SCI 215A<br/>Analise Riscos"]
+            P11["SCI 215A<br/>Análise Riscos"]
         end
 
         subgraph anexos["ANEXOS"]
@@ -408,127 +408,127 @@ const diagramFormulariosPai: Diagram = {
 };
 
 // ------------------------------------------------------------
-// SECOES DE CONTEUDO
+// SEÇÕES DE CONTEÚDO
 // ------------------------------------------------------------
 
 const visaoGeralCicloP: Section = {
   id: 'visao-geral-ciclo-p',
   slug: 'visao-geral-ciclo-p',
-  title: '20. Visao Geral do Ciclo "P"',
+  title: '20. Visão Geral do Ciclo "P"',
   part: 5,
   order: 1,
   content: `## Conceito do Ciclo "P"
 
-O **Ciclo de Planejamento Operacional**, conhecido como **"Ciclo P"**, e o processo sistematico usado para desenvolver o Plano de Acao do Incidente (PAI) para cada periodo operacional.
+O **Ciclo de Planejamento Operacional**, conhecido como **"Ciclo P"**, é o processo sistemático usado para desenvolver o Plano de Ação do Incidente (PAI) para cada período operacional.
 
-### Definicao
+### Definição
 
-- **CICLO "P":** Processo de planejamento que define etapas sequenciais desde a resposta inicial ate o briefing operacional do proximo periodo
-- **NOME:** Chamado "Ciclo P" porque o diagrama se assemelha a letra "P"
-- **OBJETIVO:** Transicao de resposta reativa (acoes imediatas) para resposta proativa (acoes planejadas)
+- **CICLO "P":** Processo de planejamento que define etapas sequenciais desde a resposta inicial até o briefing operacional do próximo período
+- **NOME:** Chamado "Ciclo P" porque o diagrama se assemelha à letra "P"
+- **OBJETIVO:** Transição de resposta reativa (ações imediatas) para resposta proativa (ações planejadas)
 
 ### Quando Aplicar
 
-**OBRIGATORIO:**
-- Operacoes Nivel 3 e 4
-- Operacoes que excedem um periodo operacional (12h)
-- Multiplos periodos operacionais previstos
+**OBRIGATÓRIO:**
+- Operações Nível 3 e 4
+- Operações que excedem um período operacional (12h)
+- Múltiplos períodos operacionais previstos
 
 **RECOMENDADO:**
-- Operacoes Nivel 2 complexas
-- Quando planejamento formal beneficia coordenacao
+- Operações Nível 2 complexas
+- Quando planejamento formal beneficia coordenação
 
-**NAO NECESSARIO:**
-- Nivel 1 (resposta inicial simples)
-- Operacoes curtas (poucas horas)
-- Recursos limitados sem necessidade de coordenacao complexa
+**NÃO NECESSÁRIO:**
+- Nível 1 (resposta inicial simples)
+- Operações curtas (poucas horas)
+- Recursos limitados sem necessidade de coordenação complexa
 
 ---
 
 ## Fases do Ciclo "P"
 
-O Ciclo "P" consiste em 14 etapas sequenciais divididas em tres grupos:
+O Ciclo "P" consiste em 14 etapas sequenciais divididas em três grupos:
 
 ### Lado Esquerdo (Base - Resposta Inicial)
 
-| Fase | Descricao |
+| Fase | Descrição |
 |------|-----------|
-| 1 | Resposta Inicial e Avaliacao |
+| 1 | Resposta Inicial e Avaliação |
 | 2 | Briefing do Incidente (SCI 201) |
-| 3 | Briefing do Representante da Instituicao |
-| 4 | Reuniao Inicial do Comando Unificado |
+| 3 | Briefing do Representante da Instituição |
+| 4 | Reunião Inicial do Comando Unificado |
 
 ### Centro (Desenvolvimento - Planejamento)
 
-| Fase | Descricao |
+| Fase | Descrição |
 |------|-----------|
-| 5 | Estabelecimento/Atualizacao de Objetivos (SCI 202) |
-| 6 | Reuniao com Staff do Comando e Staff Geral |
-| 7 | Preparacao para Reuniao Tatica |
-| 8 | **REUNIAO TATICA** |
-| 9 | Preparacao para Reuniao de Planejamento |
-| 10 | **REUNIAO DE PLANEJAMENTO** |
+| 5 | Estabelecimento/Atualização de Objetivos (SCI 202) |
+| 6 | Reunião com Staff do Comando e Staff Geral |
+| 7 | Preparação para Reunião Tática |
+| 8 | **REUNIÃO TÁTICA** |
+| 9 | Preparação para Reunião de Planejamento |
+| 10 | **REUNIÃO DE PLANEJAMENTO** |
 
-### Lado Direito (Implementacao)
+### Lado Direito (Implementação)
 
-| Fase | Descricao |
+| Fase | Descrição |
 |------|-----------|
-| 11 | Preparacao e Aprovacao do PAI |
-| 12 | Briefing do Periodo Operacional |
-| 13 | Execucao do PAI |
-| 14 | Avaliacao de Progresso |
+| 11 | Preparação e Aprovação do PAI |
+| 12 | Briefing do Período Operacional |
+| 13 | Execução do PAI |
+| 14 | Avaliação de Progresso |
 
 ---
 
-## Periodo Operacional
+## Período Operacional
 
-### Definicao e Duracao
+### Definição e Duração
 
-- **PERIODO OPERACIONAL:** Intervalo de tempo especifico para o qual taticas sao planejadas e recursos designados
-- **DURACAO TIPICA:** 12 horas (pode variar de 8 a 24 horas)
+- **PERÍODO OPERACIONAL:** Intervalo de tempo específico para o qual táticas são planejadas e recursos designados
+- **DURAÇÃO TÍPICA:** 12 horas (pode variar de 8 a 24 horas)
 
-**Fatores que influenciam duracao:**
+**Fatores que influenciam duração:**
 - Comportamento do incidente
 - Disponibilidade de recursos
 - Necessidade de descanso de pessoal
-- Condicoes meteorologicas
-- Operacoes diurnas vs noturnas
+- Condições meteorológicas
+- Operações diurnas vs noturnas
 
-### Ciclo Diurno/Noturno (comum em incendios florestais)
+### Ciclo Diurno/Noturno (comum em incêndios florestais)
 
-**PERIODO DIURNO (06:00-18:00):**
-- Operacoes taticas mais intensas
-- Condicoes meteorologicas mais adversas (calor, vento)
+**PERÍODO DIURNO (06:00-18:00):**
+- Operações táticas mais intensas
+- Condições meteorológicas mais adversas (calor, vento)
 - Maior disponibilidade de recursos
-- Operacoes aereas possiveis
+- Operações aéreas possíveis
 
-**PERIODO NOTURNO (18:00-06:00):**
-- Operacoes reduzidas ou suspensas
-- Condicoes mais favoraveis (umidade aumenta, vento diminui)
+**PERÍODO NOTURNO (18:00-06:00):**
+- Operações reduzidas ou suspensas
+- Condições mais favoráveis (umidade aumenta, vento diminui)
 - Foco em rescaldo, patrulhamento
 - Descanso de parte dos recursos
 
 ---
 
-## Integracao com Estrutura CBMMT
+## Integração com Estrutura CBMMT
 
-### Papel das Salas de Situacao
+### Papel das Salas de Situação
 
 **SSD/SSC durante Ciclo "P":**
-- Monitora execucao do PAI
-- Fornece suporte logistico
+- Monitora execução do PAI
+- Fornece suporte logístico
 - Despacha recursos adicionais quando solicitado
-- Recebe atualizacoes de progresso
-- Nao participa diretamente de reunioes de planejamento
+- Recebe atualizações de progresso
+- Não participa diretamente de reuniões de planejamento
 
 **CI no campo:** Conduz Ciclo "P" com staff no Posto de Comando.
 
-### Aprovacao de PAI por Nivel
+### Aprovação de PAI por Nível
 
-| Nivel | Aprovacao |
+| Nível | Aprovação |
 |-------|-----------|
-| Nivel 2 | CI aprova PAI, informa SSC |
-| Nivel 3-4 | CI aprova PAI, pode consultar SSC/DOp para decisoes estrategicas |`,
+| Nível 2 | CI aprova PAI, informa SSC |
+| Nível 3-4 | CI aprova PAI, pode consultar SSC/DOp para decisões estratégicas |`,
   diagrams: [diagramCicloP, diagramPeriodoOperacional]
 };
 
@@ -541,111 +541,111 @@ const estabelecimentoObjetivos: Section = {
   content: `## Desenvolvimento de Objetivos pelo CI
 
 ### Momento
-- **PRIMEIRA VEZ:** Logo apos CI assumir comando, antes do primeiro periodo operacional planejado
-- **PERIODICIDADE:** Revisados e atualizados a cada periodo operacional (inicio do Ciclo "P")
+- **PRIMEIRA VEZ:** Logo após CI assumir comando, antes do primeiro período operacional planejado
+- **PERIODICIDADE:** Revisados e atualizados a cada período operacional (início do Ciclo "P")
 
-### Responsavel
+### Responsável
 - **COMANDANTE DO INCIDENTE:** Exclusivamente CI (ou Comando Unificado) estabelece objetivos
-- **OUTROS NAO ESTABELECEM OBJETIVOS:** CSOp desenvolve taticas, mas nao objetivos
+- **OUTROS NÃO ESTABELECEM OBJETIVOS:** CSOp desenvolve táticas, mas não objetivos
 
-### Informacoes Consideradas pelo CI
+### Informações Consideradas pelo CI
 
-**SITUACAO ATUAL:**
-- Tamanho do incendio
+**SITUAÇÃO ATUAL:**
+- Tamanho do incêndio
 - Comportamento do fogo
-- Progresso ate agora
-- Recursos disponiveis
+- Progresso até agora
+- Recursos disponíveis
 
-**PROJECAO FUTURA:**
-- Previsao meteorologica
+**PROJEÇÃO FUTURA:**
+- Previsão meteorológica
 - Comportamento esperado do fogo
 - Disponibilidade futura de recursos
 
 **PRIORIDADES:**
-1. Seguranca (sempre primeiro)
-2. Protecao de vidas
-3. Protecao de estruturas
-4. Protecao de recursos naturais
-5. Minimizacao de area queimada
+1. Segurança (sempre primeiro)
+2. Proteção de vidas
+3. Proteção de estruturas
+4. Proteção de recursos naturais
+5. Minimização de área queimada
 
 ---
 
-## Caracteristicas de Objetivos SMART
+## Características de Objetivos SMART
 
-### S - Specific (Especificos)
-Claro e detalhado, nao ambiguo, todos entendem exatamente o que fazer.
-
-| Exemplo RUIM | Exemplo BOM |
-|--------------|-------------|
-| "Combater o fogo" | "Conter avanco no flanco norte usando linha de controle na estrada MT-100" |
-
-### M - Measurable (Mensuraveis)
-Pode-se determinar objetivamente se foi alcancado.
+### S - Specific (Específicos)
+Claro e detalhado, não ambíguo, todos entendem exatamente o que fazer.
 
 | Exemplo RUIM | Exemplo BOM |
 |--------------|-------------|
-| "Melhorar a situacao" | "Reduzir perimetro ativo de 5 km para 2 km" |
+| "Combater o fogo" | "Conter avanço no flanco norte usando linha de controle na estrada MT-100" |
 
-### A - Achievable (Atingiveis)
-Possivel com recursos e tempo disponiveis.
+### M - Measurable (Mensuráveis)
+Pode-se determinar objetivamente se foi alcançado.
 
 | Exemplo RUIM | Exemplo BOM |
 |--------------|-------------|
-| "Extinguir 100% do incendio nas proximas 6h" (500 ha) | "Completar 60% do perimetro de linha de controle nas proximas 12h" |
+| "Melhorar a situação" | "Reduzir perímetro ativo de 5 km para 2 km" |
+
+### A - Achievable (Atingíveis)
+Possível com recursos e tempo disponíveis.
+
+| Exemplo RUIM | Exemplo BOM |
+|--------------|-------------|
+| "Extinguir 100% do incêndio nas próximas 6h" (500 ha) | "Completar 60% do perímetro de linha de controle nas próximas 12h" |
 
 ### R - Relevant (Relevantes)
-Alinham-se com estrategia geral e prioridades.
+Alinham-se com estratégia geral e prioridades.
 
 | Exemplo RUIM | Exemplo BOM |
 |--------------|-------------|
-| "Limpar acampamento base" | "Proteger as 3 residencias no setor sul do incendio" |
+| "Limpar acampamento base" | "Proteger as 3 residências no setor sul do incêndio" |
 
 ### T - Time-bound (Temporais)
-Especifica quando deve ser alcancado.
+Especifica quando deve ser alcançado.
 
 | Exemplo RUIM | Exemplo BOM |
 |--------------|-------------|
-| "Conter fogo eventualmente" | "Conter fogo no flanco leste ate as 18:00 de hoje" |
+| "Conter fogo eventualmente" | "Conter fogo no flanco leste até as 18:00 de hoje" |
 
 ---
 
 ## Quantidade de Objetivos
 
-- **IDEAL:** 2 a 5 objetivos por periodo operacional
-- **MINIMO:** 1 objetivo claro
-- **MAXIMO:** Evitar mais de 7 objetivos (dificulta foco)
+- **IDEAL:** 2 a 5 objetivos por período operacional
+- **MÍNIMO:** 1 objetivo claro
+- **MÁXIMO:** Evitar mais de 7 objetivos (dificulta foco)
 
-### Priorizacao
-**SEGURANCA SEMPRE PRIMEIRO.** Primeiro objetivo sempre relacionado a seguranca.
+### Priorização
+**SEGURANÇA SEMPRE PRIMEIRO.** Primeiro objetivo sempre relacionado à segurança.
 
 **Exemplo de Objetivos Priorizados:**
-1. Garantir seguranca de todos combatentes (zonas seguras, rotas fuga, monitoramento)
-2. Proteger residencias no setor sul
-3. Conter avanco no flanco norte ate estrada MT-100
+1. Garantir segurança de todos combatentes (zonas seguras, rotas fuga, monitoramento)
+2. Proteger residências no setor sul
+3. Conter avanço no flanco norte até estrada MT-100
 4. Completar 50% do rescaldo no setor leste
 
 ---
 
-## Formulario SCI 202 - Objetivos do Incidente
+## Formulário SCI 202 - Objetivos do Incidente
 
-### Estrutura do Formulario
+### Estrutura do Formulário
 
-**CABECALHO:**
+**CABEÇALHO:**
 - Nome do incidente
-- Numero do incidente
-- Periodo operacional (data/horario inicio e fim)
-- Data/hora de preparacao
+- Número do incidente
+- Período operacional (data/horário início e fim)
+- Data/hora de preparação
 
-**SECAO 1 - OBJETIVOS DO INCIDENTE:**
+**SEÇÃO 1 - OBJETIVOS DO INCIDENTE:**
 Lista numerada dos objetivos (2-5 objetivos)
 
-**SECAO 2 - CONSIDERACOES DE SEGURANCA:**
-Mensagem de seguranca do OSeg (ou CI se OSeg nao designado)
+**SEÇÃO 2 - CONSIDERAÇÕES DE SEGURANÇA:**
+Mensagem de segurança do OSeg (ou CI se OSeg não designado)
 
-**SECAO 3 - INSTRUCOES ESPECIAIS:**
-Restricoes operacionais, prioridades especiais, coordenacao com outras agencias
+**SEÇÃO 3 - INSTRUÇÕES ESPECIAIS:**
+Restrições operacionais, prioridades especiais, coordenação com outras agências
 
-**SECAO 4 - APROVACAO:**
+**SEÇÃO 4 - APROVAÇÃO:**
 Nome do CI, assinatura, data/hora
 
 ### Exemplo Preenchido
@@ -653,32 +653,32 @@ Nome do CI, assinatura, data/hora
 \`\`\`
 SCI 202 - OBJETIVOS DO INCIDENTE
 
-Incidente: Incendio Florestal Fazenda Boa Esperanca
-Numero: IF-2025-089
-Periodo Operacional: PO3 - 06:00 15/ago as 18:00 15/ago
-Data/Hora Preparacao: 14/ago 17:30
+Incidente: Incêndio Florestal Fazenda Boa Esperança
+Número: IF-2025-089
+Período Operacional: PO3 - 06:00 15/ago às 18:00 15/ago
+Data/Hora Preparação: 14/ago 17:30
 
 OBJETIVOS DO INCIDENTE:
 
-1. SEGURANCA: Manter seguranca de todos combatentes. Todas divisoes
-   devem ter zonas de seguranca identificadas e rotas de fuga
-   estabelecidas. Check-in/check-out obrigatorio.
+1. SEGURANÇA: Manter segurança de todos combatentes. Todas divisões
+   devem ter zonas de segurança identificadas e rotas de fuga
+   estabelecidas. Check-in/check-out obrigatório.
 
-2. PROTECAO: Proteger as 5 residencias no setor sul atraves de acoes
-   defensivas e linha de controle. Concluir ate 14:00.
+2. PROTEÇÃO: Proteger as 5 residências no setor sul através de ações
+   defensivas e linha de controle. Concluir até 14:00.
 
-3. CONTENCAO: Conter 100% do flanco norte usando estrada MT-100 como
-   ancora. Completar linha de controle ate as 16:00.
+3. CONTENÇÃO: Conter 100% do flanco norte usando estrada MT-100 como
+   âncora. Completar linha de controle até as 16:00.
 
-4. RESCALDO: Completar 70% do rescaldo no setor leste (ja contido
+4. RESCALDO: Completar 70% do rescaldo no setor leste (já contido
    ontem). Priorizar 50 metros de profundidade.
 
-CONSIDERACOES DE SEGURANCA:
+CONSIDERAÇÕES DE SEGURANÇA:
 - Vento previsto SE, 20-30 km/h, rajadas 40 km/h. ALTO RISCO 12:00-17:00.
-- LCES obrigatorio em todas divisoes.
-- Suspensao de operacoes se vento > 50 km/h.
+- LCES obrigatório em todas divisões.
+- Suspensão de operações se vento > 50 km/h.
 
-APROVACAO:
+APROVAÇÃO:
 CI: Maj Roberto Silva
 Data/Hora: 14/ago 17:45
 \`\`\``,
@@ -688,119 +688,119 @@ Data/Hora: 14/ago 17:45
 const reuniaoTatica: Section = {
   id: 'reuniao-tatica',
   slug: 'reuniao-tatica',
-  title: '22. Reuniao Tatica',
+  title: '22. Reunião Tática',
   part: 5,
   order: 3,
-  content: `## Preparacao para Reuniao Tatica
+  content: `## Preparação para Reunião Tática
 
-### Responsavel
-**CHEFE DA SECAO DE OPERACOES (CSOp):** Lidera preparacao e conducao da Reuniao Tatica.
+### Responsável
+**CHEFE DA SEÇÃO DE OPERAÇÕES (CSOp):** Lidera preparação e condução da Reunião Tática.
 
-### O Que CSOp Faz Antes da Reuniao
+### O Que CSOp Faz Antes da Reunião
 
-**ANALISE:**
+**ANÁLISE:**
 - Estuda objetivos do CI
-- Analisa situacao atual
+- Analisa situação atual
 - Consulta mapas
-- Avalia recursos disponiveis
-- Considera condicoes meteorologicas
+- Avalia recursos disponíveis
+- Considera condições meteorológicas
 
-**DESENVOLVIMENTO DE TATICAS:**
-- Como alcancar cada objetivo
-- Quais recursos necessarios
-- Onde alocar recursos (divisoes/grupos)
+**DESENVOLVIMENTO DE TÁTICAS:**
+- Como alcançar cada objetivo
+- Quais recursos necessários
+- Onde alocar recursos (divisões/grupos)
 - Estimativa de tempo
 
-**FORMULARIOS:**
+**FORMULÁRIOS:**
 Inicia preenchimento do SCI 215 (Matriz de Planejamento Operacional)
 
-**TEMPO DE PREPARACAO:** 1-3 horas entre Reuniao com Staff e Reuniao Tatica
+**TEMPO DE PREPARAÇÃO:** 1-3 horas entre Reunião com Staff e Reunião Tática
 
 ---
 
-## Participantes da Reuniao Tatica
+## Participantes da Reunião Tática
 
-### Participantes Obrigatorios
+### Participantes Obrigatórios
 
-| Funcao | Papel |
+| Função | Papel |
 |--------|-------|
-| CSOp | Conduz reuniao, apresenta taticas |
-| OSeg | Avaliacao de riscos |
+| CSOp | Conduz reunião, apresenta táticas |
+| OSeg | Avaliação de riscos |
 | CSPlan/URec | Disponibilidade de recursos |
-| CSLog | Viabilidade logistica |
+| CSLog | Viabilidade logística |
 | CI | Pode participar ou delegar |
 
-### Especialistas Tecnico (podem ser convidados)
-- Coordenador de Operacoes Aereas
+### Especialistas Técnico (podem ser convidados)
+- Coordenador de Operações Aéreas
 - Especialista em comportamento do fogo
-- Especialista em maquinario
-- Representantes de agencias (ICMBio, Prevfogo)
+- Especialista em maquinário
+- Representantes de agências (ICMBio, Prevfogo)
 
 ---
 
-## Conducao da Reuniao Tatica
+## Condução da Reunião Tática
 
-**DURACAO:** 30 minutos a 2 horas (depende da complexidade)
+**DURAÇÃO:** 30 minutos a 2 horas (depende da complexidade)
 **LOCAL:** Posto de Comando, com mapas e recursos visuais
 
-### Agenda Tipica
+### Agenda Típica
 
 **1. ABERTURA (CSOp):**
-Objetivo da reuniao, revisao rapida de situacao atual
+Objetivo da reunião, revisão rápida de situação atual
 
-**2. REVISAO DE OBJETIVOS:**
-Leitura dos objetivos estabelecidos pelo CI, confirmacao de entendimento
+**2. REVISÃO DE OBJETIVOS:**
+Leitura dos objetivos estabelecidos pelo CI, confirmação de entendimento
 
-**3. APRESENTACAO DE TATICAS (CSOp):**
-- Como alcancar cada objetivo
-- Quais divisoes/grupos
+**3. APRESENTAÇÃO DE TÁTICAS (CSOp):**
+- Como alcançar cada objetivo
+- Quais divisões/grupos
 - Quais recursos
-- Quando (sequencia, horarios)
+- Quando (sequência, horários)
 
-**4. DISCUSSAO (Todos):**
-- **OSeg avalia:** Riscos de cada tatica, medidas de mitigacao
-- **CSLog avalia:** Viabilidade logistica, disponibilidade de suprimentos
+**4. DISCUSSÃO (Todos):**
+- **OSeg avalia:** Riscos de cada tática, medidas de mitigação
+- **CSLog avalia:** Viabilidade logística, disponibilidade de suprimentos
 - **CSPlan/URec avalia:** Disponibilidade de recursos, necessidade de recursos adicionais
 
-**5. ANALISE DE RISCOS (OSeg + CSOp):**
-Preenchimento do SCI 215A (identificacao, probabilidade, severidade, mitigacoes)
+**5. ANÁLISE DE RISCOS (OSeg + CSOp):**
+Preenchimento do SCI 215A (identificação, probabilidade, severidade, mitigações)
 
 **6. AJUSTES (CSOp):**
-CSOp ajusta taticas baseado em feedback
+CSOp ajusta táticas baseado em feedback
 
-**7. FINALIZACAO:**
-CSOp conclui SCI 215, OSeg conclui SCI 215A, aprovacao de taticas
+**7. FINALIZAÇÃO:**
+CSOp conclui SCI 215, OSeg conclui SCI 215A, aprovação de táticas
 
 ---
 
-## Formulario SCI 215 - Matriz de Planejamento Operacional
+## Formulário SCI 215 - Matriz de Planejamento Operacional
 
-### Estrutura do Formulario
+### Estrutura do Formulário
 
-| Coluna | Conteudo |
+| Coluna | Conteúdo |
 |--------|----------|
-| 1. Setores/Divisoes/Grupos | Lista elementos operacionais |
-| 2. Atribuicao de Trabalho | O que cada um fara |
-| 3. Recursos Designados | Quais recursos por divisao |
-| 4. Solicitado | Recursos adicionais necessarios |
-| 5. ETA | Horario estimado de chegada |
+| 1. Setores/Divisões/Grupos | Lista elementos operacionais |
+| 2. Atribuição de Trabalho | O que cada um fará |
+| 3. Recursos Designados | Quais recursos por divisão |
+| 4. Solicitado | Recursos adicionais necessários |
+| 5. ETA | Horário estimado de chegada |
 | 6. Local de Reporte | Onde se apresentar |
-| 7. Horario de Reporte | Quando se apresentar |
+| 7. Horário de Reporte | Quando se apresentar |
 
 ### Exemplo Simplificado SCI 215
 
 \`\`\`
 SCI 215 - MATRIZ DE PLANEJAMENTO OPERACIONAL
-Incidente: IF Fazenda Boa Esperanca | PO: 3 (06:00-18:00)
+Incidente: IF Fazenda Boa Esperança | PO: 3 (06:00-18:00)
 
-DIV/GRUPO | ATRIBUICAO              | RECURSOS        | LOCAL  | HORA
+DIV/GRUPO | ATRIBUIÇÃO              | RECURSOS        | LOCAL  | HORA
 ----------|-------------------------|-----------------|--------|------
 Div Norte | Conter flanco norte     | EIAOP 03 (10)   | PC     | 05:30
           | Linha controle 2km      | BDBM Chapada(8) | PC     | 05:30
           | Concluir 16:00          | EMec: 2 motos   | Div N  | 07:00
 ----------|-------------------------|-----------------|--------|------
-Div Sul   | Protecao 5 residencias  | EIAOP 05 (10)   | PC     | 05:30
-          | Acoes defensivas        | BMM Nobres (7)  | PC     | 05:30
+Div Sul   | Proteção 5 residências  | EIAOP 05 (10)   | PC     | 05:30
+          | Ações defensivas        | BMM Nobres (7)  | PC     | 05:30
           | Concluir 14:00          |                 |        |
 ----------|-------------------------|-----------------|--------|------
 Div Leste | Rescaldo 70%            | GCIF 1 (5)      | A.Esp  | 06:00
@@ -811,37 +811,37 @@ TOTAL RECURSOS: 58 bombeiros, 2 motoniveladoras
 
 ---
 
-## Formulario SCI 215A - Analise de Risco
+## Formulário SCI 215A - Análise de Risco
 
 ### Estrutura
 
-| Coluna | Conteudo |
+| Coluna | Conteúdo |
 |--------|----------|
 | Riscos/Perigos | Lista de riscos identificados |
-| Probabilidade | Alta / Media / Baixa |
-| Severidade | Alta / Media / Baixa |
-| Medidas de Mitigacao | O que sera feito para reduzir risco |
-| Responsavel | Quem garante implementacao |
+| Probabilidade | Alta / Média / Baixa |
+| Severidade | Alta / Média / Baixa |
+| Medidas de Mitigação | O que será feito para reduzir risco |
+| Responsável | Quem garante implementação |
 
 ### Exemplo Simplificado SCI 215A
 
 \`\`\`
-SCI 215A - ANALISE DE RISCO
-Incidente: IF Fazenda Boa Esperanca | PO: 3
+SCI 215A - ANÁLISE DE RISCO
+Incidente: IF Fazenda Boa Esperança | PO: 3
 
-RISCO/PERIGO         | PROB. | SEVER.| MITIGACAO              | RESP.
+RISCO/PERIGO         | PROB. | SEVER.| MITIGAÇÃO              | RESP.
 ---------------------|-------|-------|------------------------|--------
 Vento forte SE       | ALTA  | ALTA  | Lookouts designados    | OSeg
 20-30km/h            |       |       | Suspender se >50km/h   | CSOp
                      |       |       | Rota fuga clara        |
 ---------------------|-------|-------|------------------------|--------
-Umidade baixa (25%)  | ALTA  | MEDIA | Hidratacao reforcada   | CSLog
-Temp alta (38C)      |       |       | Rodizio de trabalho    | Sup Divs
+Umidade baixa (25%)  | ALTA  | MÉDIA | Hidratação reforçada   | CSLog
+Temp alta (38C)      |       |       | Rodízio de trabalho    | Sup Divs
 ---------------------|-------|-------|------------------------|--------
-Comunicacao limitada | MEDIA | ALTA  | Celular como backup    | Sup Divs
-em vales             |       |       | Check-in periodico     |
+Comunicação limitada | MÉDIA | ALTA  | Celular como backup    | Sup Divs
+em vales             |       |       | Check-in periódico     |
 
-MENSAGEM PRINCIPAL: "LCES obrigatorio em todas divisoes"
+MENSAGEM PRINCIPAL: "LCES obrigatório em todas divisões"
 \`\`\``,
   diagrams: [diagramReuniaoTatica]
 };
@@ -849,30 +849,30 @@ MENSAGEM PRINCIPAL: "LCES obrigatorio em todas divisoes"
 const reuniaoPlanejamento: Section = {
   id: 'reuniao-planejamento',
   slug: 'reuniao-planejamento',
-  title: '23-24. Reuniao de Planejamento',
+  title: '23-24. Reunião de Planejamento',
   part: 5,
   order: 4,
-  content: `## Preparacao para Reuniao de Planejamento
+  content: `## Preparação para Reunião de Planejamento
 
-### Coordenacao pelo CSPlan
+### Coordenação pelo CSPlan
 
-**RESPONSAVEL:** Chefe da Secao de Planejamento coordena todos os preparativos
-**TEMPO DISPONIVEL:** 2-4 horas entre Reuniao Tatica e Reuniao de Planejamento
+**RESPONSÁVEL:** Chefe da Seção de Planejamento coordena todos os preparativos
+**TEMPO DISPONÍVEL:** 2-4 horas entre Reunião Tática e Reunião de Planejamento
 
 ### Murais e Materiais Visuais
 
-**AGENDA DA REUNIAO:** Mural visivel com tempo para cada item
+**AGENDA DA REUNIÃO:** Mural visível com tempo para cada item
 
-**OBJETIVOS (SCI 202):** Versao grande postada em parede ou quadro
+**OBJETIVOS (SCI 202):** Versão grande postada em parede ou quadro
 
 **MAPAS DO INCIDENTE:**
-- Mapa grande (minimo A1, ideal A0 ou maior)
-- Perimetro atual do incendio
-- Divisoes marcadas com cores
-- Instalacoes (PC, Base, Area de Espera)
+- Mapa grande (mínimo A1, ideal A0 ou maior)
+- Perímetro atual do incêndio
+- Divisões marcadas com cores
+- Instalações (PC, Base, Área de Espera)
 - Linhas de controle planejadas
 
-### Verificacao de Preparacao
+### Verificação de Preparação
 
 **CSPlan verifica:**
 - CSOp: SCI 215 finalizado? SCI 204 preparado?
@@ -882,241 +882,241 @@ const reuniaoPlanejamento: Section = {
 
 ---
 
-## Reuniao de Planejamento
+## Reunião de Planejamento
 
 ### Finalidade
 
-- **APRESENTACAO:** Apresentar o plano operacional completo para o proximo periodo
-- **VALIDACAO:** Garantir que todos entendem e concordam com o plano
-- **COORDENACAO:** Assegurar que todas secoes e recursos estao alinhados
-- **ULTIMA OPORTUNIDADE:** Identificar problemas ou conflitos antes de implementacao
+- **APRESENTAÇÃO:** Apresentar o plano operacional completo para o próximo período
+- **VALIDAÇÃO:** Garantir que todos entendem e concordam com o plano
+- **COORDENAÇÃO:** Assegurar que todas seções e recursos estão alinhados
+- **ÚLTIMA OPORTUNIDADE:** Identificar problemas ou conflitos antes de implementação
 
 ### Participantes
 
 **QUEM PARTICIPA:**
 - Staff do Comando: CI, OSeg, OIP, OLig
 - Staff Geral: CSOp, CSPlan, CSLog, CSAdmin
-- Supervisores de todas Divisoes/Grupos
-- Lideres de Unidades ativadas
-- Representantes de agencias cooperadoras
+- Supervisores de todas Divisões/Grupos
+- Líderes de Unidades ativadas
+- Representantes de agências cooperadoras
 
-**QUEM NAO PARTICIPA:**
-- Recursos taticos no campo (receberao Briefing depois)
-- Pessoal de apoio basico
+**QUEM NÃO PARTICIPA:**
+- Recursos táticos no campo (receberão Briefing depois)
+- Pessoal de apoio básico
 
-### Conducao
+### Condução
 
 - **FACILITADOR:** CSPlan conduz e facilita
-- **LOCAL:** Posto de Comando, area para reunioes
-- **DURACAO:** 60 a 90 minutos
+- **LOCAL:** Posto de Comando, área para reuniões
+- **DURAÇÃO:** 60 a 90 minutos
 
 ---
 
-## Agenda da Reuniao de Planejamento
+## Agenda da Reunião de Planejamento
 
 ### 1. Abertura (CSPlan - 2 min)
-Boas-vindas, revisao da agenda, expectativas
+Boas-vindas, revisão da agenda, expectativas
 
-### 2. Briefing de Seguranca (OSeg - 5 min)
-Mensagem de seguranca baseada em SCI 215A, LCES, riscos principais
+### 2. Briefing de Segurança (OSeg - 5 min)
+Mensagem de segurança baseada em SCI 215A, LCES, riscos principais
 
-### 3. Situacao Atual (CSPlan - 10 min)
-- Tamanho atual do incendio
+### 3. Situação Atual (CSPlan - 10 min)
+- Tamanho atual do incêndio
 - Comportamento do fogo
-- Previsao meteorologica
+- Previsão meteorológica
 - Recursos empenhados
 
 ### 4. Objetivos do Incidente (CI - 5 min)
-CI le ou resume objetivos estabelecidos (SCI 202), explica raciocinio
+CI lê ou resume objetivos estabelecidos (SCI 202), explica raciocínio
 
 ### 5. Plano Operacional (CSOp - 20-30 min)
-**Para cada Divisao/Grupo:**
-1. Identificacao e supervisor
-2. Area de responsabilidade (aponta no mapa)
-3. Atribuicao (objetivo especifico)
+**Para cada Divisão/Grupo:**
+1. Identificação e supervisor
+2. Área de responsabilidade (aponta no mapa)
+3. Atribuição (objetivo específico)
 4. Recursos designados
-5. Taticas a serem usadas
-6. Sequencia/timing
-7. Seguranca especifica (zonas, rotas)
+5. Táticas a serem usadas
+6. Sequência/timing
+7. Segurança específica (zonas, rotas)
 
-**Apos cada:** Supervisor confirma entendimento
+**Após cada:** Supervisor confirma entendimento
 
-### 6. Plano Medico (CSLog - 5 min)
-- Instalacoes medicas
-- Procedimentos de evacuacao
-- Hospitais de referencia
+### 6. Plano Médico (CSLog - 5 min)
+- Instalações médicas
+- Procedimentos de evacuação
+- Hospitais de referência
 
-### 7. Plano de Comunicacoes (CSLog - 5 min)
-- Frequencias de radio por funcao
-- Protocolo de comunicacao
-- Outros meios (celular, satelite)
+### 7. Plano de Comunicações (CSLog - 5 min)
+- Frequências de rádio por função
+- Protocolo de comunicação
+- Outros meios (celular, satélite)
 
-### 8. Suporte Logistico (CSLog - 10 min)
-- Instalacoes (Base, Area de Espera, Helibase)
-- Suprimentos (agua, combustivel, alimentacao)
+### 8. Suporte Logístico (CSLog - 10 min)
+- Instalações (Base, Área de Espera, Helibase)
+- Suprimentos (água, combustível, alimentação)
 - Transporte
 
-### 9. Consideracoes Admin/Financeiras (CSAdmin - 5 min)
-Custos estimados, registro de horas, contratacoes (se aplicavel)
+### 9. Considerações Admin/Financeiras (CSAdmin - 5 min)
+Custos estimados, registro de horas, contratações (se aplicável)
 
-### 10. Questoes e Esclarecimentos (CSPlan - 10-15 min)
-Abertura para perguntas, resolucao de conflitos identificados
+### 10. Questões e Esclarecimentos (CSPlan - 10-15 min)
+Abertura para perguntas, resolução de conflitos identificados
 
-### 11. Aprovacao Final (CI - 5 min)
-Comentarios finais, confirmacao de aprovacao, expectativas, agradecimento`,
+### 11. Aprovação Final (CI - 5 min)
+Comentários finais, confirmação de aprovação, expectativas, agradecimento`,
   diagrams: [diagramReuniaoPlanejamento]
 };
 
 const preparacaoPai: Section = {
   id: 'preparacao-pai',
   slug: 'preparacao-pai',
-  title: '25. Preparacao e Aprovacao do PAI',
+  title: '25. Preparação e Aprovação do PAI',
   part: 5,
   order: 5,
-  content: `## Compilacao do PAI
+  content: `## Compilação do PAI
 
-### Responsavel
-- **SECAO DE PLANEJAMENTO:** CSPlan coordena compilacao
-- **UNIDADE DE DOCUMENTACAO:** Frequentemente responsavel pela montagem fisica/digital
+### Responsável
+- **SEÇÃO DE PLANEJAMENTO:** CSPlan coordena compilação
+- **UNIDADE DE DOCUMENTAÇÃO:** Frequentemente responsável pela montagem física/digital
 
 ### Estrutura do PAI Completo
 
-O PAI completo contem (em ordem):
+O PAI completo contém (em ordem):
 
-| # | Componente | Descricao |
+| # | Componente | Descrição |
 |---|------------|-----------|
-| 1 | CAPA | Nome, numero, periodo, CI responsavel |
+| 1 | CAPA | Nome, número, período, CI responsável |
 | 2 | SCI 202 | Objetivos do Incidente |
-| 3 | SCI 203 | Organizacao (posicoes e ocupantes) |
-| 4 | SCI 204 | Atribuicoes (um por Divisao/Grupo) |
-| 5 | SCI 205 | Comunicacoes de Radio |
-| 6 | SCI 205A | Lista de Comunicacoes |
-| 7 | SCI 206 | Plano Medico |
+| 3 | SCI 203 | Organização (posições e ocupantes) |
+| 4 | SCI 204 | Atribuições (um por Divisão/Grupo) |
+| 5 | SCI 205 | Comunicações de Rádio |
+| 6 | SCI 205A | Lista de Comunicações |
+| 7 | SCI 206 | Plano Médico |
 | 8 | SCI 207 | Organograma (opcional mas recomendado) |
-| 9 | SCI 208 | Plano de Seguranca |
-| 10 | SCI 215 | Matriz Operacional (referencia) |
-| 11 | SCI 215A | Analise de Riscos (referencia) |
-| 12 | MAPAS | Mapa do incidente com divisoes |
+| 9 | SCI 208 | Plano de Segurança |
+| 10 | SCI 215 | Matriz Operacional (referência) |
+| 11 | SCI 215A | Análise de Riscos (referência) |
+| 12 | MAPAS | Mapa do incidente com divisões |
 | 13 | ANEXOS | Outros documentos relevantes |
 
 ### Deadline para Anexos
 
-- **ESTABELECIDO NA REUNIAO:** Tipico 1-2 horas apos Reuniao de Planejamento
-- **RESPONSABILIDADE:** Cada secao entrega seus formularios completos a SPlan
+- **ESTABELECIDO NA REUNIÃO:** Típico 1-2 horas após Reunião de Planejamento
+- **RESPONSABILIDADE:** Cada seção entrega seus formulários completos à SPlan
 
 ---
 
-## Revisao pelo CI
+## Revisão pelo CI
 
 ### PAI Completo para CI
 
-- **ENTREGA:** CSPlan entrega PAI compilado ao CI para revisao final
-- **FORMATO:** Impresso (copia mestre) + Digital (PDF)
+- **ENTREGA:** CSPlan entrega PAI compilado ao CI para revisão final
+- **FORMATO:** Impresso (cópia mestre) + Digital (PDF)
 
-### Verificacao pelo CI
+### Verificação pelo CI
 
 **CI VERIFICA:**
-- **COMPLETUDE:** Todos formularios necessarios presentes?
-- **CONSISTENCIA:** Informacoes em diferentes formularios sao consistentes?
-- **ALINHAMENTO:** Plano operacional realmente alcancara objetivos?
-- **VIABILIDADE:** Plano e realista com recursos disponiveis?
-- **SEGURANCA:** Medidas de seguranca adequadas?
+- **COMPLETUDE:** Todos formulários necessários presentes?
+- **CONSISTÊNCIA:** Informações em diferentes formulários são consistentes?
+- **ALINHAMENTO:** Plano operacional realmente alcançará objetivos?
+- **VIABILIDADE:** Plano é realista com recursos disponíveis?
+- **SEGURANÇA:** Medidas de segurança adequadas?
 
-### Aprovacao ou Ajustes
+### Aprovação ou Ajustes
 
 - **SE APROVADO:** CI assina/aprova PAI
-- **SE AJUSTES:** CI solicita correcoes, SPlan faz ajustes, resubmete
-- **REGISTRO:** Data/hora de aprovacao, assinatura do CI, carimbada como "APROVADO"
+- **SE AJUSTES:** CI solicita correções, SPlan faz ajustes, resubmete
+- **REGISTRO:** Data/hora de aprovação, assinatura do CI, carimbada como "APROVADO"
 
 ---
 
-## Reproducao e Distribuicao
+## Reprodução e Distribuição
 
-### Copias Necessarias
+### Cópias Necessárias
 
-**QUANTIDADE TIPICA:** 10-20 copias dependendo do tamanho da estrutura
+**QUANTIDADE TÍPICA:** 10-20 cópias dependendo do tamanho da estrutura
 
-**QUEM RECEBE COPIA COMPLETA:**
+**QUEM RECEBE CÓPIA COMPLETA:**
 - CI e Staff do Comando
-- Cada Chefe de Secao
+- Cada Chefe de Seção
 - SSC
-- Arquivo (2 copias)
+- Arquivo (2 cópias)
 
-**QUEM RECEBE COPIA PARCIAL (relevante):**
+**QUEM RECEBE CÓPIA PARCIAL (relevante):**
 
-Supervisores de Divisao/Grupo recebem:
+Supervisores de Divisão/Grupo recebem:
 - SCI 202 (Objetivos)
-- SCI 204 (sua atribuicao especifica)
-- SCI 205/205A (Comunicacoes)
-- SCI 206 (Plano Medico)
-- SCI 208 (Seguranca)
+- SCI 204 (sua atribuição específica)
+- SCI 205/205A (Comunicações)
+- SCI 206 (Plano Médico)
+- SCI 208 (Segurança)
 - Mapa do incidente
 
-**NAO RECEBEM:** SCI 215/215A (ferramentas internas de planejamento)
+**NÃO RECEBEM:** SCI 215/215A (ferramentas internas de planejamento)
 
 ---
 
 ## Futuro com ARGOS-SCI
 
-**SISTEMA DIGITAL PERMITIRA:**
-- PAI digital disponivel em tablets
-- Impressao on-demand
-- Distribuicao eletronica automatica
-- Atualizacoes em tempo real`,
+**SISTEMA DIGITAL PERMITIRÁ:**
+- PAI digital disponível em tablets
+- Impressão on-demand
+- Distribuição eletrônica automática
+- Atualizações em tempo real`,
   diagrams: [diagramFormulariosPai]
 };
 
 const briefingOperacional: Section = {
   id: 'briefing-operacional',
   slug: 'briefing-operacional',
-  title: '26. Briefing do Periodo Operacional',
+  title: '26. Briefing do Período Operacional',
   part: 5,
   order: 6,
   content: `## Finalidade do Briefing
 
-- **COMUNICAR O PLANO:** Apresentar PAI a todos que o executarao
-- **ATRIBUICOES CLARAS:** Cada supervisor/recurso sabe exatamente o que fazer
-- **ALINHAMENTO:** Todos operando com mesma informacao
-- **ULTIMA CHANCE:** Esclarecimentos finais antes de iniciar operacoes
+- **COMUNICAR O PLANO:** Apresentar PAI a todos que o executarão
+- **ATRIBUIÇÕES CLARAS:** Cada supervisor/recurso sabe exatamente o que fazer
+- **ALINHAMENTO:** Todos operando com mesma informação
+- **ÚLTIMA CHANCE:** Esclarecimentos finais antes de iniciar operações
 
 ---
 
-## Responsavel e Participantes
+## Responsável e Participantes
 
 ### Condutor
-**CHEFE DA SECAO DE OPERACOES (CSOp)** conduz Briefing Operacional.
-- Pode delegar: Em grandes operacoes, cada Supervisor pode briefar sua equipe.
+**CHEFE DA SEÇÃO DE OPERAÇÕES (CSOp)** conduz Briefing Operacional.
+- Pode delegar: Em grandes operações, cada Supervisor pode briefar sua equipe.
 
 ### Participantes
 
-**OBRIGATORIO:**
-- Todos Supervisores de Divisao/Grupo
-- Lideres de Forca-Tarefa
-- Lideres de Equipes de Intervencao
-- Recursos taticos (idealmente todos combatentes)
+**OBRIGATÓRIO:**
+- Todos Supervisores de Divisão/Grupo
+- Líderes de Força-Tarefa
+- Líderes de Equipes de Intervenção
+- Recursos táticos (idealmente todos combatentes)
 
 **STAFF:**
-- OSeg (seguranca)
-- Representante SPlan (situacao)
-- Representante SLog (logistica)
+- OSeg (segurança)
+- Representante SPlan (situação)
+- Representante SLog (logística)
 
-### Configuracao
+### Configuração
 
-| Tamanho Operacao | Formato |
+| Tamanho Operação | Formato |
 |------------------|---------|
-| Grande | Briefing geral (supervisores) 30-45 min + Briefings de divisao (equipes) 15-20 min |
-| Media | Briefing unico com todos 30-45 min |
+| Grande | Briefing geral (supervisores) 30-45 min + Briefings de divisão (equipes) 15-20 min |
+| Média | Briefing único com todos 30-45 min |
 
 ---
 
-## Local e Horario
+## Local e Horário
 
-**LOCAL TIPICO:**
-- Base (se recursos iniciam la)
-- PC (se proximo)
-- Area de Espera
+**LOCAL TÍPICO:**
+- Base (se recursos iniciam lá)
+- PC (se próximo)
+- Área de Espera
 
-**HORARIO:** 30-60 minutos ANTES do inicio do periodo operacional
+**HORÁRIO:** 30-60 minutos ANTES do início do período operacional
 
 **Exemplo:**
 - PO inicia: 06:00
@@ -1127,259 +1127,259 @@ const briefingOperacional: Section = {
 ## Agenda do Briefing Operacional
 
 ### 1. Abertura (CSOp - 2 min)
-Qual periodo operacional, duracao, proposito do briefing
+Qual período operacional, duração, propósito do briefing
 
-### 2. Situacao Atual (SPlan - 5 min)
-Tamanho atual, progressos, condicoes atuais, previsao do tempo HOJE
+### 2. Situação Atual (SPlan - 5 min)
+Tamanho atual, progressos, condições atuais, previsão do tempo HOJE
 
-### 3. Objetivos do Periodo (CSOp - 3 min)
-Leitura dos objetivos do SCI 202, enfase nas prioridades
+### 3. Objetivos do Período (CSOp - 3 min)
+Leitura dos objetivos do SCI 202, ênfase nas prioridades
 
-### 4. Seguranca (OSeg - 5-10 min) **MAIS IMPORTANTE**
+### 4. Segurança (OSeg - 5-10 min) **MAIS IMPORTANTE**
 
-**CONDICOES:**
+**CONDIÇÕES:**
 - Meteorologia (vento, temperatura, umidade)
 - Comportamento esperado do fogo
-- Perigos especificos
+- Perigos específicos
 
 **LCES:**
-- **L**ookouts: Quem sao, onde estarao
-- **C**ommunications: Frequencias, check-ins
-- **E**scape Routes: Rotas de fuga primarias/secundarias
-- **S**afety Zones: Onde sao, como identificar
+- **L**ookouts: Quem são, onde estarão
+- **C**ommunications: Frequências, check-ins
+- **E**scape Routes: Rotas de fuga primárias/secundárias
+- **S**afety Zones: Onde são, como identificar
 
-**PROCEDIMENTOS DE EMERGENCIA:**
-- Sinal de evacuacao
+**PROCEDIMENTOS DE EMERGÊNCIA:**
+- Sinal de evacuação
 - Ponto de encontro
-- Como solicitar ajuda medica
+- Como solicitar ajuda médica
 
-**ENFASE:** "Se nao se sentir seguro, PARE. Comunique ao seu supervisor. Seguranca e prioridade numero 1."
+**ÊNFASE:** "Se não se sentir seguro, PARE. Comunique ao seu supervisor. Segurança é prioridade número 1."
 
-### 5. Atribuicoes Operacionais (CSOp - 15-20 min)
+### 5. Atribuições Operacionais (CSOp - 15-20 min)
 
-**PARA CADA DIVISAO/GRUPO:**
-1. **SUPERVISOR:** "Divisao Norte, Sgt Silva supervisiona."
-2. **AREA/FUNCAO:** Aponta no mapa
-3. **OBJETIVO:** "Conter 100% ate 16:00 usando estrada MT-100."
+**PARA CADA DIVISÃO/GRUPO:**
+1. **SUPERVISOR:** "Divisão Norte, Sgt Silva supervisiona."
+2. **ÁREA/FUNÇÃO:** Aponta no mapa
+3. **OBJETIVO:** "Conter 100% até 16:00 usando estrada MT-100."
 4. **RECURSOS:** "EIAOP 03, BDBM Chapada, 2 motos. Total 18 combatentes."
-5. **TATICAS:** "Motos abrem aceiro, voces fazem ataque direto, rescaldo imediato."
-6. **SEGURANCA:** "Zona de seguranca: area desmatada. Rota de fuga: retornar a estrada."
-7. **COORDENACAO:** "Grupo Aereo fara reconhecimento 07:00."
-8. **ONDE REPORTAR:** "Apresentar-se no PC as 05:40."
+5. **TÁTICAS:** "Motos abrem aceiro, vocês fazem ataque direto, rescaldo imediato."
+6. **SEGURANÇA:** "Zona de segurança: área desmatada. Rota de fuga: retornar à estrada."
+7. **COORDENAÇÃO:** "Grupo Aéreo fará reconhecimento 07:00."
+8. **ONDE REPORTAR:** "Apresentar-se no PC às 05:40."
 
-**APOS CADA:** Supervisor confirma: "Sgt Silva, entendido?"
+**APÓS CADA:** Supervisor confirma: "Sgt Silva, entendido?"
 
-### 6. Comunicacoes (CSLog/CSOp - 3 min)
-Revisao rapida das frequencias, protocolo de check-in
+### 6. Comunicações (CSLog/CSOp - 3 min)
+Revisão rápida das frequências, protocolo de check-in
 
-### 7. Logistica (CSLog - 5 min)
-Agua, combustivel, alimentacao, ferramentas, transporte
+### 7. Logística (CSLog - 5 min)
+Água, combustível, alimentação, ferramentas, transporte
 
-### 8. Horarios (CSOp - 2 min)
-Inicio, fim, proximo briefing
+### 8. Horários (CSOp - 2 min)
+Início, fim, próximo briefing
 
 ### 9. Perguntas (CSOp - 5-10 min)
-Abertura para duvidas, esclarecimentos
+Abertura para dúvidas, esclarecimentos
 
 ### 10. Encerramento (CSOp - 2 min)
-Motivacao, encaminhamento, ultimo lembrete: "Seguranca primeiro, sempre."
+Motivação, encaminhamento, último lembrete: "Segurança primeiro, sempre."
 
 ---
 
-## Briefings de Divisao/Grupo
+## Briefings de Divisão/Grupo
 
-### Quando Necessarios
-Em grandes operacoes, quando impraticavel reunir todos combatentes.
+### Quando Necessários
+Em grandes operações, quando impraticável reunir todos combatentes.
 
 ### Processo
 1. Briefing principal: apenas supervisores
-2. Briefings de divisao: cada supervisor briefa sua equipe
+2. Briefings de divisão: cada supervisor briefa sua equipe
 
-### Conteudo Especifico
-- Situacao especifica da area
-- Atribuicao detalhada da divisao
-- Taticas especificas
-- Divisao de trabalho entre equipes
-- Seguranca especifica (LCES para area)
-- Comunicacoes internas da divisao`,
+### Conteúdo Específico
+- Situação específica da área
+- Atribuição detalhada da divisão
+- Táticas específicas
+- Divisão de trabalho entre equipes
+- Segurança específica (LCES para área)
+- Comunicações internas da divisão`,
   diagrams: [diagramBriefingOperacional]
 };
 
 const execucaoAvaliacao: Section = {
   id: 'execucao-avaliacao',
   slug: 'execucao-avaliacao',
-  title: '27. Execucao e Avaliacao',
+  title: '27. Execução e Avaliação',
   part: 5,
   order: 7,
-  content: `## Execucao do PAI
+  content: `## Execução do PAI
 
-### Inicio do Periodo Operacional
+### Início do Período Operacional
 
-- **HORARIO:** Recursos iniciam operacoes conforme planejado (ex: 06:00)
+- **HORÁRIO:** Recursos iniciam operações conforme planejado (ex: 06:00)
 - **SUPERVISORES:** Posicionam equipes conforme SCI 204
-- **CI/CSOP:** Monitoram inicio, garantem que todos estao em posicao
+- **CI/CSOP:** Monitoram início, garantem que todos estão em posição
 
-### Operacoes Conforme Plano
+### Operações Conforme Plano
 
 **IDEAL:** Recursos executam exatamente como planejado
 
-**REALIDADE:** Ajustes sao sempre necessarios baseados em:
-- Condicoes reais encontradas
-- Mudancas no comportamento do fogo
+**REALIDADE:** Ajustes são sempre necessários baseados em:
+- Condições reais encontradas
+- Mudanças no comportamento do fogo
 - Disponibilidade de recursos
 - Problemas imprevistos
 
-### Comunicacao Durante Execucao
+### Comunicação Durante Execução
 
-**CHECK-INS PERIODICOS:**
-- Inicial: "Div Norte em posicao, iniciando operacoes"
+**CHECK-INS PERIÓDICOS:**
+- Inicial: "Div Norte em posição, iniciando operações"
 - A cada hora: "Div Norte, 30% da linha completada, progresso normal"
-- Ao completar: "Div Norte, objetivo alcancado"
+- Ao completar: "Div Norte, objetivo alcançado"
 
-**MUDANCAS:**
-- Supervisor reporta: "Div Norte, terreno mais dificil que esperado, vou precisar 2h adicionais"
-- CSOp aprova ajustes: "Div Norte, entendido, tome o tempo necessario. Priorize seguranca."
+**MUDANÇAS:**
+- Supervisor reporta: "Div Norte, terreno mais difícil que esperado, vou precisar 2h adicionais"
+- CSOp aprova ajustes: "Div Norte, entendido, tome o tempo necessário. Priorize segurança."
 
 ---
 
-## Papel do CI Durante Execucao
+## Papel do CI Durante Execução
 
-### Supervisao Estrategica
+### Supervisão Estratégica
 
-**CI NAO GERENCIA TATICAS** - CSOp gerencia operacoes taticas
+**CI NÃO GERENCIA TÁTICAS** - CSOp gerencia operações táticas
 
 **CI MONITORA:**
-- Progresso geral em relacao aos objetivos
+- Progresso geral em relação aos objetivos
 - Status de recursos (fadiga, disponibilidade)
-- Condicoes que podem exigir mudanca de estrategia
+- Condições que podem exigir mudança de estratégia
 - Necessidade de recursos adicionais
 
-### Comunicacao com SSC
+### Comunicação com SSC
 
-**ATUALIZACOES PERIODICAS:**
-- Inicio do PO
-- Meio do PO (situacao intermediaria)
+**ATUALIZAÇÕES PERIÓDICAS:**
+- Início do PO
+- Meio do PO (situação intermediária)
 - Fim do PO (resultados)
 
-**SOLICITACOES:** CI solicita recursos adicionais via SSC quando necessario
+**SOLICITAÇÕES:** CI solicita recursos adicionais via SSC quando necessário
 
-### Decisoes Estrategicas
+### Decisões Estratégicas
 
-- **MUDANCA DE OBJETIVOS:** Se situacao mudar drasticamente, CI pode revisar objetivos
-- **SUSPENSAO DE OPERACOES:** CI decide se operacoes devem ser suspensas (ex: vento muito forte)
+- **MUDANÇA DE OBJETIVOS:** Se situação mudar drasticamente, CI pode revisar objetivos
+- **SUSPENSÃO DE OPERAÇÕES:** CI decide se operações devem ser suspensas (ex: vento muito forte)
 
 ---
 
 ## Monitoramento de Progresso
 
-### Responsaveis
-- **SECAO DE OPERACOES:** CSOp monitora progresso tatico
-- **SECAO DE PLANEJAMENTO:** Unidade de Situacao monitora situacao geral
+### Responsáveis
+- **SEÇÃO DE OPERAÇÕES:** CSOp monitora progresso tático
+- **SEÇÃO DE PLANEJAMENTO:** Unidade de Situação monitora situação geral
 
 ### Ferramentas
-- Comunicacoes (reportes de radio de supervisores)
-- Reconhecimento (OSeg ou pessoal SPlan visitam divisoes)
-- Observacao aerea (se disponivel)
-- Mapas (atualizacao continua)
+- Comunicações (reportes de rádio de supervisores)
+- Reconhecimento (OSeg ou pessoal SPlan visitam divisões)
+- Observação aérea (se disponível)
+- Mapas (atualização contínua)
 
 ### Indicadores de Progresso
 
 | Objetivo | Indicadores |
 |----------|-------------|
-| 1. Seguranca | Acidentes/lesoes: 0, Violacoes: nenhuma |
-| 2. Protecao Estruturas | 5 residencias protegidas: sim/nao |
-| 3. Contencao | % linha completada: 20%, 40%, 60%, 80%, 100% |
-| 4. Rescaldo | % area rescaldada, profundidade atingida |
+| 1. Segurança | Acidentes/lesões: 0, Violações: nenhuma |
+| 2. Proteção Estruturas | 5 residências protegidas: sim/não |
+| 3. Contenção | % linha completada: 20%, 40%, 60%, 80%, 100% |
+| 4. Rescaldo | % área rescaldada, profundidade atingida |
 
 ---
 
-## Ajustes Durante o Periodo
+## Ajustes Durante o Período
 
 ### Quando Ajustar
 - Progresso muito mais lento que esperado
-- Condicoes mudaram (vento, comportamento fogo)
+- Condições mudaram (vento, comportamento fogo)
 - Recursos insuficientes
 - Novo risco identificado
 
 ### Quem Decide
-- **AJUSTES TATICOS (pequenos):** CSOp decide e implementa
-- **AJUSTES ESTRATEGICOS (grandes):** CI decide, pode consultar staff
+- **AJUSTES TÁTICOS (pequenos):** CSOp decide e implementa
+- **AJUSTES ESTRATÉGICOS (grandes):** CI decide, pode consultar staff
 
-### Comunicacao de Ajustes
-- **Afetados diretamente:** CSOp comunica via radio
-- **Todos (se significativo):** Transmissao geral
+### Comunicação de Ajustes
+- **Afetados diretamente:** CSOp comunica via rádio
+- **Todos (se significativo):** Transmissão geral
 - **SSC:** CI informa de ajustes importantes
 
 ---
 
-## Avaliacao ao Final do Periodo
+## Avaliação ao Final do Período
 
 ### Momento
-- Final do periodo operacional (ultimas 1-2 horas)
-- Antes do proximo Ciclo P
+- Final do período operacional (últimas 1-2 horas)
+- Antes do próximo Ciclo P
 
 ### Perguntas Avaliadas
 
-**OBJETIVOS ALCANCADOS?**
-- Objetivo 1: sim/nao, por que?
-- Objetivo 2: sim/nao, por que?
-- Objetivo 3: parcialmente, por que?
+**OBJETIVOS ALCANÇADOS?**
+- Objetivo 1: sim/não, por quê?
+- Objetivo 2: sim/não, por quê?
+- Objetivo 3: parcialmente, por quê?
 
-**TATICAS EFETIVAS?**
+**TÁTICAS EFETIVAS?**
 - O que funcionou bem?
-- O que nao funcionou?
-- Ajustes necessarios?
+- O que não funcionou?
+- Ajustes necessários?
 
 **RECURSOS ADEQUADOS?**
 - Suficientes?
 - Bem utilizados?
-- Necessidade para proximo periodo?
+- Necessidade para próximo período?
 
-**SEGURANCA MANTIDA?**
+**SEGURANÇA MANTIDA?**
 - Acidentes/incidentes?
 - Quase-acidentes?
-- Medidas de seguranca efetivas?
+- Medidas de segurança efetivas?
 
-**LOGISTICA ADEQUADA?**
+**LOGÍSTICA ADEQUADA?**
 - Suprimentos suficientes?
-- Comunicacoes funcionaram?
-- Instalacoes adequadas?
+- Comunicações funcionaram?
+- Instalações adequadas?
 
-### Reuniao de Avaliacao (Opcional)
+### Reunião de Avaliação (Opcional)
 
-- **DURACAO:** 15-30 minutos
-- **CONTEUDO:** O que deu certo, o que melhorar, licoes aprendidas
-- **NAO E FORMAL:** Nao e a Reuniao de Planejamento do proximo periodo
+- **DURAÇÃO:** 15-30 minutos
+- **CONTEÚDO:** O que deu certo, o que melhorar, lições aprendidas
+- **NÃO É FORMAL:** Não é a Reunião de Planejamento do próximo período
 
 ---
 
-## Relatorio de Fim de Periodo
+## Relatório de Fim de Período
 
-### Conteudo
+### Conteúdo
 
-**SITUACAO AO FINAL:**
-- Tamanho do incendio
+**SITUAÇÃO AO FINAL:**
+- Tamanho do incêndio
 - Percentual contido
-- Area rescaldada
-- Objetivos alcancados vs nao alcancados
+- Área rescaldada
+- Objetivos alcançados vs não alcançados
 
 **RECURSOS:**
 - Total empenhado
 - Status atual
 
-**PROXIMAS ACOES:**
-- Planos para proximo periodo
-- Recursos adicionais necessarios
+**PRÓXIMAS AÇÕES:**
+- Planos para próximo período
+- Recursos adicionais necessários
 
-### Distribuicao
-- CI (aprovacao)
+### Distribuição
+- CI (aprovação)
 - SSC
 - Arquivo`,
   diagrams: [diagramExecucaoPai]
 };
 
 // ------------------------------------------------------------
-// EXPORTACOES
+// EXPORTAÇÕES
 // ------------------------------------------------------------
 
 export const parteVSections: Section[] = [

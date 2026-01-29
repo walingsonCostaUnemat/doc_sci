@@ -6,11 +6,11 @@ const diagramOrgCBMMT: Diagram = {
   title: 'Estrutura Organizacional CBMMT para TIF',
   type: 'flowchart',
   code: `flowchart TB
-    subgraph GESTAO["Instrumentos de Gestao"]
+    subgraph GESTAO["Instrumentos de Gestão"]
         CG[Comando Geral]
         DOp[Diretoria Operacional]
-        BEA[Batalhao de Emergencias Ambientais]
-        SSC[Sala de Situacao Central]
+        BEA[Batalhão de Emergências Ambientais]
+        SSC[Sala de Situação Central]
 
         CG --> DOp
         CG --> BEA
@@ -36,7 +36,7 @@ const diagramOrgCBMMT: Diagram = {
         DOp --> CRBM7
     end
 
-    subgraph SALAS["Salas de Situacao"]
+    subgraph SALAS["Salas de Situação"]
         SSD1[SSD I]
         SSD2[SSD II]
         SSD3[SSD III]
@@ -60,27 +60,27 @@ const diagramOrgCBMMT: Diagram = {
     style DOp fill:#B91C1C,color:#fff
     style BEA fill:#1E40AF,color:#fff
     style SSC fill:#059669,color:#fff`,
-  description: 'Estrutura organizacional do CBMMT para operacoes de incendio florestal'
+  description: 'Estrutura organizacional do CBMMT para operações de incêndio florestal'
 };
 
 // Diagrama: Tipos de IRTs
 const diagramTiposIRTs: Diagram = {
   id: 'tipos-irts',
-  title: 'Instrumentos de Resposta Temporarios (IRTs)',
+  title: 'Instrumentos de Resposta Temporários (IRTs)',
   type: 'flowchart',
   code: `flowchart TB
-    subgraph IRTS["INSTRUMENTOS DE RESPOSTA TEMPORARIOS"]
+    subgraph IRTS["INSTRUMENTOS DE RESPOSTA TEMPORÁRIOS"]
         direction TB
     end
 
     subgraph EIAOPS["EIAOPs"]
         E1["10 equipes<br/>10 BM cada"]
-        E2["BEA coordena<br/>Resposta rapida"]
+        E2["BEA coordena<br/>Resposta rápida"]
     end
 
     subgraph BDBMS["BDBMs"]
         B1["15 brigadas<br/>5-10 BM"]
-        B2["CRBMs coordenam<br/>Base movel"]
+        B2["CRBMs coordenam<br/>Base móvel"]
     end
 
     subgraph BMMS["BMMs"]
@@ -90,21 +90,21 @@ const diagramTiposIRTs: Diagram = {
 
     subgraph BEMS["BEMs"]
         BE1["Estaduais mistas<br/>BM + servidores"]
-        BE2["Integracao<br/>estado"]
+        BE2["Integração<br/>estado"]
     end
 
     subgraph GAVBM["GAvBM"]
-        G1["Aviacao<br/>Helicopteros"]
-        G2["Reconhecimento<br/>aereo"]
+        G1["Aviação<br/>Helicópteros"]
+        G2["Reconhecimento<br/>aéreo"]
     end
 
     subgraph EMEC["EMec"]
-        EM1["Maquinario<br/>pesado"]
+        EM1["Maquinário<br/>pesado"]
         EM2["Aceiros e linhas<br/>de controle"]
     end
 
     subgraph GCIFS["GCIFs"]
-        GC1["Equipes taticas<br/>3-5 BM"]
+        GC1["Equipes táticas<br/>3-5 BM"]
         GC2["Resposta<br/>inicial"]
     end
 
@@ -131,36 +131,36 @@ const diagramTiposIRTs: Diagram = {
     class G1,G2 gavStyle
     class EM1,EM2 emecStyle
     class GC1,GC2 gcifStyle`,
-  description: 'Os 7 tipos de Instrumentos de Resposta Temporarios do CBMMT'
+  description: 'Os 7 tipos de Instrumentos de Resposta Temporários do CBMMT'
 };
 
-// Diagrama: Niveis de Complexidade
+// Diagrama: Níveis de Complexidade
 const diagramNiveis: Diagram = {
   id: 'niveis-complexidade',
-  title: 'Niveis de Complexidade Operacional',
+  title: 'Níveis de Complexidade Operacional',
   type: 'flowchart',
   code: `flowchart LR
-    subgraph N1["NIVEL 1"]
-        N1T[Operacao Simples]
-        N1C[Ate 3 IRTs]
+    subgraph N1["NÍVEL 1"]
+        N1T[Operação Simples]
+        N1C[Até 3 IRTs]
         N1S[SCI Opcional]
     end
 
-    subgraph N2["NIVEL 2"]
-        N2T[Operacao Intermediaria]
+    subgraph N2["NÍVEL 2"]
+        N2T[Operação Intermediária]
         N2C[4-7 IRTs]
-        N2S[SCI Obrigatorio]
+        N2S[SCI Obrigatório]
     end
 
-    subgraph N3["NIVEL 3"]
-        N3T[Operacao Complexa]
+    subgraph N3["NÍVEL 3"]
+        N3T[Operação Complexa]
         N3C[7+ IRTs + Federais]
         N3S[SCI Completo]
     end
 
-    subgraph N4["NIVEL 4"]
-        N4T[Grande Emergencia]
-        N4C[Maximos recursos]
+    subgraph N4["NÍVEL 4"]
+        N4T[Grande Emergência]
+        N4C[Máximos recursos]
         N4S[Comando Unificado]
     end
 
@@ -170,39 +170,39 @@ const diagramNiveis: Diagram = {
     style N2 fill:#D97706,color:#fff
     style N3 fill:#DC2626,color:#fff
     style N4 fill:#7C3AED,color:#fff`,
-  description: 'Os 4 niveis de complexidade operacional definidos no POTIF 2025'
+  description: 'Os 4 níveis de complexidade operacional definidos no POTIF 2025'
 };
 
-// Diagrama: Integracao SCI-CBMMT
+// Diagrama: Integração SCI-CBMMT
 const diagramIntegracaoSCI: Diagram = {
   id: 'integracao-sci-cbmmt',
-  title: 'Integracao SCI com Estrutura CBMMT',
+  title: 'Integração SCI com Estrutura CBMMT',
   type: 'flowchart',
   code: `flowchart TB
     subgraph CBMMT["ESTRUTURA CBMMT"]
         DOp[DOp - Diretoria Operacional]
         SSC[SSC - Sala Central]
         SSD[SSD - Salas Descentralizadas]
-        BEA[BEA - Emergencias Ambientais]
+        BEA[BEA - Emergências Ambientais]
     end
 
     subgraph SCI["ESTRUTURA SCI"]
         CI[Comandante do Incidente]
         STAFF[Staff de Comando]
-        SECOES[Secoes SCI]
+        SECOES[Seções SCI]
     end
 
     subgraph CAMPO["CAMPO"]
         IRTs[Equipes de Combate]
     end
 
-    DOp -->|Autoriza Nivel 3-4| SSC
+    DOp -->|Autoriza Nível 3-4| SSC
     SSC -->|Coordena despacho| SSD
     BEA -->|Assessora| SSC
     BEA -->|Capacita| CI
 
     SSC -->|Designa CI| CI
-    SSD -->|Apoio logistico| CI
+    SSD -->|Apoio logístico| CI
     CI --> STAFF
     CI --> SECOES
     SECOES --> IRTs
@@ -219,54 +219,54 @@ const diagramIntegracaoSCI: Diagram = {
 // Diagrama: Fases do POTIF
 const diagramFasesPOTIF: Diagram = {
   id: 'fases-potif',
-  title: 'Fases da Temporada de Incendios Florestais',
+  title: 'Fases da Temporada de Incêndios Florestais',
   type: 'gantt',
   code: `gantt
     title POTIF 2025 - Fases da Temporada
     dateFormat YYYY-MM
     axisFormat %b
 
-    section Preparacao
+    section Preparação
     Treinamentos         :prep1, 2025-03, 3M
     Equipamentos         :prep2, 2025-04, 2M
 
     section Alerta
-    Ativacao IRTs        :alert1, 2025-06, 1M
+    Ativação IRTs        :alert1, 2025-06, 1M
 
-    section Critica
-    Operacoes Intensivas :crit1, 2025-07, 4M
+    section Crítica
+    Operações Intensivas :crit1, 2025-07, 4M
 
-    section Desmobilizacao
+    section Desmobilização
     Encerramento         :desm1, 2025-11, 1M`,
-  description: 'Cronograma das fases da Temporada de Incendios Florestais'
+  description: 'Cronograma das fases da Temporada de Incêndios Florestais'
 };
 
-// Diagrama: Arvore de Decisao POTIF
+// Diagrama: Árvore de Decisão POTIF
 const diagramDecisaoPOTIF: Diagram = {
   id: 'decisao-potif',
-  title: 'Arvore de Decisao - Classificacao de Nivel',
+  title: 'Árvore de Decisão - Classificação de Nível',
   type: 'flowchart',
   code: `flowchart TD
     START[Incidente Iniciado] --> Q1{Quantos IRTs?}
 
-    Q1 -->|Ate 3| CHECK1{Recursos especiais?}
-    Q1 -->|4-7| CHECK2{Orgaos federais?}
+    Q1 -->|Até 3| CHECK1{Recursos especiais?}
+    Q1 -->|4-7| CHECK2{Órgãos federais?}
     Q1 -->|7+| CHECK3{Multi-institucional?}
 
-    CHECK1 -->|Nao| NIVEL1[NIVEL 1]
-    CHECK1 -->|Sim| NIVEL2[NIVEL 2]
+    CHECK1 -->|Não| NIVEL1[NÍVEL 1]
+    CHECK1 -->|Sim| NIVEL2[NÍVEL 2]
 
-    CHECK2 -->|Nao| NIVEL2
-    CHECK2 -->|Sim| NIVEL3[NIVEL 3]
+    CHECK2 -->|Não| NIVEL2
+    CHECK2 -->|Sim| NIVEL3[NÍVEL 3]
 
-    CHECK3 -->|Nao| NIVEL3
-    CHECK3 -->|Sim| Q4{Grande emergencia?}
+    CHECK3 -->|Não| NIVEL3
+    CHECK3 -->|Sim| Q4{Grande emergência?}
 
-    Q4 -->|Nao| NIVEL3
-    Q4 -->|Sim| NIVEL4[NIVEL 4]
+    Q4 -->|Não| NIVEL3
+    Q4 -->|Sim| NIVEL4[NÍVEL 4]
 
     NIVEL1 --> A1[SCI Opcional]
-    NIVEL2 --> A2[SCI Obrigatorio]
+    NIVEL2 --> A2[SCI Obrigatório]
     NIVEL3 --> A3[SCI Completo]
     NIVEL4 --> A4[Comando Unificado]
 
@@ -274,214 +274,214 @@ const diagramDecisaoPOTIF: Diagram = {
     style NIVEL2 fill:#D97706,color:#fff
     style NIVEL3 fill:#DC2626,color:#fff
     style NIVEL4 fill:#7C3AED,color:#fff`,
-  description: 'Fluxograma para classificacao do nivel de complexidade operacional'
+  description: 'Fluxograma para classificação do nível de complexidade operacional'
 };
 
 export const estruturaCbmmt: Section = {
   id: 'estrutura-cbmmt',
-  title: 'Estrutura de Gestao do CBMMT',
+  title: 'Estrutura de Gestão do CBMMT',
   slug: 'estrutura-cbmmt',
   part: 3,
-  content: `## Estrutura de Gestao do CBMMT
+  content: `## Estrutura de Gestão do CBMMT
 
-A estrutura organizacional do CBMMT para operacoes de incendio florestal distingue **instrumentos de gestao** (estrutura permanente) de **instrumentos de resposta** (estrutura temporaria).
+A estrutura organizacional do CBMMT para operações de incêndio florestal distingue **instrumentos de gestão** (estrutura permanente) de **instrumentos de resposta** (estrutura temporária).
 
-### Instrumentos de Gestao
+### Instrumentos de Gestão
 
-Estruturas permanentes responsaveis pelo planejamento, coordenacao e suporte.
+Estruturas permanentes responsáveis pelo planejamento, coordenação e suporte.
 
 #### Diretoria Operacional (DOp)
 
-| Aspecto | Descricao |
+| Aspecto | Descrição |
 |---------|-----------|
-| **Funcao** | Direcao estrategica de todas atividades operacionais |
+| **Função** | Direção estratégica de todas atividades operacionais |
 | **Autoridade** | Maior autoridade operacional, reporta ao Comando-Geral |
-| **Responsabilidades TIF** | Coordenar SSC, aprovar diarias, gerenciar SCI nivel 2-4 |
+| **Responsabilidades TIF** | Coordenar SSC, aprovar diárias, gerenciar SCI nível 2-4 |
 
-#### Batalhao de Emergencias Ambientais (BEA)
+#### Batalhão de Emergências Ambientais (BEA)
 
-| Aspecto | Descricao |
+| Aspecto | Descrição |
 |---------|-----------|
-| **Funcao** | Unidade especializada em emergencias ambientais |
-| **Sede** | Cuiaba-MT |
-| **Subordinacao** | Direto ao Comando-Geral |
+| **Função** | Unidade especializada em emergências ambientais |
+| **Sede** | Cuiabá-MT |
+| **Subordinação** | Direto ao Comando-Geral |
 | **Responsabilidades** | Assessorar CBMMT, criar doutrina, coordenar EIAOPs |
 
 #### Comandos Regionais (CRBM I a VII)
 
-| Regional | Regiao | Sede |
+| Regional | Região | Sede |
 |----------|--------|------|
-| CRBM I | Metropolitana | Cuiaba, Varzea Grande |
-| CRBM II | Sul | Rondonopolis |
+| CRBM I | Metropolitana | Cuiabá, Várzea Grande |
+| CRBM II | Sul | Rondonópolis |
 | CRBM III | Norte | Sinop |
-| CRBM IV | Araguaia | Barra do Garcas |
-| CRBM V | Oeste | Caceres |
+| CRBM IV | Araguaia | Barra do Garças |
+| CRBM V | Oeste | Cáceres |
 | CRBM VI | Noroeste | Alta Floresta |
 | CRBM VII | Sudeste | Primavera do Leste |
 
-### Salas de Situacao
+### Salas de Situação
 
-#### Sala de Situacao Central (SSC)
+#### Sala de Situação Central (SSC)
 
-- **Coordenacao:** Diretor Operacional, assessorado pelo BEA
-- **Periodo:** Junho a Novembro
-- **Localizacao:** BEA, Cuiaba-MT
-- **Funcao:** Coordenar operacoes nivel 2, 3 e 4
+- **Coordenação:** Diretor Operacional, assessorado pelo BEA
+- **Período:** Junho a Novembro
+- **Localização:** BEA, Cuiabá-MT
+- **Função:** Coordenar operações nível 2, 3 e 4
 
-#### Sala de Situacao do Pantanal (SSPAN)
+#### Sala de Situação do Pantanal (SSPAN)
 
-- **Carater:** Temporaria, durante fase resposta no Pantanal
-- **Coordenacao:** CI da Operacao Pantanal (rodizio)
-- **Subordinacao:** SSC
-- **Localizacao:** Dentro do Bioma Pantanal (instalacao movel)
+- **Caráter:** Temporária, durante fase resposta no Pantanal
+- **Coordenação:** CI da Operação Pantanal (rodízio)
+- **Subordinação:** SSC
+- **Localização:** Dentro do Bioma Pantanal (instalação móvel)
 
-#### Salas de Situacao Descentralizadas (SSD)
+#### Salas de Situação Descentralizadas (SSD)
 
 - **Quantidade:** 7 (uma por CRBM)
-- **Coordenacao:** Comandante Regional
-- **Funcao:** Gestao descentralizada de IRTs em nivel regional`,
+- **Coordenação:** Comandante Regional
+- **Função:** Gestão descentralizada de IRTs em nível regional`,
   diagrams: [diagramOrgCBMMT],
 };
 
 export const operacoesIncendio: Section = {
   id: 'operacoes-incendio',
-  title: 'Instrumentos de Resposta Temporarios',
+  title: 'Instrumentos de Resposta Temporários',
   slug: 'operacoes-incendio',
   part: 3,
-  content: `## Instrumentos de Resposta Temporarios (IRTs)
+  content: `## Instrumentos de Resposta Temporários (IRTs)
 
-Os IRTs sao estruturas criadas especificamente para a Temporada de Incendios Florestais (TIF), com prazo determinado.
+Os IRTs são estruturas criadas especificamente para a Temporada de Incêndios Florestais (TIF), com prazo determinado.
 
-### Caracteristicas Gerais
+### Características Gerais
 
 - Existem apenas durante TIF (junho a novembro)
-- Dedicacao exclusiva a incendios florestais
-- Bombeiros recebem diarias
-- Distribuidos estrategicamente pelo estado
-- Treinamento especifico em incendio florestal
+- Dedicação exclusiva a incêndios florestais
+- Bombeiros recebem diárias
+- Distribuídos estrategicamente pelo estado
+- Treinamento específico em incêndio florestal
 
-### EIAOP - Equipe de Intervencao e Apoio Operacional
+### EIAOP - Equipe de Intervenção e Apoio Operacional
 
-| Aspecto | Descricao |
+| Aspecto | Descrição |
 |---------|-----------|
-| **Composicao** | 10 bombeiros militares + viatura especializada |
+| **Composição** | 10 bombeiros militares + viatura especializada |
 | **Quantidade** | 10 EIAOPs (EIAOP 01 a 10) |
-| **Coordenacao** | BEA (diretamente) |
-| **Qualificacao** | Curso de Formacao de Brigadista Florestal (CFBF) |
-| **Emprego** | Pronta-resposta, operacoes nivel 2, 3 e 4 |
+| **Coordenação** | BEA (diretamente) |
+| **Qualificação** | Curso de Formação de Brigadista Florestal (CFBF) |
+| **Emprego** | Pronta-resposta, operações nível 2, 3 e 4 |
 
-### BDBM - Brigada de Deslocamento Base Movel
+### BDBM - Brigada de Deslocamento Base Móvel
 
-| Aspecto | Descricao |
+| Aspecto | Descrição |
 |---------|-----------|
-| **Composicao** | 5 a 10 bombeiros + viatura |
+| **Composição** | 5 a 10 bombeiros + viatura |
 | **Quantidade** | 15 BDBMs |
-| **Coordenacao** | Comandos Regionais (via SSD) |
-| **Caracteristica** | Base movel permite reposicionamento |
-| **Emprego** | Resposta inicial, operacoes nivel 1 e 2 |
+| **Coordenação** | Comandos Regionais (via SSD) |
+| **Característica** | Base móvel permite reposicionamento |
+| **Emprego** | Resposta inicial, operações nível 1 e 2 |
 
 ### BMM - Brigada Mista Municipal
 
-| Aspecto | Descricao |
+| Aspecto | Descrição |
 |---------|-----------|
-| **Composicao** | 5-10 pessoas (min. 2 BM + brigadistas locais) |
+| **Composição** | 5-10 pessoas (min. 2 BM + brigadistas locais) |
 | **Quantidade** | 13 BMMs |
-| **Coordenacao** | Comandos Regionais |
+| **Coordenação** | Comandos Regionais |
 | **Vantagem** | Combina expertise BM com conhecimento local |
-| **Emprego** | Resposta local, operacoes nivel 1 |
+| **Emprego** | Resposta local, operações nível 1 |
 
 ### BEM - Brigada Estadual Mista
 
-| Aspecto | Descricao |
+| Aspecto | Descrição |
 |---------|-----------|
-| **Composicao** | BM + servidores estaduais + voluntarios |
-| **Coordenacao** | Comandos Regionais |
-| **Emprego** | Operacoes integradas estado-municipios |
+| **Composição** | BM + servidores estaduais + voluntários |
+| **Coordenação** | Comandos Regionais |
+| **Emprego** | Operações integradas estado-municípios |
 
-### GAvBM - Grupo de Aviacao Bombeiro Militar
+### GAvBM - Grupo de Aviação Bombeiro Militar
 
-| Aspecto | Descricao |
+| Aspecto | Descrição |
 |---------|-----------|
-| **Recursos** | Helicopteros CBMMT + Defesa Civil + CIOPAer |
-| **Coordenacao** | BEA (acionamento), CI (quando SCI ativado) |
-| **Atividades** | Reconhecimento, lancamento de agua, transporte |
-| **Base** | Cuiaba-MT |
+| **Recursos** | Helicópteros CBMMT + Defesa Civil + CIOPAer |
+| **Coordenação** | BEA (acionamento), CI (quando SCI ativado) |
+| **Atividades** | Reconhecimento, lançamento de água, transporte |
+| **Base** | Cuiabá-MT |
 
-### EMec - Equipe de Mecanizacao
+### EMec - Equipe de Mecanização
 
-| Aspecto | Descricao |
+| Aspecto | Descrição |
 |---------|-----------|
-| **Recursos** | Motoniveladoras, tratores, pas-carregadeiras |
+| **Recursos** | Motoniveladoras, tratores, pás-carregadeiras |
 | **Atividades** | Abertura de aceiros, linhas de controle |
-| **Parcerias** | SINFRA, municipios |
+| **Parcerias** | SINFRA, municípios |
 
-### GCIF - Guarnicao de Combate a Incendios Florestais
+### GCIF - Guarnição de Combate a Incêndios Florestais
 
-| Aspecto | Descricao |
+| Aspecto | Descrição |
 |---------|-----------|
-| **Composicao** | 3 a 5 bombeiros + viatura leve |
-| **Origem** | Guarnicoes de servico ordinario |
-| **Emprego** | Resposta inicial, operacoes nivel 1 |`,
+| **Composição** | 3 a 5 bombeiros + viatura leve |
+| **Origem** | Guarnições de serviço ordinário |
+| **Emprego** | Resposta inicial, operações nível 1 |`,
   diagrams: [diagramTiposIRTs],
 };
 
 export const integracaoSci: Section = {
   id: 'integracao-sci',
-  title: 'Integracao SCI-CBMMT',
+  title: 'Integração SCI-CBMMT',
   slug: 'integracao-sci',
   part: 3,
-  content: `## Integracao SCI-CBMMT
+  content: `## Integração SCI-CBMMT
 
-O SCI nao substitui a estrutura existente do CBMMT, mas **complementa** as operacoes quando a complexidade exige.
+O SCI não substitui a estrutura existente do CBMMT, mas **complementa** as operações quando a complexidade exige.
 
-### Principio de Integracao
+### Princípio de Integração
 
-| Estrutura | Funcao |
+| Estrutura | Função |
 |-----------|--------|
-| **Salas de Situacao** | Coordenam despacho de recursos |
+| **Salas de Situação** | Coordenam despacho de recursos |
 | **SCI** | Gerencia recursos no campo |
-| **BEA** | Fornece suporte tecnico especializado |
-| **DOp** | Mantem comando estrategico |
+| **BEA** | Fornece suporte técnico especializado |
+| **DOp** | Mantém comando estratégico |
 
-### Quando SCI e Ativado
+### Quando SCI é Ativado
 
-O SCI e ativado quando a operacao e classificada como:
+O SCI é ativado quando a operação é classificada como:
 
-- **Nivel 2:** 4-7 IRTs empenhados (SCI obrigatorio)
-- **Nivel 3:** 7+ IRTs com orgaos federais (SCI completo)
-- **Nivel 4:** Grande emergencia (Comando Unificado)
+- **Nível 2:** 4-7 IRTs empenhados (SCI obrigatório)
+- **Nível 3:** 7+ IRTs com órgãos federais (SCI completo)
+- **Nível 4:** Grande emergência (Comando Unificado)
 
-### Relacao Salas de Situacao x SCI
+### Relação Salas de Situação x SCI
 
-**Sem SCI (Nivel 1):**
+**Sem SCI (Nível 1):**
 - SSC/SSD coordenam diretamente os IRTs
 - Despacho centralizado
-- Supervisao remota
+- Supervisão remota
 
-**Com SCI (Niveis 2-4):**
+**Com SCI (Níveis 2-4):**
 - CI assume comando no campo
-- SSC/SSD apoiam com logistica e recursos
-- Coordenacao estrategica mantida
-- Reportes periodicos ao CI
+- SSC/SSD apoiam com logística e recursos
+- Coordenação estratégica mantida
+- Reportes periódicos ao CI
 
-### Capacitacao
+### Capacitação
 
-O CBMMT esta capacitando oficiais e pracas em:
+O CBMMT está capacitando oficiais e praças em:
 
-| Curso | Publico | Objetivo |
+| Curso | Público | Objetivo |
 |-------|---------|----------|
-| SCI 100 | Todos | Introducao ao SCI |
+| SCI 100 | Todos | Introdução ao SCI |
 | SCI 200 | Supervisores | Resposta inicial |
-| SCI 300 | Comandantes | Incidentes em expansao |
+| SCI 300 | Comandantes | Incidentes em expansão |
 
 ### Comando Unificado
 
-Aplicado quando multiplas instituicoes tem jurisdicao:
+Aplicado quando múltiplas instituições têm jurisdição:
 
-**Exemplo:** Incendio em UC federal no Pantanal
+**Exemplo:** Incêndio em UC federal no Pantanal
 - CI CBMMT + CI ICMBio
 - Objetivos definidos conjuntamente
-- Estrutura unica de operacoes`,
+- Estrutura única de operações`,
   diagrams: [diagramIntegracaoSCI],
 };
 
@@ -490,153 +490,153 @@ export const potif2025: Section = {
   title: 'POTIF 2025',
   slug: 'potif-2025',
   part: 3,
-  content: `## POTIF 2025 - Plano de Operacoes para Temporada de Incendios Florestais
+  content: `## POTIF 2025 - Plano de Operações para Temporada de Incêndios Florestais
 
-O POTIF 2025 e o documento que estabelece as diretrizes operacionais do CBMMT para a Temporada de Incendios Florestais.
+O POTIF 2025 é o documento que estabelece as diretrizes operacionais do CBMMT para a Temporada de Incêndios Florestais.
 
 ### Objetivo
 
-Definir estrategias, recursos e procedimentos para:
-- Prevencao de incendios florestais
-- Preparacao de equipes e equipamentos
-- Resposta efetiva a ocorrencias
-- Integracao entre instituicoes
+Definir estratégias, recursos e procedimentos para:
+- Prevenção de incêndios florestais
+- Preparação de equipes e equipamentos
+- Resposta efetiva a ocorrências
+- Integração entre instituições
 
-### Periodo de Vigencia
+### Período de Vigência
 
-| Fase | Periodo | Atividades |
+| Fase | Período | Atividades |
 |------|---------|------------|
-| **Preparacao** | Marco a Maio | Treinamentos, logistica |
-| **Alerta** | Junho | Ativacao de IRTs |
-| **Critica** | Julho a Outubro | Operacoes intensivas |
-| **Desmobilizacao** | Novembro | Encerramento gradual |
+| **Preparação** | Março a Maio | Treinamentos, logística |
+| **Alerta** | Junho | Ativação de IRTs |
+| **Crítica** | Julho a Outubro | Operações intensivas |
+| **Desmobilização** | Novembro | Encerramento gradual |
 
 ### Estrutura do POTIF
 
-1. **Prevencao:** Campanhas, monitoramento, fiscalizacao
-2. **Preparacao:** Treinamentos, equipamentos, logistica
-3. **Resposta:** Niveis de complexidade, SCI, recursos
-4. **Responsabilizacao:** Investigacao, pericias
+1. **Prevenção:** Campanhas, monitoramento, fiscalização
+2. **Preparação:** Treinamentos, equipamentos, logística
+3. **Resposta:** Níveis de complexidade, SCI, recursos
+4. **Responsabilização:** Investigação, perícias
 
-### Niveis de Complexidade
+### Níveis de Complexidade
 
-O POTIF define 4 niveis baseados em:
+O POTIF define 4 níveis baseados em:
 
 - Quantidade de IRTs empenhados
 - Tipos de recursos especiais
-- Instituicoes envolvidas
-- Complexidade geografica
+- Instituições envolvidas
+- Complexidade geográfica
 - Interesse institucional`,
   diagrams: [diagramFasesPOTIF],
 };
 
 export const cenariosNiveis: Section = {
   id: 'cenarios-niveis',
-  title: 'Cenarios Operacionais - Niveis 1 a 4',
+  title: 'Cenários Operacionais - Níveis 1 a 4',
   slug: 'cenarios-niveis',
   part: 3,
-  content: `## Niveis de Complexidade Operacional
+  content: `## Níveis de Complexidade Operacional
 
-O POTIF 2025 estabelece 4 niveis de complexidade para classificar operacoes de incendio florestal.
+O POTIF 2025 estabelece 4 níveis de complexidade para classificar operações de incêndio florestal.
 
-### Criterios de Classificacao
+### Critérios de Classificação
 
-Uma operacao e classificada quando atende **pelo menos um** criterio do nivel.
+Uma operação é classificada quando atende **pelo menos um** critério do nível.
 
-| Criterio | Nivel 1 | Nivel 2 | Nivel 3 | Nivel 4 |
+| Critério | Nível 1 | Nível 2 | Nível 3 | Nível 4 |
 |----------|---------|---------|---------|---------|
-| **IRTs** | Ate 3 | 4-7 | 7+ | Maximos |
-| **Recursos** | Basicos | Especiais | Complexos | Todos |
-| **Instituicoes** | Privadas/Municipais | Estaduais | Federais | Multi-esferas |
-| **Geografica** | Facil acesso | Deslocamento >4h | Multiplas frentes | Extrema |
-| **Interesse** | Moderado | Elevado | Muito elevado | Maximo |
+| **IRTs** | Até 3 | 4-7 | 7+ | Máximos |
+| **Recursos** | Básicos | Especiais | Complexos | Todos |
+| **Instituições** | Privadas/Municipais | Estaduais | Federais | Multi-esferas |
+| **Geográfica** | Fácil acesso | Deslocamento >4h | Múltiplas frentes | Extrema |
+| **Interesse** | Moderado | Elevado | Muito elevado | Máximo |
 
 ---
 
-### NIVEL 1 - Operacao Simples
+### NÍVEL 1 - Operação Simples
 
-**Caracteristicas:**
-- Ate 3 IRTs empenhados
-- Area de facil acesso
-- Deslocamento ate 4h entre pontos
+**Características:**
+- Até 3 IRTs empenhados
+- Área de fácil acesso
+- Deslocamento até 4h entre pontos
 - Interesse institucional moderado
 
 **Estrutura de Comando:**
 - Primeiro BM no local assume como CI
 - SCI formal **opcional** (recomendado para treinamento)
-- Coordenacao via SSD
+- Coordenação via SSD
 
 **Exemplos:**
-- Incendio em pasto de propriedade privada
-- Pequeno incendio em area urbana-rural
-- Incendio inicial contido rapidamente
+- Incêndio em pasto de propriedade privada
+- Pequeno incêndio em área urbana-rural
+- Incêndio inicial contido rapidamente
 
 ---
 
-### NIVEL 2 - Operacao Intermediaria
+### NÍVEL 2 - Operação Intermediária
 
-**Caracteristicas:**
+**Características:**
 - 4 a 7 IRTs empenhados
-- Recursos especiais necessarios (aviacao, mecanizacao)
+- Recursos especiais necessários (aviação, mecanização)
 - Deslocamentos superiores a 4h
 - Interesse institucional elevado
 
 **Estrutura de Comando:**
 - CI designado formalmente (oficial)
-- SCI **obrigatorio**
+- SCI **obrigatório**
 - PAI escrito
 - Staff de Comando ativado
 
 **Exemplos:**
-- Incendio em UC estadual de medio porte
-- Operacao com duracao superior a 24h
-- Necessidade de coordenacao entre CRBMs
+- Incêndio em UC estadual de médio porte
+- Operação com duração superior a 24h
+- Necessidade de coordenação entre CRBMs
 
 ---
 
-### NIVEL 3 - Operacao Complexa
+### NÍVEL 3 - Operação Complexa
 
-**Caracteristicas:**
+**Características:**
 - Mais de 7 IRTs empenhados
-- Integracao com orgaos federais (ICMBio, Prevfogo)
-- Multiplas frentes de combate
+- Integração com órgãos federais (ICMBio, Prevfogo)
+- Múltiplas frentes de combate
 - Interesse institucional muito elevado
 
 **Estrutura de Comando:**
 - CI experiente (oficial superior)
-- SCI **completo** (todas secoes)
+- SCI **completo** (todas seções)
 - Possibilidade de Comando Unificado
-- Bases avancadas estabelecidas
+- Bases avançadas estabelecidas
 
 **Exemplos:**
-- Grande incendio no Pantanal
-- Incendio em UC federal
-- Operacao com duracao superior a 1 semana
+- Grande incêndio no Pantanal
+- Incêndio em UC federal
+- Operação com duração superior a 1 semana
 
 ---
 
-### NIVEL 4 - Grande Emergencia
+### NÍVEL 4 - Grande Emergência
 
-**Caracteristicas:**
-- Maxima quantidade de recursos
+**Características:**
+- Máxima quantidade de recursos
 - Todas as esferas governamentais
-- UCs prioritarias afetadas
-- Repercussao nacional/internacional
+- UCs prioritárias afetadas
+- Repercussão nacional/internacional
 
 **Estrutura de Comando:**
-- **Comando Unificado** obrigatorio
-- Multiplos CIs (um por instituicao)
-- Todas secoes do SCI ativadas
-- Centro de Operacoes Integrado
+- **Comando Unificado** obrigatório
+- Múltiplos CIs (um por instituição)
+- Todas seções do SCI ativadas
+- Centro de Operações Integrado
 
 **Exemplos:**
 - Crise do Pantanal 2020
-- Incendios simultaneos em multiplas UCs
-- Declaracao de emergencia estadual/federal`,
+- Incêndios simultâneos em múltiplas UCs
+- Declaração de emergência estadual/federal`,
   diagrams: [diagramNiveis, diagramDecisaoPOTIF],
 };
 
-// Exportar todas as secoes da Parte III
+// Exportar todas as seções da Parte III
 export const parteIIISections: Section[] = [
   estruturaCbmmt,
   operacoesIncendio,
@@ -645,7 +645,7 @@ export const parteIIISections: Section[] = [
   cenariosNiveis,
 ];
 
-// Mapa de slug para secao
+// Mapa de slug para seção
 export const parteIIISectionMap: Record<string, Section> = {
   'estrutura-cbmmt': estruturaCbmmt,
   'operacoes-incendio': operacoesIncendio,

@@ -3,7 +3,7 @@ import type { Section, Diagram } from '@/data/types';
 // Diagrama: O que é o SCI
 const diagramOQueESci: Diagram = {
   id: 'sci-overview',
-  title: 'Visao Geral do SCI',
+  title: 'Visão Geral do SCI',
   type: 'flowchart',
   code: `flowchart TB
     subgraph SCI["SISTEMA DE COMANDO DE INCIDENTES"]
@@ -51,13 +51,13 @@ const diagramOQueESci: Diagram = {
     class M1,M2,M3 modStyle
     class I1,I2,I3 intStyle
     class F1,F2,F3 flexStyle`,
-  description: 'Diagrama mostrando as principais caracteristicas do Sistema de Comando de Incidentes'
+  description: 'Diagrama mostrando as principais características do Sistema de Comando de Incidentes'
 };
 
 // Diagrama: Linha do tempo do SCI
 const diagramHistorico: Diagram = {
   id: 'sci-timeline',
-  title: 'Evolucao Historica do SCI',
+  title: 'Evolução Histórica do SCI',
   type: 'timeline',
   code: `timeline
     title Historia do Sistema de Comando de Incidentes
@@ -73,13 +73,13 @@ const diagramHistorico: Diagram = {
       2009 : PRONAFOGO e CIMAN
       2024 : Manuais SCI 100/200
       2025 : Manual SCI 300`,
-  description: 'Linha do tempo da evolucao do SCI desde sua criacao ate os dias atuais'
+  description: 'Linha do tempo da evolução do SCI desde sua criação até os dias atuais'
 };
 
 // Diagrama: Quando usar SCI
 const diagramQuandoUsarSci: Diagram = {
   id: 'quando-usar-sci',
-  title: 'Criterios para Ativacao do SCI',
+  title: 'Critérios para Ativação do SCI',
   type: 'flowchart',
   code: `flowchart TD
     A[Incidente Iniciado] --> B{Avaliacao de Criterios}
@@ -106,13 +106,13 @@ const diagramQuandoUsarSci: Diagram = {
     style SIM fill:#059669,color:#fff
     style NAO fill:#6B7280,color:#fff
     style H fill:#DC2626,color:#fff`,
-  description: 'Fluxograma de decisao para determinar quando ativar o SCI'
+  description: 'Fluxograma de decisão para determinar quando ativar o SCI'
 };
 
-// Diagrama: 14 Principios do SCI
+// Diagrama: 14 Princípios do SCI
 const diagramPrincipios: Diagram = {
   id: 'principios-sci',
-  title: '14 Principios do SCI',
+  title: '14 Princípios do SCI',
   type: 'flowchart',
   code: `flowchart TB
     subgraph TITULO["14 PRINCIPIOS DO SCI"]
@@ -159,13 +159,13 @@ const diagramPrincipios: Diagram = {
     class P1,P2,P3 planStyle
     class R1,R2,R3,R4 recStyle
     class I1,I2 intStyle`,
-  description: 'Os 14 principios fundamentais do Sistema de Comando de Incidentes organizados por categoria'
+  description: 'Os 14 princípios fundamentais do Sistema de Comando de Incidentes organizados por categoria'
 };
 
 // Diagrama: Estrutura modular
 const diagramEstruturaModular: Diagram = {
   id: 'estrutura-modular',
-  title: 'Expansao Modular do SCI',
+  title: 'Expansão Modular do SCI',
   type: 'flowchart',
   code: `flowchart TB
     subgraph PEQUENO["Incidente Pequeno"]
@@ -200,99 +200,99 @@ const diagramEstruturaModular: Diagram = {
     style CI1 fill:#DC2626,color:#fff
     style CI2 fill:#DC2626,color:#fff
     style CI3 fill:#DC2626,color:#fff`,
-  description: 'Demonstracao de como a estrutura do SCI se expande conforme a complexidade do incidente'
+  description: 'Demonstração de como a estrutura do SCI se expande conforme a complexidade do incidente'
 };
 
 export const oQueESci: Section = {
   id: 'o-que-e-sci',
-  title: 'O Que e o Sistema de Comando de Incidentes',
+  title: 'O Que é o Sistema de Comando de Incidentes',
   slug: 'o-que-e-sci',
   part: 1,
-  content: `## O que e o Sistema de Comando de Incidentes
+  content: `## O que é o Sistema de Comando de Incidentes
 
-O Sistema de Comando de Incidentes (SCI) e uma **ferramenta de gerenciamento padronizada** para todos os tipos de incidentes, permitindo adotar uma estrutura organizacional integrada que:
+O Sistema de Comando de Incidentes (SCI) é uma **ferramenta de gerenciamento padronizada** para todos os tipos de incidentes, permitindo adotar uma estrutura organizacional integrada que:
 
-### Caracteristicas Principais
+### Características Principais
 
 - **Padroniza** processos de gerenciamento
 - **Funciona** independente da natureza ou magnitude do incidente
-- **Aplica-se** a incidentes unicos ou multiplos simultaneos
-- **Integra** multiplas jurisdicoes e instituicoes
-- **Adapta-se** dinamicamente a complexidade
+- **Aplica-se** a incidentes únicos ou múltiplos simultâneos
+- **Integra** múltiplas jurisdições e instituições
+- **Adapta-se** dinamicamente à complexidade
 
-### Definicao Formal
+### Definição Formal
 
-> "Sistema de gerenciamento de incidentes padronizado que permite ao usuario adotar uma estrutura organizacional integrada para suprir as complexidades e demandas de incidentes unicos ou multiplos, independente das barreiras jurisdicionais."
+> "Sistema de gerenciamento de incidentes padronizado que permite ao usuário adotar uma estrutura organizacional integrada para suprir as complexidades e demandas de incidentes únicos ou múltiplos, independente das barreiras jurisdicionais."
 
-### O que o SCI NAO e
+### O que o SCI NÃO é
 
-- Sistema hierarquico rigido militar
-- Processo burocratico que atrasa resposta
-- Substituicao de protocolos existentes
-- Aplicavel apenas a grandes incidentes
-- Exclusivo para incendios florestais
+- Sistema hierárquico rígido militar
+- Processo burocrático que atrasa resposta
+- Substituição de protocolos existentes
+- Aplicável apenas a grandes incidentes
+- Exclusivo para incêndios florestais
 
-### O que o SCI E
+### O que o SCI É
 
-- Ferramenta flexivel e modular
-- Estrutura que acelera coordenacao
+- Ferramenta flexível e modular
+- Estrutura que acelera coordenação
 - Complemento aos protocolos existentes
-- Escalavel desde pequenos ate grandes incidentes
-- Aplicavel a qualquer tipo de emergencia
+- Escalonável desde pequenos até grandes incidentes
+- Aplicável a qualquer tipo de emergência
 
-### Beneficios Imediatos
+### Benefícios Imediatos
 
-1. **Comando unico e claro** em incidentes complexos
-2. **Estrutura modular** que se adapta a magnitude do incidente
-3. **Processos padronizados** de planejamento e execucao
-4. **Comunicacoes integradas** entre todas as partes
+1. **Comando único e claro** em incidentes complexos
+2. **Estrutura modular** que se adapta à magnitude do incidente
+3. **Processos padronizados** de planejamento e execução
+4. **Comunicações integradas** entre todas as partes
 5. **Rastreamento efetivo** de recursos humanos e materiais
-6. **Documentacao completa** de acoes e decisoes
-7. **Seguranca** como prioridade maxima
+6. **Documentação completa** de ações e decisões
+7. **Segurança** como prioridade máxima
 
 ---
 
 ### O SCI no CBMMT
 
-O Corpo de Bombeiros Militar do Mato Grosso (CBMMT) adota o SCI como ferramenta principal de gestao de incidentes, com foco especial na **resposta a incendios florestais**, dado o contexto ambiental do estado.
+O Corpo de Bombeiros Militar do Mato Grosso (CBMMT) adota o SCI como ferramenta principal de gestão de incidentes, com foco especial na **resposta a incêndios florestais**, dado o contexto ambiental do estado.
 
-**Por que o SCI e essencial para o CBMMT:**
+**Por que o SCI é essencial para o CBMMT:**
 
-- O Mato Grosso abrange tres biomas criticos: **Amazonia, Cerrado e Pantanal**
-- As Temporadas de Incendio Florestal (TIF) exigem coordenacao de **multiplas agencias** (ICMBio, IBAMA, SEMA, Defesa Civil, Forcas Armadas)
+- O Mato Grosso abrange três biomas críticos: **Amazônia, Cerrado e Pantanal**
+- As Temporadas de Incêndio Florestal (TIF) exigem coordenação de **múltiplas agências** (ICMBio, IBAMA, SEMA, Defesa Civil, Forças Armadas)
 - Incidentes de grande porte demandam **Comando Unificado** interinstitucional
-- A dispersao geografica das unidades exige **padronizacao de procedimentos**
+- A dispersão geográfica das unidades exige **padronização de procedimentos**
 
-**Aplicacao especifica em incendio florestal:**
+**Aplicação específica em incêndio florestal:**
 
-O SCI e aplicado pelo CBMMT de forma integrada ao **Plano Operativo de Temporada de Incendio Florestal (POTIF)**, que estabelece:
+O SCI é aplicado pelo CBMMT de forma integrada ao **Plano Operativo de Temporada de Incêndio Florestal (POTIF)**, que estabelece:
 
-- Niveis de resposta escalonados (1 a 4) com ativacao progressiva de recursos
-- Estrutura de Salas de Situacao (SSC/SSD) para monitoramento e coordenacao
-- Integracao com a plataforma **ARGOS** para gestao operacional digital
-- Mobilizacao de Instalacoes de Resposta Tatica (IRTs) em areas estrategicas
-- Protocolos de deteccao, classificacao e resposta rapida a focos de calor
+- Níveis de resposta escalonados (1 a 4) com ativação progressiva de recursos
+- Estrutura de Salas de Situação (SSC/SSD) para monitoramento e coordenação
+- Integração com a plataforma **ARGOS** para gestão operacional digital
+- Mobilização de Instalações de Resposta Tática (IRTs) em áreas estratégicas
+- Protocolos de detecção, classificação e resposta rápida a focos de calor
 
-> **NOTA:** Embora o foco principal no CBMMT seja incendio florestal, o SCI e aplicavel a qualquer tipo de incidente atendido pela corporacao, incluindo operacoes de busca e salvamento, desastres naturais e apoio a defesa civil.`,
+> **NOTA:** Embora o foco principal no CBMMT seja incêndio florestal, o SCI é aplicável a qualquer tipo de incidente atendido pela corporação, incluindo operações de busca e salvamento, desastres naturais e apoio à defesa civil.`,
   diagrams: [diagramOQueESci],
 };
 
 export const historico: Section = {
   id: 'historico',
-  title: 'Historico e Evolucao do SCI',
+  title: 'Histórico e Evolução do SCI',
   slug: 'historico',
   part: 1,
-  content: `## Origem e Historia do SCI
+  content: `## Origem e História do SCI
 
-### Decada de 1970 - Nascimento na California
+### Década de 1970 - Nascimento na Califórnia
 
-Em 1970, uma serie de **incendios florestais devastadores** na California (EUA) resultou em:
+Em 1970, uma série de **incêndios florestais devastadores** na Califórnia (EUA) resultou em:
 - 16 mortes
-- Destruicao de centenas de residencias
+- Destruição de centenas de residências
 
-A analise posterior identificou problemas graves:
-- Falta de coordenacao entre agencias
-- Comunicacoes incompativeis
+A análise posterior identificou problemas graves:
+- Falta de coordenação entre agências
+- Comunicações incompatíveis
 - Estrutura organizacional confusa
 - Planejamento inadequado
 - Uso ineficiente de recursos
@@ -301,43 +301,43 @@ A analise posterior identificou problemas graves:
 
 O Congresso Americano criou o programa **FIRESCOPE** (Firefighting Resources of California Organized for Potential Emergencies) para desenvolver um sistema que resolvesse estes problemas.
 
-**Resultado:** Nasceu o Incident Command System (ICS), testado e refinado em incendios reais durante a decada de 1970.
+**Resultado:** Nasceu o Incident Command System (ICS), testado e refinado em incêndios reais durante a década de 1970.
 
-### Expansao Nacional (1980-2000)
+### Expansão Nacional (1980-2000)
 
-- Adotado pelo Servico Florestal dos EUA (USFS)
-- Expandido para outros tipos de incidentes (furacoes, terremotos, desastres)
-- Integrado a resposta de emergencia nacional
+- Adotado pelo Serviço Florestal dos EUA (USFS)
+- Expandido para outros tipos de incidentes (furacões, terremotos, desastres)
+- Integrado à resposta de emergência nacional
 
-### Pos 11 de Setembro (2001-2004)
+### Pós 11 de Setembro (2001-2004)
 
-Apos os ataques as Torres Gemeas em Nova York, o governo americano reconheceu a necessidade de padronizacao nacional:
+Após os ataques às Torres Gêmeas em Nova York, o governo americano reconheceu a necessidade de padronização nacional:
 
 | Ano | Marco |
 |-----|-------|
-| 2003 | Criacao do Department of Homeland Security (DHS) |
-| 2004 | Criacao do National Incident Management System (NIMS) |
-| 2004 | SCI/ICS incorporado ao NIMS como estrutura padrao |
+| 2003 | Criação do Department of Homeland Security (DHS) |
+| 2004 | Criação do National Incident Management System (NIMS) |
+| 2004 | SCI/ICS incorporado ao NIMS como estrutura padrão |
 
-### Aplicacao no Brasil
+### Aplicação no Brasil
 
 **Primeiros Passos (1990-2000):**
-- 1990: Acordo de Cooperacao Tecnica USFS-IBAMA
+- 1990: Acordo de Cooperação Técnica USFS-IBAMA
 - 1991: Primeiros treinamentos no Brasil
 
-**Implementacao Gradual (2000-2010):**
+**Implementação Gradual (2000-2010):**
 
-| Instituicao | Nomenclatura |
+| Instituição | Nomenclatura |
 |-------------|--------------|
 | CBMDF | SCI (Sistema de Comando de Incidentes) |
-| Defesa Civil | SCO (Sistema de Comando em Operacoes) |
-| CBMSP | SICOE (Sistema de Comando em Operacoes de Emergencia) |
+| Defesa Civil | SCO (Sistema de Comando em Operações) |
+| CBMSP | SICOE (Sistema de Comando em Operações de Emergência) |
 | Setor Privado | ICS ou IMS |
 
-**Padronizacao Nacional (2020-Presente):**
-- 2024: Manual SCI 100 - Introducao ao Sistema de Comando de Incidentes
-- 2024: Manual SCI 200 - Curso Basico para Resposta Inicial
-- 2025: Manual SCI 300 - Curso Intermediario para Incidentes em Expansao`,
+**Padronização Nacional (2020-Presente):**
+- 2024: Manual SCI 100 - Introdução ao Sistema de Comando de Incidentes
+- 2024: Manual SCI 200 - Curso Básico para Resposta Inicial
+- 2025: Manual SCI 300 - Curso Intermediário para Incidentes em Expansão`,
   diagrams: [diagramHistorico],
 };
 
@@ -350,46 +350,46 @@ export const conceitos: Section = {
 
 ### Terminologia Comum
 
-O SCI utiliza **termos padronizados** para funcoes organizacionais, instalacoes, recursos e procedimentos.
+O SCI utiliza **termos padronizados** para funções organizacionais, instalações, recursos e procedimentos.
 
-| Termo Correto | Nao Usar |
+| Termo Correto | Não Usar |
 |---------------|----------|
 | Comandante do Incidente | Coordenador, Chefe |
 | Posto de Comando | Base, Quartel-general |
-| Secao de Operacoes | Equipe tatica |
-| Periodo Operacional | Turno, Plantao |
+| Seção de Operações | Equipe tática |
+| Período Operacional | Turno, Plantão |
 
-**Beneficios:**
-- Elimina confusoes de comunicacao
-- Facilita integracao entre instituicoes
-- Acelera transferencia de comando
-- Permite documentacao clara
+**Benefícios:**
+- Elimina confusões de comunicação
+- Facilita integração entre instituições
+- Acelera transferência de comando
+- Permite documentação clara
 
-### Periodo Operacional
+### Período Operacional
 
-O **periodo operacional** e o intervalo de tempo planejado para execucao do Plano de Acao do Incidente (PAI).
+O **período operacional** é o intervalo de tempo planejado para execução do Plano de Ação do Incidente (PAI).
 
-- Duracao tipica: **12 horas**
+- Duração típica: **12 horas**
 - Pode variar conforme necessidade operacional
-- Define ciclo de planejamento e execucao
+- Define ciclo de planejamento e execução
 
-### Instalacoes Padronizadas
+### Instalações Padronizadas
 
-| Instalacao | Funcao |
+| Instalação | Função |
 |------------|--------|
-| **Posto de Comando (PC)** | Localizacao do CI e staff, centro de decisoes |
-| **Base** | Recursos entre atribuicoes, alimentacao, suprimentos |
-| **Acampamento** | Repouso prolongado, dormitorio |
-| **Area de Espera** | Recursos disponiveis aguardando designacao |
-| **Helibase/Heliponto** | Apoio a operacoes aereas |
+| **Posto de Comando (PC)** | Localização do CI e staff, centro de decisões |
+| **Base** | Recursos entre atribuições, alimentação, suprimentos |
+| **Acampamento** | Repouso prolongado, dormitório |
+| **Área de Espera** | Recursos disponíveis aguardando designação |
+| **Helibase/Heliponto** | Apoio a operações aéreas |
 
 ### Status de Recursos
 
 Todo recurso no incidente possui um **status** definido:
 
-1. **Disponivel** - Pronto para atribuicao imediata
-2. **Designado** - Em atividade especifica
-3. **Fora de Servico** - Indisponivel (manutencao, descanso)
+1. **Disponível** - Pronto para atribuição imediata
+2. **Designado** - Em atividade específica
+3. **Fora de Serviço** - Indisponível (manutenção, descanso)
 
 ### Check-in e Check-out
 
@@ -398,62 +398,62 @@ Todo recurso no incidente possui um **status** definido:
 - Registra capacidades
 - Atribui status inicial
 
-**Check-out:** Processo formal de liberacao do incidente
+**Check-out:** Processo formal de liberação do incidente
 - Registra horas trabalhadas
 - Devolve equipamentos
-- Finaliza participacao`,
+- Finaliza participação`,
   diagrams: [diagramQuandoUsarSci],
 };
 
 export const principios: Section = {
   id: 'principios',
-  title: 'Os 14 Principios do SCI',
+  title: 'Os 14 Princípios do SCI',
   slug: 'principios',
   part: 1,
-  content: `## Os 14 Principios Fundamentais do SCI
+  content: `## Os 14 Princípios Fundamentais do SCI
 
-O SCI fundamenta-se em **14 caracteristicas de gerenciamento** estabelecidas pelo NIMS (National Incident Management System). Estes principios garantem coordenacao efetiva independente da natureza ou magnitude do incidente.
+O SCI fundamenta-se em **14 características de gerenciamento** estabelecidas pelo NIMS (National Incident Management System). Estes princípios garantem coordenação efetiva independente da natureza ou magnitude do incidente.
 
 ### 1. Terminologia Comum
-Uso de termos padronizados para funcoes, instalacoes, recursos e procedimentos.
+Uso de termos padronizados para funções, instalações, recursos e procedimentos.
 
-### 2. Organizacao Modular
+### 2. Organização Modular
 Estrutura que se expande ou contrai conforme a necessidade do incidente.
 
 ### 3. Gerenciamento por Objetivos
-Toda acao e orientada por objetivos claros, especificos e mensuraveis (SMART).
+Toda ação é orientada por objetivos claros, específicos e mensuráveis (SMART).
 
-### 4. Plano de Acao do Incidente (PAI)
-Documento formal que consolida objetivos, estrategias, taticas, organizacao e recursos.
+### 4. Plano de Ação do Incidente (PAI)
+Documento formal que consolida objetivos, estratégias, táticas, organização e recursos.
 
 ### 5. Amplitude de Controle
-Numero adequado de subordinados por supervisor (3-7, ideal 5).
+Número adequado de subordinados por supervisor (3-7, ideal 5).
 
-### 6. Instalacoes Padronizadas
-Locais pre-definidos com funcoes especificas (PC, Base, Acampamento, Area de Espera).
+### 6. Instalações Padronizadas
+Locais pré-definidos com funções específicas (PC, Base, Acampamento, Área de Espera).
 
 ### 7. Gerenciamento Coordenado de Recursos
-Sistema unico de rastreamento, alocacao e utilizacao de todos os recursos.
+Sistema único de rastreamento, alocação e utilização de todos os recursos.
 
-### 8. Comunicacoes Integradas
-Plano de comunicacao que integra todos os participantes com protocolos interoperaveis.
+### 8. Comunicações Integradas
+Plano de comunicação que integra todos os participantes com protocolos interoperáveis.
 
-### 9. Estabelecimento e Transferencia de Comando
+### 9. Estabelecimento e Transferência de Comando
 Processo formal de assumir, manter e transferir comando do incidente.
 
 ### 10. Comando Unificado
-Multiplas instituicoes com jurisdicao compartilham comando do incidente.
+Múltiplas instituições com jurisdição compartilham comando do incidente.
 
 ### 11. Cadeia de Comando
-Linha ordenada de autoridade e supervisao do topo ao campo.
+Linha ordenada de autoridade e supervisão do topo ao campo.
 
 ### 12. Unidade de Comando
 Cada pessoa reporta-se a apenas um supervisor direto.
 
 ### 13. Controle Efetivo de Recursos
-Recursos posicionados, movidos e liberados de forma estrategica.
+Recursos posicionados, movidos e liberados de forma estratégica.
 
-### 14. Mobilizacao e Desmobilizacao
+### 14. Mobilização e Desmobilização
 Processos ordenados de trazer e liberar recursos do incidente.
 
 ---
@@ -464,44 +464,44 @@ Todo objetivo no SCI deve ser:
 
 | Letra | Significado | Exemplo |
 |-------|-------------|---------|
-| **S** | Especifico | "Conter flanco norte" |
-| **M** | Mensuravel | "Linha de 2km construida" |
-| **A** | Atingivel | Recursos disponiveis |
+| **S** | Específico | "Conter flanco norte" |
+| **M** | Mensurável | "Linha de 2km construída" |
+| **A** | Atingível | Recursos disponíveis |
 | **R** | Relevante | Prioridade operacional |
-| **T** | Temporal | "Ate as 18:00" |
+| **T** | Temporal | "Até as 18:00" |
 
 **Exemplo de objetivo RUIM:**
 > "Combater o fogo"
 
 **Exemplo de objetivo BOM:**
-> "Conter avanco do fogo no flanco norte ate as 18:00 usando linha de controle na estrada MT-100"`,
+> "Conter avanço do fogo no flanco norte até as 18:00 usando linha de controle na estrada MT-100"`,
   diagrams: [diagramPrincipios],
 };
 
 export const caracteristicas: Section = {
   id: 'caracteristicas',
-  title: 'Caracteristicas do SCI',
+  title: 'Características do SCI',
   slug: 'caracteristicas',
   part: 1,
-  content: `## Caracteristicas Operacionais do SCI
+  content: `## Características Operacionais do SCI
 
-### Organizacao Modular
+### Organização Modular
 
-O SCI permite **expansao gradual** conforme a complexidade do incidente aumenta.
+O SCI permite **expansão gradual** conforme a complexidade do incidente aumenta.
 
-**Principio:** "Ativa apenas o necessario, quando necessario"
+**Princípio:** "Ativa apenas o necessário, quando necessário"
 
 #### Incidente Pequeno
 \`\`\`
-CI (sozinho, acumula todas funcoes)
+CI (sozinho, acumula todas funções)
 \`\`\`
 
-#### Incidente Medio
+#### Incidente Médio
 \`\`\`
 CI
 ├── OSeg
-├── Secao de Operacoes
-└── Secao de Logistica
+├── Seção de Operações
+└── Seção de Logística
 \`\`\`
 
 #### Incidente Grande
@@ -510,13 +510,13 @@ CI
 ├── OSeg
 ├── OIP
 ├── OLig
-├── Secao de Operacoes
-│   ├── Divisao Norte
-│   ├── Divisao Sul
-│   └── Grupo de Maquinas
-├── Secao de Planejamento
-├── Secao de Logistica
-└── Secao de Administracao/Financas
+├── Seção de Operações
+│   ├── Divisão Norte
+│   ├── Divisão Sul
+│   └── Grupo de Máquinas
+├── Seção de Planejamento
+├── Seção de Logística
+└── Seção de Administração/Finanças
 \`\`\`
 
 ### Amplitude de Controle
@@ -524,7 +524,7 @@ CI
 **Regra:** 3 a 7 subordinados por supervisor (ideal: 5)
 
 **Quando exceder 7 subordinados:**
-- Criar nivel intermediario (Ramo, Divisao, Grupo)
+- Criar nível intermediário (Ramo, Divisão, Grupo)
 - Delegar autoridade
 - Redistribuir recursos
 
@@ -533,44 +533,44 @@ CI
 Exemplo de cadeia de comando completa:
 
 \`\`\`
-CI → CSOp → Supervisor Divisao → Lider Equipe → Combatente
+CI → CSOp → Supervisor Divisão → Líder Equipe → Combatente
 \`\`\`
 
-**Beneficios:**
+**Benefícios:**
 - Autoridade clara
-- Fluxo de informacao organizado
+- Fluxo de informação organizado
 - Responsabilidades definidas
 
 ### Unidade de Comando
 
-**Principio:** "Um subordinado, um supervisor"
+**Princípio:** "Um subordinado, um supervisor"
 
 **Evita:**
 - Conflito de ordens
-- Confusao de responsabilidades
+- Confusão de responsabilidades
 - Sobrecarga de subordinados
 
-### Comunicacoes Integradas
+### Comunicações Integradas
 
-**Niveis de Comunicacao:**
+**Níveis de Comunicação:**
 
-| Nivel | Funcao |
+| Nível | Função |
 |-------|--------|
-| **Tatico** | Entre combatentes em campo |
-| **Comando** | Entre CI e chefes de secao |
-| **Coordenacao** | Com Salas de Situacao |
-| **Aereo** | Com aeronaves |
+| **Tático** | Entre combatentes em campo |
+| **Comando** | Entre CI e chefes de seção |
+| **Coordenação** | Com Salas de Situação |
+| **Aéreo** | Com aeronaves |
 
 ### Comando Unificado
 
-Aplicado quando multiplas instituicoes tem **jurisdicao compartilhada**.
+Aplicado quando múltiplas instituições têm **jurisdição compartilhada**.
 
-**Exemplo:** Incendio em UC federal que atinge terras estaduais
+**Exemplo:** Incêndio em UC federal que atinge terras estaduais
 - CI ICMBio + CI CBMMT
 - Objetivos definidos conjuntamente
-- Estrutura unica de operacoes, planejamento, logistica
+- Estrutura única de operações, planejamento, logística
 
-**Beneficios:**
+**Benefícios:**
 - Respeita autoridades legais
 - Evita conflitos de comando
 - Otimiza recursos
@@ -578,7 +578,7 @@ Aplicado quando multiplas instituicoes tem **jurisdicao compartilhada**.
   diagrams: [diagramEstruturaModular],
 };
 
-// Exportar todas as secoes da Parte I
+// Exportar todas as seções da Parte I
 export const parteISections: Section[] = [
   oQueESci,
   historico,
@@ -587,7 +587,7 @@ export const parteISections: Section[] = [
   caracteristicas,
 ];
 
-// Mapa de slug para secao
+// Mapa de slug para seção
 export const parteISectionMap: Record<string, Section> = {
   'o-que-e-sci': oQueESci,
   'historico': historico,

@@ -1,7 +1,7 @@
 import type { Section, Diagram } from '@/data/types';
 
 // ============================================================
-// PARTE VII - FORMULARIOS SCI: REFERENCIA COMPLETA CBMMT
+// PARTE VII - FORMULÁRIOS SCI: REFERÊNCIA COMPLETA CBMMT
 // ============================================================
 
 // ------------------------------------------------------------
@@ -10,27 +10,27 @@ import type { Section, Diagram } from '@/data/types';
 
 const diagramFormulariosPorCategoria: Diagram = {
   id: 'formularios-categorias',
-  title: 'Formularios SCI por Categoria',
+  title: 'Formulários SCI por Categoria',
   type: 'flowchart',
-  description: 'Organizacao dos 24 formularios SCI',
+  description: 'Organização dos 24 formulários SCI',
   code: `flowchart TB
-    subgraph FORMS["24 FORMULARIOS SCI"]
+    subgraph FORMS["24 FORMULÁRIOS SCI"]
         direction TB
     end
 
-    subgraph PAI_OBR["PAI - OBRIGATORIOS"]
+    subgraph PAI_OBR["PAI - OBRIGATÓRIOS"]
         direction LR
         PO1["SCI 200CG<br/>Capa"]
         PO2["SCI 202<br/>Objetivos"]
-        PO3["SCI 204<br/>Atribuicoes"]
-        PO4["SCI 205<br/>Radio"]
-        PO5["SCI 206<br/>Plano Medico"]
-        PO6["SCI 208<br/>Seguranca"]
+        PO3["SCI 204<br/>Atribuições"]
+        PO4["SCI 205<br/>Rádio"]
+        PO5["SCI 206<br/>Plano Médico"]
+        PO6["SCI 208<br/>Segurança"]
     end
 
     subgraph PAI_OPC["PAI - OPCIONAIS"]
         direction LR
-        PP1["SCI 203<br/>Organizacao"]
+        PP1["SCI 203<br/>Organização"]
         PP2["SCI 205A<br/>Lista Contatos"]
         PP3["SCI 207<br/>Organograma"]
     end
@@ -46,20 +46,20 @@ const diagramFormulariosPorCategoria: Diagram = {
         direction LR
         OP1["SCI 209<br/>Status"]
         OP2["SCI 211<br/>Check-In"]
-        OP3["SCI 213RR<br/>Requisicao"]
-        OP4["SCI 220<br/>Aereo"]
+        OP3["SCI 213RR<br/>Requisição"]
+        OP4["SCI 220<br/>Aéreo"]
     end
 
     subgraph ADMIN["ADMINISTRATIVOS"]
         direction LR
         AD1["SCI 214<br/>Registro"]
-        AD2["SCI 218<br/>Inventario"]
+        AD2["SCI 218<br/>Inventário"]
         AD3["SCI 221<br/>Desmob"]
     end
 
-    subgraph CBMMT["CBMMT ESPECIFICOS"]
+    subgraph CBMMT["CBMMT ESPECÍFICOS"]
         direction LR
-        CB1["SCI 233CG<br/>Acoes"]
+        CB1["SCI 233CG<br/>Ações"]
         CB2["SCI 234CG<br/>Matriz"]
     end
 
@@ -87,11 +87,11 @@ const diagramFormulariosPorCategoria: Diagram = {
 
 const diagramFluxoFormularios: Diagram = {
   id: 'fluxo-formularios',
-  title: 'Fluxo de Uso dos Formularios',
+  title: 'Fluxo de Uso dos Formulários',
   type: 'flowchart',
-  description: 'Quando cada formulario e utilizado no ciclo operacional',
+  description: 'Quando cada formulário é utilizado no ciclo operacional',
   code: `flowchart TB
-    subgraph inicio["INICIO INCIDENTE"]
+    subgraph inicio["INÍCIO INCIDENTE"]
         F1["SCI 201<br/>Briefing"]
         F2["SCI 211<br/>Check-In"]
     end
@@ -104,21 +104,21 @@ const diagramFluxoFormularios: Diagram = {
 
     subgraph pai["PAI COMPLETO"]
         F6["SCI 200CG Capa"]
-        F7["SCI 203 Organizacao"]
-        F8["SCI 204 Atribuicoes"]
-        F9["SCI 205 Radio"]
-        F10["SCI 206 Medico"]
-        F11["SCI 208 Seguranca"]
+        F7["SCI 203 Organização"]
+        F8["SCI 204 Atribuições"]
+        F9["SCI 205 Rádio"]
+        F10["SCI 206 Médico"]
+        F11["SCI 208 Segurança"]
     end
 
-    subgraph operacao["OPERACAO"]
+    subgraph operacao["OPERAÇÃO"]
         F12["SCI 209 Status"]
-        F13["SCI 210 Mudanca"]
-        F14["SCI 213RR Requisicao"]
+        F13["SCI 210 Mudança"]
+        F14["SCI 213RR Requisição"]
         F15["SCI 214 Registro"]
     end
 
-    subgraph desmob["DESMOBILIZACAO"]
+    subgraph desmob["DESMOBILIZAÇÃO"]
         F16["SCI 221<br/>Check-Out"]
     end
 
@@ -142,9 +142,9 @@ const diagramFluxoFormularios: Diagram = {
 
 const diagramFluxoRequisicao: Diagram = {
   id: 'fluxo-requisicao',
-  title: 'Fluxo de Requisicao de Recursos (SCI 213RR)',
+  title: 'Fluxo de Requisição de Recursos (SCI 213RR)',
   type: 'sequence',
-  description: 'Processo de solicitacao de recursos via SSC',
+  description: 'Processo de solicitação de recursos via SSC',
   code: `sequenceDiagram
     participant CSOp as CSOp
     participant CI as Comandante
@@ -155,11 +155,11 @@ const diagramFluxoRequisicao: Diagram = {
 
     CSOp->>CSOp: 1. Identifica necessidade
     CSOp->>CSOp: 2. Preenche SCI 213RR
-    CSOp->>CI: 3. Solicita aprovacao
-    CI->>CSOp: 4. Aprova requisicao
+    CSOp->>CI: 3. Solicita aprovação
+    CI->>CSOp: 4. Aprova requisição
 
     rect rgb(220, 38, 38)
-        CSOp->>SSC: 5. Envia requisicao
+        CSOp->>SSC: 5. Envia requisição
         SSC->>SSC: 6. Localiza recurso
         SSC->>CSOp: 7. Confirma despacho + ETA
     end
@@ -167,36 +167,36 @@ const diagramFluxoRequisicao: Diagram = {
     SPlan->>SPlan: 8. Acompanha chegada
     SPlan->>CSOp: 9. Confirma check-in
 
-    Note over CSOp,SSC: Recurso disponivel para atribuicao`
+    Note over CSOp,SSC: Recurso disponível para atribuição`
 };
 
 const diagramComunicacaoSeguranca: Diagram = {
   id: 'comunicacao-seguranca',
-  title: 'Sistema de Comunicacoes e Seguranca',
+  title: 'Sistema de Comunicações e Segurança',
   type: 'flowchart',
-  description: 'Estrutura de comunicacoes e elementos LCES',
+  description: 'Estrutura de comunicações e elementos LCES',
   code: `flowchart TB
-    subgraph comunicacao["COMUNICACOES (SCI 205/205A)"]
+    subgraph comunicacao["COMUNICAÇÕES (SCI 205/205A)"]
         direction TB
         C1["Canal 1<br/>COMANDO<br/>CI + Chefes"]
-        C2["Canal 2<br/>TATICO<br/>Divisoes"]
-        C3["Canal 3<br/>GRUPOS<br/>Aereo/Maq"]
-        C4["Canal 4<br/>LOGISTICA<br/>Suprimentos"]
-        C5["Canal 5<br/>EMERGENCIA<br/>Todos"]
+        C2["Canal 2<br/>TÁTICO<br/>Divisões"]
+        C3["Canal 3<br/>GRUPOS<br/>Aéreo/Maq"]
+        C4["Canal 4<br/>LOGÍSTICA<br/>Suprimentos"]
+        C5["Canal 5<br/>EMERGÊNCIA<br/>Todos"]
     end
 
-    subgraph medico["PLANO MEDICO (SCI 206)"]
+    subgraph medico["PLANO MÉDICO (SCI 206)"]
         direction TB
-        M1["Posto PC<br/>Medico"]
-        M2["Socorristas<br/>Divisoes"]
-        M3["Evacuacao<br/>Terrestre/Aerea"]
-        M4["Hospital<br/>Referencia"]
+        M1["Posto PC<br/>Médico"]
+        M2["Socorristas<br/>Divisões"]
+        M3["Evacuação<br/>Terrestre/Aérea"]
+        M4["Hospital<br/>Referência"]
     end
 
-    subgraph lces["SEGURANCA - LCES (SCI 208)"]
+    subgraph lces["SEGURANÇA - LCES (SCI 208)"]
         direction TB
         L["L - Lookouts<br/>Observadores"]
-        CE["C - Communications<br/>Check-in horario"]
+        CE["C - Communications<br/>Check-in horário"]
         E["E - Escape Routes<br/>Rotas de Fuga"]
         S["S - Safety Zones<br/>Zonas Seguras"]
     end
@@ -215,30 +215,30 @@ const diagramComunicacaoSeguranca: Diagram = {
 
 const diagramFormulariosAdmin: Diagram = {
   id: 'formularios-administrativos',
-  title: 'Formularios Administrativos e Controle',
+  title: 'Formulários Administrativos e Controle',
   type: 'flowchart',
-  description: 'Fluxo dos formularios de controle e registro',
+  description: 'Fluxo dos formulários de controle e registro',
   code: `flowchart TB
     subgraph registro["REGISTRO E CONTROLE"]
         direction TB
-        R1["SCI 214<br/>Registro Atividades<br/>Diario de Bordo"]
-        R2["SCI 218<br/>Inventario<br/>Viaturas/Equip"]
-        R3["SCI 219<br/>Cartao T<br/>Status Visual"]
+        R1["SCI 214<br/>Registro Atividades<br/>Diário de Bordo"]
+        R2["SCI 218<br/>Inventário<br/>Viaturas/Equip"]
+        R3["SCI 219<br/>Cartão T<br/>Status Visual"]
     end
 
     subgraph operacional["CICLO OPERACIONAL"]
         direction LR
         O1["SCI 211<br/>CHECK-IN<br/>Entrada"]
-        O2["SCI 210<br/>MUDANCA<br/>Status"]
-        O3["SCI 221<br/>CHECK-OUT<br/>Saida"]
+        O2["SCI 210<br/>MUDANÇA<br/>Status"]
+        O3["SCI 221<br/>CHECK-OUT<br/>Saída"]
     end
 
     subgraph status["STATUS DE RECURSOS"]
         direction LR
-        S1["DISPONIVEL"]
+        S1["DISPONÍVEL"]
         S2["DESPACHADO"]
         S3["DESIGNADO"]
-        S4["FORA SERVICO"]
+        S4["FORA SERVIÇO"]
         S5["DESMOBILIZADO"]
     end
 
@@ -265,23 +265,23 @@ const diagramFormulariosAdmin: Diagram = {
 
 const diagramFormulariosCbmmt: Diagram = {
   id: 'formularios-especificos-cbmmt',
-  title: 'Formularios Especificos CBMMT',
+  title: 'Formulários Específicos CBMMT',
   type: 'flowchart',
-  description: 'SCI 233CG e SCI 234CG - Adaptacoes CBMMT',
+  description: 'SCI 233CG e SCI 234CG - Adaptações CBMMT',
   code: `flowchart TB
-    subgraph sci233["SCI 233CG - CONTROLE DE ACOES"]
+    subgraph sci233["SCI 233CG - CONTROLE DE AÇÕES"]
         direction TB
-        A1["Acao 1<br/>Status: ABERTO"]
-        A2["Acao 2<br/>Status: EXEC"]
-        A3["Acao 3<br/>Status: CONC"]
-        A4["Acao 4<br/>Status: CANCEL"]
+        A1["Ação 1<br/>Status: ABERTO"]
+        A2["Ação 2<br/>Status: EXEC"]
+        A3["Ação 3<br/>Status: CONC"]
+        A4["Ação 4<br/>Status: CANCEL"]
     end
 
-    subgraph sci234["SCI 234CG - MATRIZ ANALISE"]
+    subgraph sci234["SCI 234CG - MATRIZ ANÁLISE"]
         direction TB
-        OBJ["OBJETIVO<br/>O que alcancar"]
-        EST["ESTRATEGIA<br/>Abordagem geral"]
-        TAT["TATICAS<br/>Acoes especificas"]
+        OBJ["OBJETIVO<br/>O que alcançar"]
+        EST["ESTRATÉGIA<br/>Abordagem geral"]
+        TAT["TÁTICAS<br/>Ações específicas"]
     end
 
     subgraph fluxo["FLUXO DE USO"]
@@ -310,12 +310,12 @@ const diagramEstruturaPai: Diagram = {
   id: 'estrutura-pai-formularios',
   title: 'Estrutura Completa do PAI',
   type: 'flowchart',
-  description: 'Formularios que compoem o Plano de Acao do Incidente',
+  description: 'Formulários que compõem o Plano de Ação do Incidente',
   code: `flowchart TB
-    subgraph pai["PLANO DE ACAO DO INCIDENTE"]
+    subgraph pai["PLANO DE AÇÃO DO INCIDENTE"]
         direction TB
 
-        subgraph capa["IDENTIFICACAO"]
+        subgraph capa["IDENTIFICAÇÃO"]
             C1["SCI 200CG<br/>Capa do PAI"]
         end
 
@@ -323,23 +323,23 @@ const diagramEstruturaPai: Diagram = {
             O1["SCI 202<br/>Objetivos do Incidente"]
         end
 
-        subgraph organizacao["ORGANIZACAO"]
-            OR1["SCI 203<br/>Lista Organizacao"]
+        subgraph organizacao["ORGANIZAÇÃO"]
+            OR1["SCI 203<br/>Lista Organização"]
             OR2["SCI 207<br/>Organograma"]
         end
 
-        subgraph atribuicoes["ATRIBUICOES"]
-            A1["SCI 204<br/>Atribuicoes por Divisao"]
+        subgraph atribuicoes["ATRIBUIÇÕES"]
+            A1["SCI 204<br/>Atribuições por Divisão"]
         end
 
-        subgraph comunicacao["COMUNICACAO"]
-            CO1["SCI 205<br/>Frequencias Radio"]
+        subgraph comunicacao["COMUNICAÇÃO"]
+            CO1["SCI 205<br/>Frequências Rádio"]
             CO2["SCI 205A<br/>Lista Contatos"]
         end
 
-        subgraph seguranca["SEGURANCA"]
-            S1["SCI 206<br/>Plano Medico"]
-            S2["SCI 208<br/>Plano Seguranca"]
+        subgraph seguranca["SEGURANÇA"]
+            S1["SCI 206<br/>Plano Médico"]
+            S2["SCI 208<br/>Plano Segurança"]
         end
 
         subgraph anexos["ANEXOS"]
@@ -373,97 +373,97 @@ const diagramEstruturaPai: Diagram = {
 };
 
 // ------------------------------------------------------------
-// SECOES DE CONTEUDO
+// SEÇÕES DE CONTEÚDO
 // ------------------------------------------------------------
 
 const visaoGeralFormularios: Section = {
   id: 'visao-geral-formularios',
   slug: 'visao-geral-formularios',
-  title: '36. Visao Geral dos Formularios SCI',
+  title: '36. Visão Geral dos Formulários SCI',
   part: 7,
   order: 1,
-  content: `## Lista Completa de Formularios
+  content: `## Lista Completa de Formulários
 
-Os formularios SCI sao ferramentas padronizadas para documentacao e comunicacao no Sistema de Comando de Incidentes. Esta parte apresenta **24 formularios** adaptados a realidade do CBMMT.
+Os formulários SCI são ferramentas padronizadas para documentação e comunicação no Sistema de Comando de Incidentes. Esta parte apresenta **24 formulários** adaptados à realidade do CBMMT.
 
-### Formularios do PAI (Obrigatorios)
+### Formulários do PAI (Obrigatórios)
 
-| Codigo | Nome | Descricao |
+| Código | Nome | Descrição |
 |--------|------|-----------|
-| SCI 200CG | Capa do PAI | Identificacao do plano |
+| SCI 200CG | Capa do PAI | Identificação do plano |
 | SCI 202 | Objetivos do Incidente | Objetivos SMART do CI |
-| SCI 204 | Atribuicoes | Designacoes por Divisao/Grupo |
-| SCI 205 | Comunicacoes Radio | Frequencias e canais |
-| SCI 206 | Plano Medico | Atendimento e evacuacao |
-| SCI 208 | Plano de Seguranca | Riscos e mitigacoes |
+| SCI 204 | Atribuições | Designações por Divisão/Grupo |
+| SCI 205 | Comunicações Rádio | Frequências e canais |
+| SCI 206 | Plano Médico | Atendimento e evacuação |
+| SCI 208 | Plano de Segurança | Riscos e mitigações |
 
-### Formularios do PAI (Opcionais)
+### Formulários do PAI (Opcionais)
 
-| Codigo | Nome | Descricao |
+| Código | Nome | Descrição |
 |--------|------|-----------|
-| SCI 203 | Organizacao | Lista de posicoes e ocupantes |
-| SCI 205A | Lista Comunicacoes | Telefones, WhatsApp, satelite |
-| SCI 207 | Organograma | Grafico visual da EOR |
+| SCI 203 | Organização | Lista de posições e ocupantes |
+| SCI 205A | Lista Comunicações | Telefones, WhatsApp, satélite |
+| SCI 207 | Organograma | Gráfico visual da EOR |
 
-### Formularios de Planejamento
+### Formulários de Planejamento
 
-| Codigo | Nome | Descricao |
+| Código | Nome | Descrição |
 |--------|------|-----------|
-| SCI 201 | Briefing do Incidente | Transferencia de comando |
-| SCI 215 | Matriz Operacional | Taticas detalhadas |
-| SCI 215A | Analise de Riscos | Identificacao e mitigacao |
+| SCI 201 | Briefing do Incidente | Transferência de comando |
+| SCI 215 | Matriz Operacional | Táticas detalhadas |
+| SCI 215A | Análise de Riscos | Identificação e mitigação |
 
-### Formularios Operacionais
+### Formulários Operacionais
 
-| Codigo | Nome | Descricao |
+| Código | Nome | Descrição |
 |--------|------|-----------|
-| SCI 209 | Resumo Status | Relatorio executivo |
-| SCI 210 | Mudanca Status | Alteracao status recurso |
+| SCI 209 | Resumo Status | Relatório executivo |
+| SCI 210 | Mudança Status | Alteração status recurso |
 | SCI 211 | Check-In | Entrada de recursos |
-| SCI 213 | Mensagem Geral | Comunicacao formal |
-| SCI 213RR | Requisicao Recursos | Solicitacao de recursos |
-| SCI 220 | Operacoes Aereas | Coordenacao GAvBM |
+| SCI 213 | Mensagem Geral | Comunicação formal |
+| SCI 213RR | Requisição Recursos | Solicitação de recursos |
+| SCI 220 | Operações Aéreas | Coordenação GAvBM |
 
-### Formularios Administrativos
+### Formulários Administrativos
 
-| Codigo | Nome | Descricao |
+| Código | Nome | Descrição |
 |--------|------|-----------|
-| SCI 214 | Registro Atividades | Diario de bordo |
-| SCI 218 | Inventario Viaturas | Controle de veiculos |
-| SCI 219 | Cartao "T" | Status visual de recursos |
-| SCI 221 | Desmobilizacao | Check-out de recursos |
+| SCI 214 | Registro Atividades | Diário de bordo |
+| SCI 218 | Inventário Viaturas | Controle de veículos |
+| SCI 219 | Cartão "T" | Status visual de recursos |
+| SCI 221 | Desmobilização | Check-out de recursos |
 
-### Formularios CBMMT Especificos
+### Formulários CBMMT Específicos
 
-| Codigo | Nome | Descricao |
+| Código | Nome | Descrição |
 |--------|------|-----------|
-| SCI 233CG | Controle Acoes | Pendencias e tarefas |
-| SCI 234CG | Matriz Analise | Objetivos → Taticas |
+| SCI 233CG | Controle Ações | Pendências e tarefas |
+| SCI 234CG | Matriz Análise | Objetivos → Táticas |
 
 ---
 
-## Adaptacao ao CBMMT
+## Adaptação ao CBMMT
 
 ### Contexto Mato Grosso
 
-- **Distancias grandes:** Operacoes remotas
+- **Distâncias grandes:** Operações remotas
 - **Clima extremo:** Calor 35-40°C, baixa umidade
-- **Vegetacao diversa:** Cerrado, Pantanal, Amazonia
-- **Infraestrutura limitada:** Areas rurais
+- **Vegetação diversa:** Cerrado, Pantanal, Amazônia
+- **Infraestrutura limitada:** Áreas rurais
 
 ### Recursos CBMMT
 
 - Nomenclatura oficial (EIAOPs, BDBMs, BMMs, GCIFs, EMec, GAvBM)
 - Estrutura SSD/SSC integrada
-- Postos e graduacoes militares
-- Sistema de comunicacao (VHF/UHF)
+- Postos e graduações militares
+- Sistema de comunicação (VHF/UHF)
 
-### Instituicoes Parceiras
+### Instituições Parceiras
 
 - ICMBio (UCs federais)
 - SEMA-MT (UCs estaduais)
 - Prevfogo/IBAMA
-- SINFRA (maquinas)
+- SINFRA (máquinas)
 - Defesa Civil MT`,
   diagrams: [diagramFormulariosPorCategoria, diagramFluxoFormularios]
 };
@@ -471,20 +471,20 @@ Os formularios SCI sao ferramentas padronizadas para documentacao e comunicacao 
 const formulariosPai: Section = {
   id: 'formularios-pai',
   slug: 'formularios-pai',
-  title: '37-40. Formularios do PAI',
+  title: '37-40. Formulários do PAI',
   part: 7,
   order: 2,
   content: `## SCI 200CG - Capa do PAI
 
 ### Finalidade
-Identificacao do Plano de Acao do Incidente.
+Identificação do Plano de Ação do Incidente.
 
-### Conteudo
+### Conteúdo
 - Nome do incidente
-- Numero do incidente
-- Periodo operacional
-- Data/hora de preparacao
-- CI responsavel
+- Número do incidente
+- Período operacional
+- Data/hora de preparação
+- CI responsável
 - Logotipo CBMMT
 
 ---
@@ -496,21 +496,21 @@ Documentar objetivos SMART estabelecidos pelo CI.
 
 ### Estrutura
 
-**CABECALHO:**
-- Nome e numero do incidente
-- Periodo operacional
-- Data/hora preparacao
+**CABEÇALHO:**
+- Nome e número do incidente
+- Período operacional
+- Data/hora preparação
 
-**SECAO 1 - OBJETIVOS:**
+**SEÇÃO 1 - OBJETIVOS:**
 Lista numerada (2-5 objetivos)
 
-**SECAO 2 - CONSIDERACOES SEGURANCA:**
+**SEÇÃO 2 - CONSIDERAÇÕES SEGURANÇA:**
 Mensagem do OSeg
 
-**SECAO 3 - INSTRUCOES ESPECIAIS:**
-Restricoes, coordenacoes
+**SEÇÃO 3 - INSTRUÇÕES ESPECIAIS:**
+Restrições, coordenações
 
-**SECAO 4 - APROVACAO:**
+**SEÇÃO 4 - APROVAÇÃO:**
 Assinatura do CI
 
 ### Exemplo
@@ -518,37 +518,37 @@ Assinatura do CI
 \`\`\`
 SCI 202 - OBJETIVOS DO INCIDENTE
 
-Incidente: IF Fazenda Boa Esperanca
-Periodo: PO3 - 06:00 as 18:00 de 15/ago
+Incidente: IF Fazenda Boa Esperança
+Período: PO3 - 06:00 às 18:00 de 15/ago
 
 OBJETIVOS:
-1. SEGURANCA: Manter seguranca de todos combatentes
-2. PROTECAO: Proteger 5 residencias setor sul
-3. CONTENCAO: Conter flanco norte ate MT-100
+1. SEGURANÇA: Manter segurança de todos combatentes
+2. PROTEÇÃO: Proteger 5 residências setor sul
+3. CONTENÇÃO: Conter flanco norte até MT-100
 4. RESCALDO: Completar 70% setor leste
 
-CONSIDERACOES SEGURANCA:
+CONSIDERAÇÕES SEGURANÇA:
 - Vento SE 20-30km/h, ALTO RISCO 12:00-17:00
-- LCES obrigatorio todas divisoes
+- LCES obrigatório todas divisões
 
 APROVADO: Maj Silva (CI) - 14/ago 17:45
 \`\`\`
 
 ---
 
-## SCI 203 - Lista de Organizacao
+## SCI 203 - Lista de Organização
 
 ### Finalidade
-Registrar todas posicoes ativadas e seus ocupantes.
+Registrar todas posições ativadas e seus ocupantes.
 
 ### Quando Usar
-- PAI formal (Nivel 3-4)
+- PAI formal (Nível 3-4)
 - Quando estrutura complexa precisa ser documentada
 
 ### Exemplo
 
 \`\`\`
-SCI 203 - ORGANIZACAO DO INCIDENTE
+SCI 203 - ORGANIZAÇÃO DO INCIDENTE
 
 COMANDO:
 - CI: Maj Roberto Silva (DOp)
@@ -563,69 +563,69 @@ STAFF GERAL:
 - CSPlan: Cap Oliveira
 - CSLog: Ten Santos
 
-DIVISOES:
+DIVISÕES:
 - Div Norte: Sgt Silva (EIAOP 03, BDBM Chapada)
 - Div Sul: Sgt Mendes (EIAOP 05, BMM Nobres)
-- Div Leste: Cb Lima (GCIF 1, GCIF 2, BDBM Pocone)
+- Div Leste: Cb Lima (GCIF 1, GCIF 2, BDBM Poconé)
 
 GRUPOS:
-- Grupo Aereo: Ten Souza (Heli-01 GAvBM)
+- Grupo Aéreo: Ten Souza (Heli-01 GAvBM)
 \`\`\`
 
 ---
 
-## SCI 204 - Atribuicoes
+## SCI 204 - Atribuições
 
 ### Finalidade
-Detalhar atribuicao especifica de cada Divisao/Grupo.
+Detalhar atribuição específica de cada Divisão/Grupo.
 
-### Um Formulario por Divisao
-Cada Divisao/Grupo recebe seu proprio SCI 204.
+### Um Formulário por Divisão
+Cada Divisão/Grupo recebe seu próprio SCI 204.
 
-### Conteudo
+### Conteúdo
 
-| Campo | Descricao |
+| Campo | Descrição |
 |-------|-----------|
-| Divisao/Grupo | Identificacao |
-| Supervisor | Responsavel |
+| Divisão/Grupo | Identificação |
+| Supervisor | Responsável |
 | Recursos | IRTs designadas |
-| Area Operacional | Limites geograficos |
-| Atribuicao | Objetivo especifico |
-| Taticas | Como executar |
-| Seguranca | LCES especifico |
-| Comunicacoes | Frequencias |
-| Coordenacao | Com outras divisoes |
+| Área Operacional | Limites geográficos |
+| Atribuição | Objetivo específico |
+| Táticas | Como executar |
+| Segurança | LCES específico |
+| Comunicações | Frequências |
+| Coordenação | Com outras divisões |
 
 ### Exemplo
 
 \`\`\`
-SCI 204 - ATRIBUICAO DIVISAO NORTE
+SCI 204 - ATRIBUIÇÃO DIVISÃO NORTE
 
-DIVISAO: Norte
+DIVISÃO: Norte
 SUPERVISOR: Sgt Silva
-PERIODO: PO3 (06:00-18:00)
+PERÍODO: PO3 (06:00-18:00)
 
 RECURSOS:
 - EIAOP 03 (10 BMs)
 - BDBM Chapada (8 BMs)
 - EMec: 2 motoniveladoras
 
-AREA: Flancos norte e nordeste (2km linha)
+ÁREA: Flancos norte e nordeste (2km linha)
 
-ATRIBUICAO: Conter 100% flanco norte ate 16:00
-usando estrada MT-100 como ancora
+ATRIBUIÇÃO: Conter 100% flanco norte até 16:00
+usando estrada MT-100 como âncora
 
-TATICAS:
+TÁTICAS:
 - Motoniveladoras abrem aceiro 6m
 - Ataque direto nas bordas
 - Rescaldo imediato 10m
 
-SEGURANCA:
-- Zona segura: area desmatada na estrada
-- Rota fuga: retornar a estrada
+SEGURANÇA:
+- Zona segura: área desmatada na estrada
+- Rota fuga: retornar à estrada
 - Lookout: Cb Mendes
 
-FREQUENCIA: Canal 2 (tatico)
+FREQUÊNCIA: Canal 2 (tático)
 \`\`\``,
   diagrams: [diagramEstruturaPai]
 };
@@ -633,127 +633,127 @@ FREQUENCIA: Canal 2 (tatico)
 const formulariosComunicacao: Section = {
   id: 'formularios-comunicacao',
   slug: 'formularios-comunicacao',
-  title: '41-44. Comunicacoes e Seguranca',
+  title: '41-44. Comunicações e Segurança',
   part: 7,
   order: 3,
-  content: `## SCI 205 - Comunicacoes de Radio
+  content: `## SCI 205 - Comunicações de Rádio
 
 ### Finalidade
-Documentar frequencias e canais de radio para o incidente.
+Documentar frequências e canais de rádio para o incidente.
 
-### Estrutura por Funcao
+### Estrutura por Função
 
-| Canal | Frequencia | Funcao | Usuarios |
+| Canal | Frequência | Função | Usuários |
 |-------|------------|--------|----------|
-| 1 | 148.500 MHz | Comando | CI, Chefes Secao, OSeg |
-| 2 | 148.525 MHz | Tatico Divisoes | CSOp, Supervisores |
-| 3 | 148.550 MHz | Tatico Grupos | Grupo Aereo, Maquinas |
-| 4 | 148.575 MHz | Logistica | CSLog, Suprimentos |
-| 5 | 148.600 MHz | Emergencia | Todas unidades |
+| 1 | 148.500 MHz | Comando | CI, Chefes Seção, OSeg |
+| 2 | 148.525 MHz | Tático Divisões | CSOp, Supervisores |
+| 3 | 148.550 MHz | Tático Grupos | Grupo Aéreo, Máquinas |
+| 4 | 148.575 MHz | Logística | CSLog, Suprimentos |
+| 5 | 148.600 MHz | Emergência | Todas unidades |
 
 ### Protocolo
-- Disciplina de radio
+- Disciplina de rádio
 - Chamadas curtas e objetivas
-- Identificacao clara
+- Identificação clara
 
 ---
 
-## SCI 205A - Lista de Comunicacoes
+## SCI 205A - Lista de Comunicações
 
 ### Finalidade
-Complementar SCI 205 com outros meios de comunicacao.
+Complementar SCI 205 com outros meios de comunicação.
 
-### Conteudo
+### Conteúdo
 
 **TELEFONES CELULARES:**
-| Funcao | Nome | Numero |
+| Função | Nome | Número |
 |--------|------|--------|
 | CI | Maj Silva | (65) 9XXXX-YYYY |
 | CSOp | Cap Silva | (65) 9XXXX-YYYY |
 | CSLog | Ten Santos | (65) 9XXXX-YYYY |
 
 **WHATSAPP:**
-- Grupo Comando: "IF Boa Esperanca - Comando"
-- Grupo Operacional: "IF Boa Esperanca - Ops"
+- Grupo Comando: "IF Boa Esperança - Comando"
+- Grupo Operacional: "IF Boa Esperança - Ops"
 
-**TELEFONE SATELITE:**
+**TELEFONE SATÉLITE:**
 - PC: +870 XXX XXX XXX
 
 **CONTATOS EXTERNOS:**
-- SSC Cuiaba: (65) 3XXX-YYYY
+- SSC Cuiabá: (65) 3XXX-YYYY
 - Hospital Sinop: (66) 3XXX-YYYY
 
 ---
 
-## SCI 206 - Plano Medico
+## SCI 206 - Plano Médico
 
 ### Finalidade
-Garantir atendimento medico adequado no incidente.
+Garantir atendimento médico adequado no incidente.
 
 ### Estrutura Completa
 
-**1. INSTALACOES MEDICAS:**
+**1. INSTALAÇÕES MÉDICAS:**
 - Posto Atendimento no PC
-- Posto Avancado (se aplicavel)
+- Posto Avançado (se aplicável)
 
-**2. PESSOAL MEDICO:**
-- Ten Martins (medico) - PC
+**2. PESSOAL MÉDICO:**
+- Ten Martins (médico) - PC
 - Sd Oliveira (socorrista) - Div Norte
 
 **3. EQUIPAMENTOS:**
-- Kit primeiros socorros por divisao
+- Kit primeiros socorros por divisão
 - Desfibrilador no PC
 - Macas (2)
 
-**4. PROCEDIMENTOS EMERGENCIA:**
+**4. PROCEDIMENTOS EMERGÊNCIA:**
 - Comunicar OSeg via Canal 5
-- Evacuacao terrestre: Viatura designada
-- Evacuacao aerea: Heli-01 (se disponivel)
+- Evacuação terrestre: Viatura designada
+- Evacuação aérea: Heli-01 (se disponível)
 
-**5. HOSPITAIS DE REFERENCIA:**
+**5. HOSPITAIS DE REFERÊNCIA:**
 
-| Hospital | Distancia | Tempo | Recursos |
+| Hospital | Distância | Tempo | Recursos |
 |----------|-----------|-------|----------|
 | Hospital Sinop | 45km | 40min | UTI, Queimados |
-| UPA Sinop | 40km | 35min | Urgencia |
-| Hospital CBA | 450km | 5h / 1h heli | Referencia |
+| UPA Sinop | 40km | 35min | Urgência |
+| Hospital CBA | 450km | 5h / 1h heli | Referência |
 
-**6. ROTA EVACUACAO:**
-PC → MT-XXX → Sinop (ambulancia aguarda)
+**6. ROTA EVACUAÇÃO:**
+PC → MT-XXX → Sinop (ambulância aguarda)
 
 ---
 
-## SCI 208 - Plano de Seguranca
+## SCI 208 - Plano de Segurança
 
 ### Finalidade
-Identificar riscos e estabelecer medidas de mitigacao.
+Identificar riscos e estabelecer medidas de mitigação.
 
-### Riscos Tipicos MT
+### Riscos Típicos MT
 
-| Risco | Probabilidade | Severidade | Mitigacao |
+| Risco | Probabilidade | Severidade | Mitigação |
 |-------|---------------|------------|-----------|
 | Vento forte | ALTA | ALTA | Lookouts, suspender se >50km/h |
-| Desidratacao | ALTA | MEDIA | Hidratacao forcada, rodizio |
-| Comunicacao limitada | MEDIA | ALTA | Celular backup, check-in periodico |
-| Terreno acidentado | MEDIA | MEDIA | Briefing, buddy system |
-| Fogo de copa | BAIXA | ALTA | Ataque indireto, evacuacao |
+| Desidratação | ALTA | MÉDIA | Hidratação forçada, rodízio |
+| Comunicação limitada | MÉDIA | ALTA | Celular backup, check-in periódico |
+| Terreno acidentado | MÉDIA | MÉDIA | Briefing, buddy system |
+| Fogo de copa | BAIXA | ALTA | Ataque indireto, evacuação |
 
-### LCES Obrigatorio
+### LCES Obrigatório
 
 **L - Lookouts (Observadores):**
-- 1 por divisao em posicao elevada
-- Monitoramento continuo de vento e fogo
+- 1 por divisão em posição elevada
+- Monitoramento contínuo de vento e fogo
 
-**C - Communications (Comunicacoes):**
-- Check-in horario obrigatorio
-- Canal 5 para emergencias
+**C - Communications (Comunicações):**
+- Check-in horário obrigatório
+- Canal 5 para emergências
 
 **E - Escape Routes (Rotas de Fuga):**
 - Identificadas e comunicadas a todos
-- Primaria e secundaria por divisao
+- Primária e secundária por divisão
 
 **S - Safety Zones (Zonas Seguras):**
-- Demarcadas em cada area operacional
+- Demarcadas em cada área operacional
 - Tamanho adequado para todos recursos`,
   diagrams: [diagramComunicacaoSeguranca]
 };
@@ -761,36 +761,36 @@ Identificar riscos e estabelecer medidas de mitigacao.
 const formulariosOperacionais: Section = {
   id: 'formularios-operacionais',
   slug: 'formularios-operacionais',
-  title: '47-51. Formularios Operacionais',
+  title: '47-51. Formulários Operacionais',
   part: 7,
   order: 4,
   content: `## SCI 209 - Resumo do Status do Incidente
 
 ### Finalidade
-Relatorio executivo para niveis superiores (DOp, Comando-Geral).
+Relatório executivo para níveis superiores (DOp, Comando-Geral).
 
 ### Quando Preparar
 - Diariamente (final do dia)
 - A pedido de autoridades
 - Antes de eventos importantes
 
-### Conteudo Principal
+### Conteúdo Principal
 
 \`\`\`
 SCI 209 - RESUMO STATUS
 
-Incidente: IF Fazenda Boa Esperanca
+Incidente: IF Fazenda Boa Esperança
 Data/Hora: 15/ago/2025, 18:00
 
-SITUACAO ATUAL:
-- Area queimada: 850 hectares
-- Perimetro: 12 km
-- Contencao: 95%
+SITUAÇÃO ATUAL:
+- Área queimada: 850 hectares
+- Perímetro: 12 km
+- Contenção: 95%
 - Status: Sob controle, rescaldo em andamento
 
 RECURSOS: 40 BMs, 8 viaturas
-OBJETIVOS PO3: 4 de 5 alcancados
-PREVISAO: Extincao 16/ago 12:00
+OBJETIVOS PO3: 4 de 5 alcançados
+PREVISÃO: Extinção 16/ago 12:00
 
 PREPARADO: Sgt Ferreira (USit)
 APROVADO: Maj Silva (CI)
@@ -798,28 +798,28 @@ APROVADO: Maj Silva (CI)
 
 ---
 
-## SCI 210 - Mudanca de Status de Recurso
+## SCI 210 - Mudança de Status de Recurso
 
-### Status Possiveis
+### Status Possíveis
 
-| Status | Descricao |
+| Status | Descrição |
 |--------|-----------|
-| DISPONIVEL | Em base, pronto para acionamento |
+| DISPONÍVEL | Em base, pronto para acionamento |
 | DESPACHADO | Em deslocamento para incidente |
-| DESIGNADO | No incidente, com atribuicao |
-| FORA DE SERVICO | Temporariamente indisponivel |
-| DESMOBILIZADO | Liberado, retornando a base |
+| DESIGNADO | No incidente, com atribuição |
+| FORA DE SERVIÇO | Temporariamente indisponível |
+| DESMOBILIZADO | Liberado, retornando à base |
 
 ### Exemplo
 
 \`\`\`
-SCI 210 - MUDANCA STATUS
+SCI 210 - MUDANÇA STATUS
 
 Recurso     | Anterior   | Novo       | Data/Hora    | Obs
 ------------|------------|------------|--------------|------------
 EIAOP 03    | DESIGNADO  | FORA SERV. | 15/ago 14:00 | Descanso 8h
 GAvBM       | DESIGNADO  | DESMOB.    | 15/ago 16:00 | Retorno CBA
-BDBM Pocone | DESPACHADO | DESIGNADO  | 15/ago 09:00 | Check-in PC
+BDBM Poconé | DESPACHADO | DESIGNADO  | 15/ago 09:00 | Check-in PC
 
 REGISTRADO: Ten Costa (URec)
 \`\`\`
@@ -828,17 +828,17 @@ REGISTRADO: Ten Costa (URec)
 
 ## SCI 211 - Check-In de Recursos
 
-### Importancia
-- Controle de quem esta no incidente
-- Base para contabilizacao de pessoal
-- Informacoes para logistica
-- Dados para desmobilizacao
+### Importância
+- Controle de quem está no incidente
+- Base para contabilização de pessoal
+- Informações para logística
+- Dados para desmobilização
 
-### Informacoes Coletadas
+### Informações Coletadas
 
-**IDENTIFICACAO:**
-- Nome/Designacao do recurso
-- Lider e pessoal
+**IDENTIFICAÇÃO:**
+- Nome/Designação do recurso
+- Líder e pessoal
 - Unidade de origem
 
 **CHEGADA:**
@@ -847,13 +847,13 @@ REGISTRADO: Ten Costa (URec)
 - Equipamentos trazidos
 
 **NECESSIDADES:**
-- Alimentacao, alojamento
-- Combustivel, agua
-- Comunicacoes
+- Alimentação, alojamento
+- Combustível, água
+- Comunicações
 
-**QUALIFICACOES:**
-- Certificacoes SCI
-- Especializacoes
+**QUALIFICAÇÕES:**
+- Certificações SCI
+- Especializações
 
 ---
 
@@ -861,9 +861,9 @@ REGISTRADO: Ten Costa (URec)
 
 ### Quando Usar
 - Mensagens que requerem registro formal
-- Solicitacoes de recursos
-- Mudancas importantes
-- Quando radio/telefone insuficiente
+- Solicitações de recursos
+- Mudanças importantes
+- Quando rádio/telefone insuficiente
 
 ### Formato
 
@@ -874,65 +874,65 @@ DE: Cap Silva (CSOp)
 PARA: Ten Santos (CSLog)
 DATA/HORA: 14/ago/2025, 16:30
 
-ASSUNTO: Solicitacao Combustivel PO3
+ASSUNTO: Solicitação Combustível PO3
 
 MENSAGEM:
-Solicito para PO3 (amanha 15/ago):
+Solicito para PO3 (amanhã 15/ago):
 1. DIESEL: 400 litros
 2. GASOLINA: 100 litros
 3. MISTURA 2T: 40 litros
 
-PRAZO: Disponivel Base ate 05:00 de 15/ago
+PRAZO: Disponível Base até 05:00 de 15/ago
 
 Cap Silva _____________ 14/ago 16:30
 
 RESPOSTA:
-Solicitacao APROVADA. Entrega 04:00.
+Solicitação APROVADA. Entrega 04:00.
 
 Ten Santos _____________ 14/ago 17:00
 \`\`\`
 
 ---
 
-## SCI 213RR - Requisicao de Recursos
+## SCI 213RR - Requisição de Recursos
 
 ### Fluxo CBMMT
 
 1. CSOp identifica necessidade
 2. Preenche SCI 213RR
 3. CI aprova
-4. Envia a SSC
+4. Envia à SSC
 5. SSC localiza e despacha
 6. URec acompanha chegada
 
-### Conteudo
+### Conteúdo
 
 \`\`\`
-SCI 213RR - REQUISICAO DE RECURSOS
+SCI 213RR - REQUISIÇÃO DE RECURSOS
 
 SOLICITANTE: Cap Silva (CSOp)
 DATA: 13/ago/2025, 14:30
 
 RECURSO SOLICITADO:
 - Tipo: BDBM (Brigada)
-- Quantidade: 1 (8 BMs + lider)
-- Qualificacoes: SCI-100, Combate IF
+- Quantidade: 1 (8 BMs + líder)
+- Qualificações: SCI-100, Combate IF
 
 JUSTIFICATIVA:
-Incendio expandiu alem capacidade atual.
-Necessario reforco flanco norte.
+Incêndio expandiu além capacidade atual.
+Necessário reforço flanco norte.
 
 PRIORIDADE: ALTA
-ETA DESEJADO: 13/ago ate 17:00
+ETA DESEJADO: 13/ago até 17:00
 
-LOCAL: PC - Fazenda Boa Esperanca
+LOCAL: PC - Fazenda Boa Esperança
 COORDENADAS: -11.8640, -55.5030
 
-APROVACAO CI: [X] APROVADO
+APROVAÇÃO CI: [X] APROVADO
 Maj Silva _____________ 13/ago 14:45
 
 PROCESSAMENTO SSC:
-Recurso: BDBM Chapada dos Guimaraes
+Recurso: BDBM Chapada dos Guimarães
 ETA: 13/ago 16:30
 Despachado: 13/ago 15:00
 \`\`\``,
@@ -942,40 +942,40 @@ Despachado: 13/ago 15:00
 const formulariosAdministrativos: Section = {
   id: 'formularios-administrativos',
   slug: 'formularios-administrativos',
-  title: '52-57. Formularios Administrativos',
+  title: '52-57. Formulários Administrativos',
   part: 7,
   order: 5,
   content: `## SCI 214 - Registro de Atividades
 
 ### Finalidade
-Diario de bordo individual de cada membro da EOR.
+Diário de bordo individual de cada membro da EOR.
 
 ### O Que Registrar
-- Decisoes tomadas
+- Decisões tomadas
 - Ordens recebidas/emitidas
-- Mudancas significativas
+- Mudanças significativas
 - Problemas encontrados
 - Recursos chegando/saindo
 - Acidentes/incidentes
-- Condicoes meteorologicas criticas
+- Condições meteorológicas críticas
 
 ### Exemplo (CSOp)
 
 \`\`\`
 SCI 214 - REGISTRO DE ATIVIDADES
 
-NOME: Cap Silva | POSICAO: CSOp
+NOME: Cap Silva | POSIÇÃO: CSOp
 DATA: 15/ago/2025 (PO3)
 
 HORA  | EVENTO
 ------|------------------------------------------
-05:00 | Inicio PO3. Briefing operacional PC
-06:00 | Inicio operacoes. Todas divisoes em posicao
+05:00 | Início PO3. Briefing operacional PC
+06:00 | Início operações. Todas divisões em posição
 09:00 | Vento aumentando (25km/h). OSeg alertado
-09:30 | Div Sul: objetivo alcancado (5 residencias)
+09:30 | Div Sul: objetivo alcançado (5 residências)
 14:00 | Div Norte: linha controle 80% completa
-16:00 | Div Norte: objetivo alcancado! 100% linha
-18:00 | Fim PO3. ZERO acidentes. Objetivos alcancados
+16:00 | Div Norte: objetivo alcançado! 100% linha
+18:00 | Fim PO3. ZERO acidentes. Objetivos alcançados
 
 ASSINATURA: Cap Silva _____________ 18:30
 \`\`\`
@@ -987,14 +987,14 @@ ASSINATURA: Cap Silva _____________ 18:30
 **Documentados na Parte V (Ciclo P)** com exemplos completos.
 
 - **SCI 215:** Matriz de Planejamento Operacional
-- **SCI 215A:** Analise de Riscos do Plano
+- **SCI 215A:** Análise de Riscos do Plano
 
 ---
 
-## SCI 218 - Inventario de Veiculos/Equipamentos
+## SCI 218 - Inventário de Veículos/Equipamentos
 
-### Responsavel
-Unidade de Suporte Terrestre (Secao Logistica)
+### Responsável
+Unidade de Suporte Terrestre (Seção Logística)
 
 ### Categorias
 
@@ -1006,10 +1006,10 @@ Unidade de Suporte Terrestre (Secao Logistica)
 | Ranger-08 | GHI-9012 | Camion. | BDBM CH | Operacional | Div Norte |
 
 **VIATURAS DE APOIO:**
-- Caminhao Pipa 10.000L - Base
-- Caminhao Bau Carga - Base
+- Caminhão Pipa 10.000L - Base
+- Caminhão Baú Carga - Base
 
-**MAQUINAS PESADAS:**
+**MÁQUINAS PESADAS:**
 - Motoniveladora SINFRA01 - Desmob. 14/ago
 - Motoniveladora SINFRA02 - Desmob. 14/ago
 
@@ -1018,68 +1018,68 @@ Unidade de Suporte Terrestre (Secao Logistica)
 
 ---
 
-## SCI 219 - Cartao "T"
+## SCI 219 - Cartão "T"
 
 ### Conceito
 Ferramenta visual para rastrear status de cada recurso.
 
-### Informacoes no Cartao
+### Informações no Cartão
 
 \`\`\`
 ┌──────────────────────────────────────┐
-│         SCI 219 - CARTAO "T"         │
+│         SCI 219 - CARTÃO "T"         │
 ├──────────────────────────────────────┤
 │ RECURSO: EIAOP 03                    │
-│ LIDER: Cb Marcos Carvalho            │
+│ LÍDER: Cb Marcos Carvalho            │
 │ PESSOAL: 10 BMs                      │
-│ ORIGEM: BEA Cuiaba                   │
+│ ORIGEM: BEA Cuiabá                   │
 ├──────────────────────────────────────┤
 │ STATUS ATUAL: DESIGNADO              │
-│ ATRIBUICAO: Divisao Norte            │
+│ ATRIBUIÇÃO: Divisão Norte            │
 │ SUPERVISOR: Sgt Silva                │
 ├──────────────────────────────────────┤
 │ CHECK-IN: 13/ago 14:00               │
-│ TEMPO MAXIMO: 14 dias                │
+│ TEMPO MÁXIMO: 14 dias                │
 └──────────────────────────────────────┘
 
 CORES:
-VERDE = Disponivel
+VERDE = Disponível
 AMARELO = Designado
-VERMELHO = Fora de Servico
+VERMELHO = Fora de Serviço
 AZUL = Desmobilizado
 \`\`\`
 
 ---
 
-## SCI 220 - Resumo de Operacoes Aereas
+## SCI 220 - Resumo de Operações Aéreas
 
 ### Quando Usar
-Operacoes com GAvBM (helicopteros).
+Operações com GAvBM (helicópteros).
 
-### Conteudo
+### Conteúdo
 
 \`\`\`
-SCI 220 - OPERACOES AEREAS
+SCI 220 - OPERAÇÕES AÉREAS
 
 AERONAVE: PT-XXX / Heli-01
 TIPO: AS350 B3 (Esquilo)
-OPERADOR: GAvBM Cuiaba
+OPERADOR: GAvBM Cuiabá
 PILOTO: Ten Souza
-FREQUENCIA: Canal 4
+FREQUÊNCIA: Canal 4
 
-MISSAO PO3:
-1. Reconhecimento aereo (07:00-08:00)
+MISSÃO PO3:
+1. Reconhecimento aéreo (07:00-08:00)
 2. Apoio Div Norte (standby 08:00-16:00)
 3. Reconhecimento final (15:00-16:00)
 
-RESTRICOES:
+RESTRIÇÕES:
 - Vento > 40km/h: suspende voos
-- Operacao APENAS diurna
+- Operação APENAS diurna
 
-SEGURANCA:
-- LZ primario: Helibase
+SEGURANÇA:
+- LZ primário: Helibase
 - LZ alternativo: Campo futebol fazenda
-- Distancia minima rotor: 50m
+- Distância mínima rotor: 50m
 \`\`\``,
   diagrams: [diagramFormulariosAdmin]
 };
@@ -1087,42 +1087,42 @@ SEGURANCA:
 const formulariosCbmmt: Section = {
   id: 'formularios-cbmmt',
   slug: 'formularios-cbmmt',
-  title: '58-60. Formularios Especificos CBMMT',
+  title: '58-60. Formulários Específicos CBMMT',
   part: 7,
   order: 6,
-  content: `## SCI 221 - Check-Out de Desmobilizacao
+  content: `## SCI 221 - Check-Out de Desmobilização
 
 **Documentado na Parte VI** com exemplo completo.
 
-Formulario que garante que recurso completou todas tarefas antes de ser liberado.
+Formulário que garante que recurso completou todas tarefas antes de ser liberado.
 
 ---
 
-## SCI 233CG - Controle de Acoes em Aberto
+## SCI 233CG - Controle de Ações em Aberto
 
 ### Finalidade
-Rastrear pendencias e tarefas que precisam ser completadas.
+Rastrear pendências e tarefas que precisam ser completadas.
 
 ### Estrutura
 
 \`\`\`
-SCI 233CG - CONTROLE DE ACOES EM ABERTO
+SCI 233CG - CONTROLE DE AÇÕES EM ABERTO
 
-Incidente: IF Fazenda Boa Esperanca | Data: 15/ago/2025
+Incidente: IF Fazenda Boa Esperança | Data: 15/ago/2025
 
-Nº | Acao                  | Resp.  | Prazo  | Status | Obs
+Nº | Ação                  | Resp.  | Prazo  | Status | Obs
 ---|----------------------|--------|--------|--------|------------
 01 | Solicitar 3 IRTs     | CSOp   | 13/ago | CONC.  | Chegaram
 02 | Estabelecer Base     | CSLog  | 13/ago | CONC.  | Operacional
 03 | Coordenar ICMBio     | OLig   | 14/ago | CONC.  | 2 brigadistas
-04 | Plano Desmobilizacao | CSPlan | 15/ago | EXEC.  | 70% completo
-05 | Investigacao causa   | CI     | 16/ago | ABERTO | PC sera acionada
-06 | Relatorio final DOp  | CSPlan | 17/ago | ABERTO | Apos extincao
+04 | Plano Desmobilização | CSPlan | 15/ago | EXEC.  | 70% completo
+05 | Investigação causa   | CI     | 16/ago | ABERTO | PC será acionada
+06 | Relatório final DOp  | CSPlan | 17/ago | ABERTO | Após extinção
 
 LEGENDA:
-ABERTO = Nao iniciado
-EXEC. = Em execucao
-CONC. = Concluido
+ABERTO = Não iniciado
+EXEC. = Em execução
+CONC. = Concluído
 CANCEL. = Cancelado
 
 ATUALIZADO: Cap Oliveira (CSPlan) | 15/ago 18:00
@@ -1130,63 +1130,63 @@ ATUALIZADO: Cap Oliveira (CSPlan) | 15/ago 18:00
 
 ---
 
-## SCI 234CG - Matriz de Analise de Trabalho
+## SCI 234CG - Matriz de Análise de Trabalho
 
 ### Finalidade
-Desdobrar objetivos em estrategias e taticas.
+Desdobrar objetivos em estratégias e táticas.
 
 ### Uso
-Auxilia CSOp a transformar objetivos (SCI 202) em plano tatico (SCI 215).
+Auxilia CSOp a transformar objetivos (SCI 202) em plano tático (SCI 215).
 
 ### Estrutura por Objetivo
 
 \`\`\`
-SCI 234CG - MATRIZ DE ANALISE DE TRABALHO
+SCI 234CG - MATRIZ DE ANÁLISE DE TRABALHO
 
-Incidente: IF Fazenda Boa Esperanca | PO: 3
+Incidente: IF Fazenda Boa Esperança | PO: 3
 
 ┌──────────────────────────────────────────────────────────┐
-│ OBJETIVO 1: Garantir seguranca de todos combatentes      │
+│ OBJETIVO 1: Garantir segurança de todos combatentes      │
 ├──────────────────────────────────────────────────────────┤
-│ ESTRATEGIA: Implementar LCES em todas divisoes           │
+│ ESTRATÉGIA: Implementar LCES em todas divisões           │
 ├──────────────────────────────────────────────────────────┤
-│ TATICAS:                                                  │
-│ 1. Designar lookouts em posicoes elevadas                │
-│ 2. Estabelecer check-in horario obrigatorio              │
-│ 3. Identificar rotas fuga para cada area                 │
-│ 4. Demarcar zonas seguranca em cada divisao              │
-│ 5. Briefing seguranca antes inicio operacoes             │
+│ TÁTICAS:                                                  │
+│ 1. Designar lookouts em posições elevadas                │
+│ 2. Estabelecer check-in horário obrigatório              │
+│ 3. Identificar rotas fuga para cada área                 │
+│ 4. Demarcar zonas segurança em cada divisão              │
+│ 5. Briefing segurança antes início operações             │
 └──────────────────────────────────────────────────────────┘
 
 ┌──────────────────────────────────────────────────────────┐
-│ OBJETIVO 2: Proteger 5 residencias setor sul             │
+│ OBJETIVO 2: Proteger 5 residências setor sul             │
 ├──────────────────────────────────────────────────────────┤
-│ ESTRATEGIA: Defesa estrutural e linha preventiva         │
+│ ESTRATÉGIA: Defesa estrutural e linha preventiva         │
 ├──────────────────────────────────────────────────────────┤
-│ TATICAS:                                                  │
-│ 1. Divisao Sul posicionar entre fogo e residencias       │
-│ 2. Remover combustivel em raio 30m de cada casa          │
+│ TÁTICAS:                                                  │
+│ 1. Divisão Sul posicionar entre fogo e residências       │
+│ 2. Remover combustível em raio 30m de cada casa          │
 │ 3. Construir linha controle 200m ao sul                  │
-│ 4. Linha molhada perimetro imediato                      │
+│ 4. Linha molhada perímetro imediato                      │
 │ 5. Preparar sistema defesa se fogo aproximar             │
 └──────────────────────────────────────────────────────────┘
 
 ┌──────────────────────────────────────────────────────────┐
 │ OBJETIVO 3: Conter flanco norte usando MT-100            │
 ├──────────────────────────────────────────────────────────┤
-│ ESTRATEGIA: Ataque indireto usando estrada como ancora   │
+│ ESTRATÉGIA: Ataque indireto usando estrada como âncora   │
 ├──────────────────────────────────────────────────────────┤
-│ TATICAS:                                                  │
+│ TÁTICAS:                                                  │
 │ 1. Motoniveladoras abrem aceiro 6m largura               │
 │ 2. Equipes fazem linha molhada ao longo aceiro           │
-│ 3. Contra-fogo controlado se necessario                  │
+│ 3. Contra-fogo controlado se necessário                  │
 │ 4. Rescaldo imediato 10m profundidade                    │
-│ 5. Patrulhamento continuo linha concluida                │
+│ 5. Patrulhamento contínuo linha concluída                │
 └──────────────────────────────────────────────────────────┘
 
-OBSERVACOES:
-Taticas podem ser ajustadas conforme situacao real.
-Supervisores tem autonomia tatica dentro das estrategias.
+OBSERVAÇÕES:
+Táticas podem ser ajustadas conforme situação real.
+Supervisores têm autonomia tática dentro das estratégias.
 
 PREPARADO: Cap Silva (CSOp) | 14/ago 16:00
 REVISADO: Maj Silva (CI) | 14/ago 16:30
@@ -1194,32 +1194,32 @@ REVISADO: Maj Silva (CI) | 14/ago 16:30
 
 ---
 
-## Resumo dos Formularios
+## Resumo dos Formulários
 
-### Total: 24 Formularios
+### Total: 24 Formulários
 
 **Por Categoria:**
-- PAI Obrigatorios: 6
+- PAI Obrigatórios: 6
 - PAI Opcionais: 3
 - Planejamento: 3
 - Operacionais: 6
 - Administrativos: 4
-- CBMMT Especificos: 2
+- CBMMT Específicos: 2
 
-### Destaques da Adaptacao CBMMT
+### Destaques da Adaptação CBMMT
 
 - Nomenclatura IRTs (EIAOPs, BDBMs, BMMs, GCIFs)
-- Recursos GAvBM (helicoptero)
-- Integracao SSC/SSD
-- Postos/graduacoes militares
-- Geografia MT (estradas, distancias, hospitais)
-- Clima MT (calor extremo, desidratacao)
-- Instituicoes parceiras (ICMBio, SINFRA, SEMA)`,
+- Recursos GAvBM (helicóptero)
+- Integração SSC/SSD
+- Postos/graduações militares
+- Geografia MT (estradas, distâncias, hospitais)
+- Clima MT (calor extremo, desidratação)
+- Instituições parceiras (ICMBio, SINFRA, SEMA)`,
   diagrams: [diagramFormulariosCbmmt]
 };
 
 // ------------------------------------------------------------
-// EXPORTACOES
+// EXPORTAÇÕES
 // ------------------------------------------------------------
 
 export const parteVIISections: Section[] = [

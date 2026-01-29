@@ -20,7 +20,7 @@ const sections = [
     id: 'parte-i',
     title: 'PARTE I',
     subtitle: 'Fundamentos SCI',
-    description: 'O que e o SCI, historico, conceitos, 14 principios e caracteristicas do sistema.',
+    description: 'O que é o SCI, histórico, conceitos, 14 princípios e características do sistema.',
     icon: BookOpen,
     path: '/parte-i/o-que-e-sci',
     color: 'bg-blue-500',
@@ -29,7 +29,7 @@ const sections = [
     id: 'parte-ii',
     title: 'PARTE II',
     subtitle: 'Estrutura Organizacional',
-    description: 'Estrutura de Resposta: Comando, Secoes de Operacoes, Planejamento, Logistica e Admin.',
+    description: 'Estrutura de Resposta: Comando, Seções de Operações, Planejamento, Logística e Admin.',
     icon: Building2,
     path: '/parte-ii/visao-geral-eor',
     color: 'bg-green-500',
@@ -38,7 +38,7 @@ const sections = [
     id: 'parte-iii',
     title: 'PARTE III',
     subtitle: 'Contexto CBMMT',
-    description: 'Estrutura do CBMMT, POTIF 2025, integracao SCI e niveis de complexidade.',
+    description: 'Estrutura do CBMMT, POTIF 2025, integração SCI e níveis de complexidade.',
     icon: Shield,
     path: '/parte-iii/estrutura-cbmmt',
     color: 'bg-red-500',
@@ -47,7 +47,7 @@ const sections = [
     id: 'parte-iv',
     title: 'PARTE IV',
     subtitle: 'Fluxo Operacional',
-    description: 'As 7 fases: ativacao, estabelecimento, reuniao tatica, PAI, operacoes e transicoes.',
+    description: 'As 7 fases: ativação, estabelecimento, reunião tática, PAI, operações e transições.',
     icon: Settings,
     path: '/parte-iv/ativacao-sci',
     color: 'bg-orange-500',
@@ -56,7 +56,7 @@ const sections = [
     id: 'parte-v',
     title: 'PARTE V',
     subtitle: 'Ciclo de Planejamento',
-    description: 'As 14 fases do Ciclo P: entendimento, planejamento, preparacao e execucao.',
+    description: 'As 14 fases do Ciclo P: entendimento, planejamento, preparação e execução.',
     icon: RefreshCw,
     path: '/parte-v/visao-geral-ciclo-p',
     color: 'bg-purple-500',
@@ -64,7 +64,7 @@ const sections = [
   {
     id: 'parte-vi',
     title: 'PARTE VI',
-    subtitle: 'Desmobilizacao',
+    subtitle: 'Desmobilização',
     description: 'Planejamento, fases, check-out de recursos, encerramento e AAR.',
     icon: DoorOpen,
     path: '/parte-vi/conceitos-desmobilizacao',
@@ -73,8 +73,8 @@ const sections = [
   {
     id: 'parte-vii',
     title: 'PARTE VII',
-    subtitle: 'Formularios SCI',
-    description: 'Os 24 formularios SCI organizados por categoria com guia rapido.',
+    subtitle: 'Formulários SCI',
+    description: 'Os 24 formulários SCI organizados por categoria com guia rápido.',
     icon: ClipboardList,
     path: '/parte-vii/visao-geral-formularios',
     color: 'bg-indigo-500',
@@ -83,7 +83,7 @@ const sections = [
     id: 'parte-viii',
     title: 'PARTE VIII',
     subtitle: 'Requisitos Sistema',
-    description: '30 requisitos funcionais, 13 nao-funcionais, modelo de dados e roadmap.',
+    description: '30 requisitos funcionais, 13 não-funcionais, modelo de dados e roadmap.',
     icon: Code,
     path: '/parte-viii/visao-geral-sistema',
     color: 'bg-pink-500',
@@ -91,10 +91,10 @@ const sections = [
 ];
 
 const stats = [
-  { label: 'Topicos', value: '95+', icon: FileText },
-  { label: 'Formularios', value: '24', icon: ClipboardList },
+  { label: 'Tópicos', value: '95+', icon: FileText },
+  { label: 'Formulários', value: '24', icon: ClipboardList },
   { label: 'Requisitos', value: '43', icon: Target },
-  { label: 'Comissao', value: '11', icon: Users },
+  { label: 'Comissão', value: '11', icon: Users },
 ];
 
 export function HomePage() {
@@ -117,8 +117,8 @@ export function HomePage() {
         </h1>
 
         <p className="hero-description mt-4 text-lg max-w-2xl mx-auto">
-          Documentacao completa do modulo SCI integrado a Plataforma ARGOS.
-          Guia de referencia para operacoes de resposta a incidentes florestais.
+          Documentação completa do módulo SCI integrado à Plataforma ARGOS.
+          Guia de referência para operações de resposta a incidentes florestais.
         </p>
 
         <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -126,7 +126,7 @@ export function HomePage() {
             to="/parte-i/o-que-e-sci"
             className="btn-primary inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-medium"
           >
-            Comecar a leitura
+            Começar a leitura
             <ArrowRight className="h-4 w-4" />
           </Link>
           <Link
@@ -168,7 +168,7 @@ export function HomePage() {
         transition={{ delay: 0.2 }}
       >
         <h2 className="section-heading text-2xl font-bold mb-6">
-          Conteudo da Documentacao
+          Conteúdo da Documentação
         </h2>
 
         <div className="grid gap-4 sm:grid-cols-2">
@@ -214,14 +214,14 @@ export function HomePage() {
         className="quick-links rounded-lg p-6"
       >
         <h2 className="quick-links-title text-lg font-semibold mb-4">
-          Acesso Rapido
+          Acesso Rápido
         </h2>
         <div className="grid gap-2 sm:grid-cols-3">
           <Link
             to="/parte-i/principios"
             className="quick-link rounded-md px-3 py-2 text-sm"
           >
-            14 Principios do SCI
+            14 Princípios do SCI
           </Link>
           <Link
             to="/parte-v/visao-geral-ciclo-p"
@@ -233,13 +233,13 @@ export function HomePage() {
             to="/parte-vii/formularios-cbmmt"
             className="quick-link rounded-md px-3 py-2 text-sm"
           >
-            Formularios CBMMT
+            Formulários CBMMT
           </Link>
           <Link
             to="/parte-iii/cenarios-niveis"
             className="quick-link rounded-md px-3 py-2 text-sm"
           >
-            Niveis de Complexidade
+            Níveis de Complexidade
           </Link>
           <Link
             to="/parte-viii/requisitos-funcionais"
@@ -251,7 +251,7 @@ export function HomePage() {
             to="/recursos/glossario"
             className="quick-link rounded-md px-3 py-2 text-sm"
           >
-            Glossario de Termos
+            Glossário de Termos
           </Link>
         </div>
       </motion.section>

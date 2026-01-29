@@ -15,10 +15,10 @@ export function SectionPage() {
   const location = useLocation();
   const { viewMode } = useViewMode();
 
-  // Buscar conteudo real da secao
+  // Buscar conteúdo real da seção
   const section = sectionId ? getSectionBySlug(sectionId) : undefined;
 
-  // Se nao encontrar conteudo, mostrar placeholder
+  // Se não encontrar conteúdo, mostrar placeholder
   if (!section) {
     return <PlaceholderContent sectionId={sectionId} location={location.pathname} />;
   }
@@ -60,7 +60,7 @@ export function SectionPage() {
           <span className="font-medium">Modo: {viewMode === 'text' ? 'Texto' : 'Diagrama'}</span>
           <span className="mode-separator">|</span>
           <GitBranch className="h-4 w-4" />
-          <span>{diagramCount} diagrama(s) disponivel(is)</span>
+          <span>{diagramCount} diagrama(s) disponível(is)</span>
         </div>
       )}
 
@@ -100,10 +100,10 @@ export function SectionPage() {
             <div className="empty-state rounded-lg border-2 border-dashed p-12 text-center">
               <Construction className="h-16 w-16 mx-auto mb-4 opacity-50" />
               <h3 className="empty-state-title text-xl font-semibold mb-2">
-                Nenhum diagrama disponivel
+                Nenhum diagrama disponível
               </h3>
               <p className="empty-state-text">
-                Esta secao ainda nao possui diagramas.
+                Esta seção ainda não possui diagramas.
               </p>
             </div>
           )}
@@ -120,7 +120,7 @@ export function SectionPage() {
 function PlaceholderContent({ sectionId, location }: { sectionId?: string; location: string }) {
   const title = sectionId
     ? sectionId.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
-    : 'Secao';
+    : 'Seção';
 
   return (
     <motion.div
@@ -139,10 +139,10 @@ function PlaceholderContent({ sectionId, location }: { sectionId?: string; locat
       <div className="empty-state rounded-lg border-2 border-dashed p-12 text-center">
         <Construction className="h-16 w-16 mx-auto mb-4 opacity-50" />
         <h3 className="empty-state-title text-xl font-semibold mb-2">
-          Conteudo em desenvolvimento
+          Conteúdo em desenvolvimento
         </h3>
         <p className="empty-state-text mb-4">
-          O conteudo desta secao sera disponibilizado em breve.
+          O conteúdo desta seção será disponibilizado em breve.
         </p>
         <p className="empty-state-route text-xs font-mono">
           Rota: {location}

@@ -137,44 +137,44 @@ const diagramaRequisitosFuncionais: Diagram = {
     end
 
     subgraph ESSENCIAIS["ESSENCIAIS"]
-        E1["RF001 Ativacao SCI"]
-        E2["RF002 Designacao CI"]
+        E1["RF001 Ativação SCI"]
+        E2["RF002 Designação CI"]
         E3["RF003 Estrutura EOR"]
         E4["RF004 Objetivos"]
         E5["RF029 Controle Acesso"]
     end
 
-    subgraph OPERACOES["OPERACOES"]
-        O1["RF010 Secao Operacoes"]
-        O2["RF011 Operacoes Aereas"]
-        O3["RF014 Divisoes/Grupos"]
+    subgraph OPERACOES["OPERAÇÕES"]
+        O1["RF010 Seção Operações"]
+        O2["RF011 Operações Aéreas"]
+        O3["RF014 Divisões/Grupos"]
         O4["RF025 Mapas"]
     end
 
     subgraph PLANEJAMENTO["PLANEJAMENTO"]
         P1["RF005 PAI Completo"]
-        P2["RF006 Periodos Operacionais"]
-        P3["RF012 Secao Planejamento"]
+        P2["RF006 Períodos Operacionais"]
+        P3["RF012 Seção Planejamento"]
         P4["RF019 Ciclo P"]
     end
 
     subgraph RECURSOS["RECURSOS"]
-        R1["RF013 Gestao Recursos"]
-        R2["RF022 Desmobilizacao"]
-        R3["RF023 Integracao CBMMT"]
+        R1["RF013 Gestão Recursos"]
+        R2["RF022 Desmobilização"]
+        R3["RF023 Integração CBMMT"]
     end
 
     subgraph STAFF["STAFF"]
-        S1["RF007 Oficial Seguranca"]
-        S2["RF008 Oficial Ligacao"]
-        S3["RF009 Oficial Informacoes"]
+        S1["RF007 Oficial Segurança"]
+        S2["RF008 Oficial Ligação"]
+        S3["RF009 Oficial Informações"]
     end
 
-    subgraph LOGISTICA["LOGISTICA"]
+    subgraph LOGISTICA["LOGÍSTICA"]
         L1["RF015 Planos Com/Med"]
-        L2["RF016 Secao Logistica"]
+        L2["RF016 Seção Logística"]
         L3["RF017 Suprimentos"]
-        L4["RF018 Admin/Financas"]
+        L4["RF018 Admin/Finanças"]
     end
 
     RF --> ESSENCIAIS

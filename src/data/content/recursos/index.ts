@@ -1,7 +1,7 @@
 import type { Section, Diagram } from '@/data/types';
 
 // ============================================================
-// RECURSOS - GLOSSARIO, REFERENCIAS E GALERIA DE DIAGRAMAS
+// RECURSOS - GLOSSÁRIO, REFERÊNCIAS E GALERIA DE DIAGRAMAS
 // ============================================================
 
 // ------------------------------------------------------------
@@ -12,7 +12,7 @@ const diagramTermosSCI: Diagram = {
   id: 'termos-sci',
   title: 'Principais Termos e Siglas do SCI',
   type: 'flowchart',
-  description: 'Organizacao dos principais termos do Sistema de Comando de Incidentes',
+  description: 'Organização dos principais termos do Sistema de Comando de Incidentes',
   code: `flowchart TB
     subgraph COMANDO["COMANDO"]
         CI["CI<br/>Comandante Incidente"]
@@ -21,28 +21,28 @@ const diagramTermosSCI: Diagram = {
     end
 
     subgraph STAFF_CMD["STAFF DO COMANDO"]
-        OSeg["OSeg<br/>Oficial Seguranca"]
-        OIP["OIP<br/>Oficial Informacao"]
-        OLig["OLig<br/>Oficial Ligacao"]
+        OSeg["OSeg<br/>Oficial Segurança"]
+        OIP["OIP<br/>Oficial Informação"]
+        OLig["OLig<br/>Oficial Ligação"]
     end
 
-    subgraph STAFF_GERAL["STAFF GERAL - SECOES"]
-        CSOp["CSOp<br/>Chefe Operacoes"]
+    subgraph STAFF_GERAL["STAFF GERAL - SEÇÕES"]
+        CSOp["CSOp<br/>Chefe Operações"]
         CSPlan["CSPlan<br/>Chefe Planejamento"]
-        CSLog["CSLog<br/>Chefe Logistica"]
+        CSLog["CSLog<br/>Chefe Logística"]
         CSAdmin["CSAdmin<br/>Chefe Admin/Fin"]
     end
 
     subgraph DOCUMENTOS["DOCUMENTOS PRINCIPAIS"]
-        PAI["PAI<br/>Plano de Acao"]
+        PAI["PAI<br/>Plano de Ação"]
         SCI201["SCI 201<br/>Briefing"]
         SCI202["SCI 202<br/>Objetivos"]
     end
 
     subgraph PROCESSOS["PROCESSOS"]
         CICLOP["Ciclo P<br/>14 Fases"]
-        DESMOB["Desmobilizacao"]
-        AAR["AAR<br/>Revisao Pos-Acao"]
+        DESMOB["Desmobilização"]
+        AAR["AAR<br/>Revisão Pós-Ação"]
     end
 
     COMANDO --> STAFF_CMD
@@ -74,17 +74,17 @@ const diagramGaleriaEor: Diagram = {
     end
 
     subgraph STAFF_COMANDO["STAFF DO COMANDO"]
-        OSeg["Oficial de<br/>Seguranca"]
-        OIP["Oficial de<br/>Informacao Publica"]
-        OLig["Oficial de<br/>Ligacao"]
+        OSeg["Oficial de<br/>Segurança"]
+        OIP["Oficial de<br/>Informação Pública"]
+        OLig["Oficial de<br/>Ligação"]
     end
 
     subgraph STAFF_GERAL["STAFF GERAL"]
         direction LR
-        CSOp["Chefe Secao<br/>Operacoes"]
-        CSPlan["Chefe Secao<br/>Planejamento"]
-        CSLog["Chefe Secao<br/>Logistica"]
-        CSAdmin["Chefe Secao<br/>Admin/Financas"]
+        CSOp["Chefe Seção<br/>Operações"]
+        CSPlan["Chefe Seção<br/>Planejamento"]
+        CSLog["Chefe Seção<br/>Logística"]
+        CSAdmin["Chefe Seção<br/>Admin/Finanças"]
     end
 
     CI --> OSeg
@@ -121,22 +121,22 @@ const diagramGaleriaCicloP: Diagram = {
         F5["5.Objetivos"]
         F6["6.Staff"]
         F7["7.Prep RT"]
-        F8["8.REUNIAO<br/>TATICA"]
+        F8["8.REUNIÃO<br/>TÁTICA"]
         F9["9.Prep RP"]
-        F10["10.REUNIAO<br/>PLANEJ"]
+        F10["10.REUNIÃO<br/>PLANEJ"]
     end
 
-    subgraph IMPL["IMPLEMENTACAO"]
+    subgraph IMPL["IMPLEMENTAÇÃO"]
         F11["11.PAI"]
         F12["12.Briefing"]
-        F13["13.Execucao"]
-        F14["14.Avaliacao"]
+        F13["13.Execução"]
+        F14["14.Avaliação"]
     end
 
     F1 --> F2 --> F3 --> F4
     F4 --> F5 --> F6 --> F7 --> F8 --> F9 --> F10
     F10 --> F11 --> F12 --> F13 --> F14
-    F14 -.->|Proximo PO| F5
+    F14 -.->|Próximo PO| F5
 
     classDef baseStyle fill:#FEF3C7,stroke:#D97706,color:#92400E
     classDef centroStyle fill:#DBEAFE,stroke:#2563EB,color:#1E40AF
@@ -151,26 +151,26 @@ const diagramGaleriaCicloP: Diagram = {
 
 const diagramGaleriaNiveis: Diagram = {
   id: 'galeria-niveis',
-  title: 'Niveis de Complexidade CBMMT',
+  title: 'Níveis de Complexidade CBMMT',
   type: 'flowchart',
-  description: 'Escalada de recursos por nivel',
+  description: 'Escalada de recursos por nível',
   code: `flowchart TB
-    subgraph N1["NIVEL 1 - Local"]
+    subgraph N1["NÍVEL 1 - Local"]
         N1R["1-3 IRTs<br/>Recursos locais"]
         N1C["CI: Primeiro BM"]
     end
 
-    subgraph N2["NIVEL 2 - Regional"]
+    subgraph N2["NÍVEL 2 - Regional"]
         N2R["4-6 IRTs<br/>Recursos regionais"]
         N2C["CI: Oficial designado"]
     end
 
-    subgraph N3["NIVEL 3 - Estadual"]
+    subgraph N3["NÍVEL 3 - Estadual"]
         N3R["7+ IRTs<br/>Recursos estaduais"]
         N3C["CI: Oficial superior"]
     end
 
-    subgraph N4["NIVEL 4 - Federal"]
+    subgraph N4["NÍVEL 4 - Federal"]
         N4R["Multiestadual<br/>Recursos federais"]
         N4C["CI: Comando Unificado"]
     end
@@ -190,23 +190,23 @@ const diagramGaleriaNiveis: Diagram = {
 
 const diagramFormularios: Diagram = {
   id: 'galeria-formularios',
-  title: 'Os 24 Formularios SCI',
+  title: 'Os 24 Formulários SCI',
   type: 'flowchart',
-  description: 'Formularios organizados por categoria',
+  description: 'Formulários organizados por categoria',
   code: `flowchart TB
-    subgraph PAI_OBR["PAI - OBRIGATORIOS"]
+    subgraph PAI_OBR["PAI - OBRIGATÓRIOS"]
         direction LR
         P1["SCI 200CG<br/>Capa"]
         P2["SCI 202<br/>Objetivos"]
-        P3["SCI 204<br/>Atribuicoes"]
-        P4["SCI 205<br/>Radio"]
-        P5["SCI 206<br/>Medico"]
-        P6["SCI 208<br/>Seguranca"]
+        P3["SCI 204<br/>Atribuições"]
+        P4["SCI 205<br/>Rádio"]
+        P5["SCI 206<br/>Médico"]
+        P6["SCI 208<br/>Segurança"]
     end
 
     subgraph PAI_OPC["PAI - OPCIONAIS"]
         direction LR
-        O1["SCI 203<br/>Organizacao"]
+        O1["SCI 203<br/>Organização"]
         O2["SCI 205A<br/>Lista Contatos"]
         O3["SCI 207<br/>Organograma"]
     end
@@ -222,7 +222,7 @@ const diagramFormularios: Diagram = {
         direction LR
         OP1["SCI 209<br/>Status"]
         OP2["SCI 211<br/>Check-In"]
-        OP3["SCI 213RR<br/>Requisicao"]
+        OP3["SCI 213RR<br/>Requisição"]
         OP4["SCI 221<br/>Desmob"]
     end
 
@@ -243,27 +243,27 @@ const diagramFormularios: Diagram = {
 
 const diagramDesmobilizacao: Diagram = {
   id: 'galeria-desmob',
-  title: 'Processo de Desmobilizacao',
+  title: 'Processo de Desmobilização',
   type: 'flowchart',
-  description: 'Fases da desmobilizacao de recursos',
+  description: 'Fases da desmobilização de recursos',
   code: `flowchart LR
     subgraph PLAN["1. PLANEJAMENTO"]
         PL1["Incidente<br/>Estabiliza"]
         PL2["Plano<br/>Desmob"]
     end
 
-    subgraph PRIOR["2. PRIORIZACAO"]
+    subgraph PRIOR["2. PRIORIZAÇÃO"]
         PR1["Recursos<br/>Excedentes"]
-        PR2["Lista de<br/>Liberacoes"]
+        PR2["Lista de<br/>Liberações"]
     end
 
-    subgraph EXEC["3. EXECUCAO"]
+    subgraph EXEC["3. EXECUÇÃO"]
         EX1["Check-Out<br/>SCI 221"]
-        EX2["Liberacao"]
+        EX2["Liberação"]
     end
 
     subgraph ENCER["4. ENCERRAMENTO"]
-        EN1["Documentacao<br/>Final"]
+        EN1["Documentação<br/>Final"]
         EN2["AAR"]
     end
 
@@ -281,131 +281,131 @@ const diagramDesmobilizacao: Diagram = {
 };
 
 // ------------------------------------------------------------
-// SECOES DE CONTEUDO
+// SEÇÕES DE CONTEÚDO
 // ------------------------------------------------------------
 
 const glossario: Section = {
   id: 'glossario',
   slug: 'glossario',
-  title: 'Glossario de Termos',
+  title: 'Glossário de Termos',
   part: 0,
   order: 1,
-  content: `## Glossario de Termos do SCI
+  content: `## Glossário de Termos do SCI
 
-Este glossario apresenta os principais termos utilizados no Sistema de Comando de Incidentes (SCI) no contexto do CBMMT.
+Este glossário apresenta os principais termos utilizados no Sistema de Comando de Incidentes (SCI) no contexto do CBMMT.
 
 ---
 
 ### A
 
-| Termo | Definicao |
+| Termo | Definição |
 |-------|-----------|
-| **AAR** | After Action Review. Revisao pos-acao para identificar licoes aprendidas |
-| **Aceiro** | Faixa de terreno desprovida de vegetacao como barreira contra o fogo |
-| **Amplitude de Controle** | Numero de subordinados que um supervisor gerencia (ideal: 3-7) |
-| **Area de Espera** | Local para recursos disponiveis aguardando atribuicao |
-| **ARGOS** | Plataforma de gestao operacional integrada do CBMMT |
+| **AAR** | After Action Review. Revisão pós-ação para identificar lições aprendidas |
+| **Aceiro** | Faixa de terreno desprovida de vegetação como barreira contra o fogo |
+| **Amplitude de Controle** | Número de subordinados que um supervisor gerencia (ideal: 3-7) |
+| **Área de Espera** | Local para recursos disponíveis aguardando atribuição |
+| **ARGOS** | Plataforma de gestão operacional integrada do CBMMT |
 
 ---
 
 ### B
 
-| Termo | Definicao |
+| Termo | Definição |
 |-------|-----------|
-| **Base** | Local para funcoes logisticas (alimentacao, alojamento, manutencao) |
-| **BEA** | Bureau de Estrategia e Assessoramento do CBMMT |
-| **Briefing** | Reuniao curta para transmitir informacoes essenciais |
+| **Base** | Local para funções logísticas (alimentação, alojamento, manutenção) |
+| **BEA** | Bureau de Estratégia e Assessoramento do CBMMT |
+| **Briefing** | Reunião curta para transmitir informações essenciais |
 
 ---
 
 ### C
 
-| Termo | Definicao |
+| Termo | Definição |
 |-------|-----------|
-| **Cadeia de Comando** | Linha de autoridade do CI para niveis inferiores |
+| **Cadeia de Comando** | Linha de autoridade do CI para níveis inferiores |
 | **Check-in** | Registro de recursos ao chegarem (SCI 211) |
-| **Check-out** | Liberacao de recursos ao sairem (SCI 221) |
-| **CI** | Comandante do Incidente. Responsavel por todas atividades |
+| **Check-out** | Liberação de recursos ao saírem (SCI 221) |
+| **CI** | Comandante do Incidente. Responsável por todas atividades |
 | **Ciclo P** | Ciclo de Planejamento com 14 fases para desenvolver o PAI |
-| **Comando Unificado** | Multiplas agencias compartilhando responsabilidade de comando |
-| **CSOp** | Chefe da Secao de Operacoes |
-| **CSPlan** | Chefe da Secao de Planejamento |
-| **CSLog** | Chefe da Secao de Logistica |
-| **CSAdmin** | Chefe da Secao de Administracao/Financas |
+| **Comando Unificado** | Múltiplas agências compartilhando responsabilidade de comando |
+| **CSOp** | Chefe da Seção de Operações |
+| **CSPlan** | Chefe da Seção de Planejamento |
+| **CSLog** | Chefe da Seção de Logística |
+| **CSAdmin** | Chefe da Seção de Administração/Finanças |
 
 ---
 
 ### D-E
 
-| Termo | Definicao |
+| Termo | Definição |
 |-------|-----------|
-| **Desmobilizacao** | Processo ordenado de liberacao de recursos |
-| **Divisao** | Subdivisao da SOp por area geografica |
-| **DOp** | Diretoria de Operacoes do CBMMT |
-| **EIAOP** | Equipe de Intervencao Aquatica e Operacoes de Praia |
+| **Desmobilização** | Processo ordenado de liberação de recursos |
+| **Divisão** | Subdivisão da SOp por área geográfica |
+| **DOp** | Diretoria de Operações do CBMMT |
+| **EIAOP** | Equipe de Intervenção Aquática e Operações de Praia |
 | **EOR** | Estrutura Organizacional de Resposta (organograma do SCI) |
-| **Equipe de Intervencao** | Menor unidade tatica (ate 7 pessoas) |
+| **Equipe de Intervenção** | Menor unidade tática (até 7 pessoas) |
 
 ---
 
 ### F-G
 
-| Termo | Definicao |
+| Termo | Definição |
 |-------|-----------|
-| **Forca-Tarefa** | Combinacao de recursos diferentes com lideranca comum |
-| **Formulario SCI** | Documentos padronizados (SCI 201 a SCI 225) |
-| **GAvBM** | Grupamento de Aviacao do Corpo de Bombeiros Militar |
-| **GCIF** | Grupo de Combate a Incendios Florestais |
-| **Grupo** | Subdivisao da SOp por funcao (ex: Grupo Aereo) |
+| **Força-Tarefa** | Combinação de recursos diferentes com liderança comum |
+| **Formulário SCI** | Documentos padronizados (SCI 201 a SCI 225) |
+| **GAvBM** | Grupamento de Aviação do Corpo de Bombeiros Militar |
+| **GCIF** | Grupo de Combate a Incêndios Florestais |
+| **Grupo** | Subdivisão da SOp por função (ex: Grupo Aéreo) |
 
 ---
 
 ### I-L
 
-| Termo | Definicao |
+| Termo | Definição |
 |-------|-----------|
-| **ICMBio** | Instituto Chico Mendes de Conservacao da Biodiversidade |
-| **IRT** | Instalacao de Resposta Tatica |
+| **ICMBio** | Instituto Chico Mendes de Conservação da Biodiversidade |
+| **IRT** | Instalação de Resposta Tática |
 | **LCES** | Lookouts, Communications, Escape Routes, Safety Zones |
-| **Linha de Controle** | Barreira para conter propagacao do incendio |
+| **Linha de Controle** | Barreira para conter propagação do incêndio |
 
 ---
 
 ### M-O
 
-| Termo | Definicao |
+| Termo | Definição |
 |-------|-----------|
-| **Modularidade** | Principio de expansao/contracao da estrutura conforme necessidade |
-| **OIP** | Oficial de Informacao Publica |
-| **OLig** | Oficial de Ligacao |
-| **OSeg** | Oficial de Seguranca |
+| **Modularidade** | Princípio de expansão/contração da estrutura conforme necessidade |
+| **OIP** | Oficial de Informação Pública |
+| **OLig** | Oficial de Ligação |
+| **OSeg** | Oficial de Segurança |
 
 ---
 
 ### P
 
-| Termo | Definicao |
+| Termo | Definição |
 |-------|-----------|
-| **PAI** | Plano de Acao do Incidente |
+| **PAI** | Plano de Ação do Incidente |
 | **PC** | Posto de Comando |
-| **Periodo Operacional** | Intervalo para planejamento de taticas (tipico: 12h) |
-| **POTIF** | Plano Operativo de Temporada de Incendio Florestal |
-| **Prevfogo** | Centro Nacional de Prevencao e Combate aos Incendios Florestais |
+| **Período Operacional** | Intervalo para planejamento de táticas (típico: 12h) |
+| **POTIF** | Plano Operativo de Temporada de Incêndio Florestal |
+| **Prevfogo** | Centro Nacional de Prevenção e Combate aos Incêndios Florestais |
 
 ---
 
 ### R-S
 
-| Termo | Definicao |
+| Termo | Definição |
 |-------|-----------|
-| **Rescaldo** | Extincao de focos residuais apos controle |
-| **Reuniao de Planejamento** | Reuniao formal para aprovar o PAI |
-| **Reuniao Tatica** | Reuniao para desenvolver taticas |
+| **Rescaldo** | Extinção de focos residuais após controle |
+| **Reunião de Planejamento** | Reunião formal para aprovar o PAI |
+| **Reunião Tática** | Reunião para desenvolver táticas |
 | **SCI** | Sistema de Comando de Incidentes |
-| **Secao** | Nivel organizacional funcional (Op, Plan, Log, Admin) |
-| **SINFRA** | Secretaria de Estado de Infraestrutura e Logistica |
-| **SSC** | Sala de Situacao Central do CBMMT |
-| **SSD** | Sala de Situacao Descentralizada do CBMMT |
+| **Seção** | Nível organizacional funcional (Op, Plan, Log, Admin) |
+| **SINFRA** | Secretaria de Estado de Infraestrutura e Logística |
+| **SSC** | Sala de Situação Central do CBMMT |
+| **SSD** | Sala de Situação Descentralizada do CBMMT |
 | **Staff do Comando** | OSeg, OIP e OLig |
 | **Staff Geral** | CSOp, CSPlan, CSLog e CSAdmin |
 
@@ -413,63 +413,63 @@ Este glossario apresenta os principais termos utilizados no Sistema de Comando d
 
 ### T-Z
 
-| Termo | Definicao |
+| Termo | Definição |
 |-------|-----------|
-| **Terminologia Comum** | Principio de uso de linguagem padronizada |
-| **Transferencia de Comando** | Passagem formal de autoridade entre CIs |
-| **UC** | Unidade de Conservacao |
-| **Unidade Comando** | Principio: cada pessoa reporta a apenas um supervisor |
+| **Terminologia Comum** | Princípio de uso de linguagem padronizada |
+| **Transferência de Comando** | Passagem formal de autoridade entre CIs |
+| **UC** | Unidade de Conservação |
+| **Unidade Comando** | Princípio: cada pessoa reporta a apenas um supervisor |
 | **URec** | Unidade de Recursos (SPlan) |
-| **USit** | Unidade de Situacao (SPlan) |
-| **Zona de Seguranca** | Area para abrigo de combatentes em emergencia |`,
+| **USit** | Unidade de Situação (SPlan) |
+| **Zona de Segurança** | Área para abrigo de combatentes em emergência |`,
   diagrams: [diagramTermosSCI]
 };
 
 const referencias: Section = {
   id: 'referencias',
   slug: 'referencias',
-  title: 'Referencias e Bibliografia',
+  title: 'Referências e Bibliografia',
   part: 0,
   order: 2,
-  content: `## Referencias e Bibliografia
+  content: `## Referências e Bibliografia
 
-Esta secao lista as principais referencias utilizadas na elaboracao desta documentacao.
+Esta seção lista as principais referências utilizadas na elaboração desta documentação.
 
 ---
 
 ### Documentos Oficiais CBMMT
 
-| Documento | Descricao |
+| Documento | Descrição |
 |-----------|-----------|
-| **POTIF 2025** | Plano Operativo de Temporada de Incendio Florestal |
-| **Portaria CBMMT** | Normas internas de operacoes |
-| **Manual de Operacoes** | Procedimentos operacionais padrao |
+| **POTIF 2025** | Plano Operativo de Temporada de Incêndio Florestal |
+| **Portaria CBMMT** | Normas internas de operações |
+| **Manual de Operações** | Procedimentos operacionais padrão |
 
 ---
 
-### Referencias Nacionais
+### Referências Nacionais
 
-**SISTEMA NACIONAL DE PROTECAO E DEFESA CIVIL**
+**SISTEMA NACIONAL DE PROTEÇÃO E DEFESA CIVIL**
 
-| Documento | Descricao |
+| Documento | Descrição |
 |-----------|-----------|
-| Instrucao Normativa n. 02/2016 | Sistema de Comando de Incidentes |
-| Material didatico SEDEC | Capacitacao em SCI |
+| Instrução Normativa n. 02/2016 | Sistema de Comando de Incidentes |
+| Material didático SEDEC | Capacitação em SCI |
 
 **CORPO DE BOMBEIROS MILITAR DO DISTRITO FEDERAL**
 
-| Documento | Descricao |
+| Documento | Descrição |
 |-----------|-----------|
 | Manual de Gerenciamento | Crises e Desastres |
 | Curso SCI | Sistema de Comando de Incidentes |
 
 ---
 
-### Referencias Internacionais
+### Referências Internacionais
 
 **NIMS (National Incident Management System) - EUA**
 
-| Curso | Conteudo |
+| Curso | Conteúdo |
 |-------|----------|
 | FEMA IS-100 | Introduction to ICS |
 | FEMA IS-200 | ICS for Single Resources |
@@ -478,18 +478,18 @@ Esta secao lista as principais referencias utilizadas na elaboracao desta docume
 
 **NWCG (National Wildfire Coordinating Group) - EUA**
 
-| Publicacao | Conteudo |
+| Publicação | Conteúdo |
 |------------|----------|
 | PMS 932 | ICS Organizational Structure |
 | PMS 210 | Wildland Fire Incident Management Field Guide |
 
 ---
 
-### Organizacoes de Referencia
+### Organizações de Referência
 
 **Nacionais**
 
-| Sigla | Organizacao |
+| Sigla | Organização |
 |-------|-------------|
 | CBMMT | Corpo de Bombeiros Militar do Mato Grosso |
 | IBAMA | Instituto Brasileiro do Meio Ambiente |
@@ -498,7 +498,7 @@ Esta secao lista as principais referencias utilizadas na elaboracao desta docume
 
 **Internacionais**
 
-| Sigla | Organizacao |
+| Sigla | Organização |
 |-------|-------------|
 | FEMA | Federal Emergency Management Agency (EUA) |
 | NWCG | National Wildfire Coordinating Group (EUA) |
@@ -506,9 +506,9 @@ Esta secao lista as principais referencias utilizadas na elaboracao desta docume
 
 ---
 
-### Normas Tecnicas
+### Normas Técnicas
 
-| Norma | Descricao |
+| Norma | Descrição |
 |-------|-----------|
 | **NFPA 1561** | Standard on Emergency Services Incident Management System |
 | **NFPA 295** | Standard for Wildfire Control |
@@ -516,57 +516,57 @@ Esta secao lista as principais referencias utilizadas na elaboracao desta docume
 
 ---
 
-### Formularios SCI Referenciados
+### Formulários SCI Referenciados
 
-Os 24 formularios oficiais do SCI utilizados nesta documentacao:
+Os 24 formulários oficiais do SCI utilizados nesta documentação:
 
-**Formularios do PAI (Obrigatorios)**
+**Formulários do PAI (Obrigatórios)**
 
-| Codigo | Nome |
+| Código | Nome |
 |--------|------|
 | SCI 200CG | Capa do PAI |
 | SCI 202 | Objetivos do Incidente |
-| SCI 204 | Formulario de Atribuicoes |
-| SCI 205 | Plano de Comunicacoes de Radio |
-| SCI 206 | Plano Medico |
-| SCI 208 | Plano de Seguranca |
+| SCI 204 | Formulário de Atribuições |
+| SCI 205 | Plano de Comunicações de Rádio |
+| SCI 206 | Plano Médico |
+| SCI 208 | Plano de Segurança |
 
-**Formularios do PAI (Opcionais)**
+**Formulários do PAI (Opcionais)**
 
-| Codigo | Nome |
+| Código | Nome |
 |--------|------|
-| SCI 203 | Designacoes da Organizacao |
-| SCI 205A | Lista de Comunicacoes |
+| SCI 203 | Designações da Organização |
+| SCI 205A | Lista de Comunicações |
 | SCI 207 | Organograma |
 
-**Formularios de Planejamento**
+**Formulários de Planejamento**
 
-| Codigo | Nome |
+| Código | Nome |
 |--------|------|
 | SCI 201 | Briefing do Incidente |
 | SCI 215 | Matriz de Planejamento Operacional |
-| SCI 215A | Analise de Risco |
+| SCI 215A | Análise de Risco |
 
-**Formularios Operacionais**
+**Formulários Operacionais**
 
-| Codigo | Nome |
+| Código | Nome |
 |--------|------|
 | SCI 209 | Resumo do Incidente |
 | SCI 210 | Status de Recursos |
 | SCI 211 | Check-in |
 | SCI 213 | Ordem de Pedido |
-| SCI 213RR | Requisicao de Recursos |
+| SCI 213RR | Requisição de Recursos |
 | SCI 214 | Registro de Atividades |
-| SCI 220 | Sumario de Recursos Aereos |
+| SCI 220 | Sumário de Recursos Aéreos |
 | SCI 221 | Check-out |
 
-**Formularios Administrativos**
+**Formulários Administrativos**
 
-| Codigo | Nome |
+| Código | Nome |
 |--------|------|
-| SCI 218 | Inventario de Viaturas/Equipamentos |
-| SCI 219 | Cartao T de Recursos |
-| SCI 224 | Log de Horario do Pessoal |
+| SCI 218 | Inventário de Viaturas/Equipamentos |
+| SCI 219 | Cartão T de Recursos |
+| SCI 224 | Log de Horário do Pessoal |
 | SCI 225 | Registro de Desempenho |`,
   diagrams: [diagramGaleriaEor]
 };
@@ -579,111 +579,111 @@ const galeriaDiagramas: Section = {
   order: 3,
   content: `## Galeria de Diagramas
 
-Esta secao apresenta os principais diagramas do SCI-ARGOS. Use o modo Diagrama (no cabecalho) para visualizar todos os diagramas abaixo de forma interativa.
+Esta seção apresenta os principais diagramas do SCI-ARGOS. Use o modo Diagrama (no cabeçalho) para visualizar todos os diagramas abaixo de forma interativa.
 
 ---
 
-### Diagramas Disponiveis nesta Pagina
+### Diagramas Disponíveis nesta Página
 
-| Diagrama | Descricao |
+| Diagrama | Descrição |
 |----------|-----------|
-| **Estrutura Organizacional (EOR)** | Organograma completo do SCI com Comando, Staff e Secoes |
+| **Estrutura Organizacional (EOR)** | Organograma completo do SCI com Comando, Staff e Seções |
 | **Ciclo P** | As 14 fases do Ciclo de Planejamento Operacional |
-| **Niveis de Complexidade** | Escalada de recursos por nivel (1 a 4) do CBMMT |
-| **Formularios SCI** | Os 24 formularios organizados por categoria |
-| **Desmobilizacao** | Fases do processo de desmobilizacao |
+| **Níveis de Complexidade** | Escalada de recursos por nível (1 a 4) do CBMMT |
+| **Formulários SCI** | Os 24 formulários organizados por categoria |
+| **Desmobilização** | Fases do processo de desmobilização |
 
 ---
 
 ### Como Usar os Diagramas
 
-**Controles de Visualizacao:**
+**Controles de Visualização:**
 
-| Controle | Funcao |
+| Controle | Função |
 |----------|--------|
 | **Zoom (+/-)** | Ampliar ou reduzir o diagrama |
 | **Arrastar** | Mover o diagrama na tela |
-| **Tela Cheia** | Expandir para visualizacao completa |
+| **Tela Cheia** | Expandir para visualização completa |
 | **Download** | Baixar o diagrama em formato SVG |
-| **Reset** | Restaurar visualizacao original |
+| **Reset** | Restaurar visualização original |
 
 **Dicas:**
-- Use o scroll do mouse para zoom rapido
+- Use o scroll do mouse para zoom rápido
 - Pressione ESC para sair do modo tela cheia
-- Diagramas em SVG podem ser usados em apresentacoes
+- Diagramas em SVG podem ser usados em apresentações
 
 ---
 
 ### Legenda de Cores
 
-Os diagramas seguem um padrao consistente de cores:
+Os diagramas seguem um padrão consistente de cores:
 
 | Cor | Significado | Exemplo |
 |-----|-------------|---------|
-| **Vermelho** | Comando / Decisao critica | CI, Reunioes importantes |
+| **Vermelho** | Comando / Decisão crítica | CI, Reuniões importantes |
 | **Laranja** | Staff do Comando | OSeg, OIP, OLig |
 | **Azul** | Staff Geral / Planejamento | CSOp, CSPlan, CSLog, CSAdmin |
-| **Verde** | Execucao / Sucesso / Conclusao | Implementacao, Check-out |
-| **Roxo** | Funcoes especiais | Nivel 4, Comando Unificado |
-| **Amarelo** | Atencao / Transicao | Fases iniciais, Preparacao |
+| **Verde** | Execução / Sucesso / Conclusão | Implementação, Check-out |
+| **Roxo** | Funções especiais | Nível 4, Comando Unificado |
+| **Amarelo** | Atenção / Transição | Fases iniciais, Preparação |
 
 ---
 
-### Diagramas por Parte da Documentacao
+### Diagramas por Parte da Documentação
 
 **Parte I - Fundamentos do SCI**
 - Conceito do SCI
-- 14 Principios do SCI
+- 14 Princípios do SCI
 
 **Parte II - Estrutura Organizacional**
 - EOR Completa (Organograma)
-- Secao de Operacoes detalhada
-- Secao de Planejamento detalhada
-- Secao de Logistica detalhada
-- Secao de Admin/Financas detalhada
+- Seção de Operações detalhada
+- Seção de Planejamento detalhada
+- Seção de Logística detalhada
+- Seção de Admin/Finanças detalhada
 - Amplitude de Controle
 
 **Parte III - Contexto CBMMT**
-- Niveis de Complexidade (1-4)
+- Níveis de Complexidade (1-4)
 - Estrutura SSC/SSD
-- Integracao com ARGOS
-- Fluxo de Deteccao
+- Integração com ARGOS
+- Fluxo de Detecção
 
 **Parte IV - Fluxo Operacional**
 - 7 Fases do Fluxo
 - Estabelecimento do Comando
-- Estrutura da Reuniao Tatica
+- Estrutura da Reunião Tática
 - Componentes do PAI
 
 **Parte V - Ciclo de Planejamento**
 - 14 Fases do Ciclo P
-- Periodos Operacionais
+- Períodos Operacionais
 - Objetivos SMART
-- Reuniao Tatica
-- Reuniao de Planejamento
+- Reunião Tática
+- Reunião de Planejamento
 - Briefing Operacional
 
-**Parte VI - Desmobilizacao**
-- Fases da Desmobilizacao
-- Prioridades de Liberacao
+**Parte VI - Desmobilização**
+- Fases da Desmobilização
+- Prioridades de Liberação
 - Processo de Check-Out
 - Estrutura do AAR
 
-**Parte VII - Formularios**
-- 24 Formularios por Categoria
-- Fluxo de Uso dos Formularios
-- Comunicacoes e Seguranca
+**Parte VII - Formulários**
+- 24 Formulários por Categoria
+- Fluxo de Uso dos Formulários
+- Comunicações e Segurança
 
 **Parte VIII - Requisitos do Sistema**
 - Arquitetura ARGOS-SCI
 - Requisitos Funcionais
-- Requisitos Nao-Funcionais
-- Roadmap de Implementacao`,
+- Requisitos Não-Funcionais
+- Roadmap de Implementação`,
   diagrams: [diagramGaleriaEor, diagramGaleriaCicloP, diagramGaleriaNiveis, diagramFormularios, diagramDesmobilizacao]
 };
 
 // ------------------------------------------------------------
-// EXPORTACOES
+// EXPORTAÇÕES
 // ------------------------------------------------------------
 
 export const recursosSections: Section[] = [

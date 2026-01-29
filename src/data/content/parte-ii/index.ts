@@ -12,7 +12,7 @@ const diagramEorCompleta: Diagram = {
   id: 'eor-completa',
   title: 'Estrutura Organizacional de Resposta Completa',
   type: 'flowchart',
-  description: 'Os 5 elementos funcionais do SCI e suas subdivisoes',
+  description: 'Os 5 elementos funcionais do SCI e suas subdivisões',
   code: `flowchart TB
     subgraph COMANDO["COMANDO"]
         CI["Comandante do<br/>Incidente"]
@@ -20,17 +20,17 @@ const diagramEorCompleta: Diagram = {
 
     subgraph STAFF["STAFF DO COMANDO"]
         direction LR
-        OSEG["Oficial de<br/>Seguranca"]
-        OIP["Oficial de<br/>Informacoes<br/>Publicas"]
-        OLIG["Oficial de<br/>Ligacao"]
+        OSEG["Oficial de<br/>Segurança"]
+        OIP["Oficial de<br/>Informações<br/>Públicas"]
+        OLIG["Oficial de<br/>Ligação"]
     end
 
-    subgraph SECOES["SECOES PRINCIPAIS"]
+    subgraph SECOES["SEÇÕES PRINCIPAIS"]
         direction LR
-        SOP["Secao de<br/>Operacoes"]
-        SPLAN["Secao de<br/>Planejamento"]
-        SLOG["Secao de<br/>Logistica"]
-        SADM["Secao<br/>Admin/Financas"]
+        SOP["Seção de<br/>Operações"]
+        SPLAN["Seção de<br/>Planejamento"]
+        SLOG["Seção de<br/>Logística"]
+        SADM["Seção<br/>Admin/Finanças"]
     end
 
     CI --> OSEG
@@ -52,7 +52,7 @@ const diagramEorCompleta: Diagram = {
 
 const diagramComando: Diagram = {
   id: 'comando-estrutura',
-  title: 'Funcoes do Comandante do Incidente',
+  title: 'Funções do Comandante do Incidente',
   type: 'flowchart',
   description: 'Responsabilidades e autoridade do CI',
   code: `flowchart TB
@@ -63,21 +63,21 @@ const diagramComando: Diagram = {
             A1["Estabelecer objetivos"]
             A2["Aprovar PAI"]
             A3["Designar pessoal-chave"]
-            A4["Autorizar liberacao<br/>de informacoes"]
+            A4["Autorizar liberação<br/>de informações"]
         end
 
         subgraph RESP["RESPONSABILIDADES"]
-            R1["Seguranca de todos"]
+            R1["Segurança de todos"]
             R2["Avaliar prioridades"]
-            R3["Determinar estrategias"]
-            R4["Coordenar acoes"]
+            R3["Determinar estratégias"]
+            R4["Coordenar ações"]
             R5["Gerenciar recursos"]
         end
 
-        subgraph TRANS["TRANSFERENCIA"]
+        subgraph TRANS["TRANSFERÊNCIA"]
             T1["Briefing completo"]
             T2["Passagem formal"]
-            T3["Notificacao a todos"]
+            T3["Notificação a todos"]
         end
     end
 
@@ -92,29 +92,29 @@ const diagramComando: Diagram = {
 
 const diagramStaffComando: Diagram = {
   id: 'staff-comando',
-  title: 'Staff do Comando - Tres Oficiais',
+  title: 'Staff do Comando - Três Oficiais',
   type: 'flowchart',
-  description: 'Oficial de Seguranca, Informacoes Publicas e Ligacao',
+  description: 'Oficial de Segurança, Informações Públicas e Ligação',
   code: `flowchart LR
-    subgraph OSEG["OFICIAL DE SEGURANCA"]
+    subgraph OSEG["OFICIAL DE SEGURANÇA"]
         direction TB
-        S1["Desenvolver Plano<br/>de Seguranca"]
-        S2["Monitorar condicoes<br/>inseguras"]
+        S1["Desenvolver Plano<br/>de Segurança"]
+        S2["Monitorar condições<br/>inseguras"]
         S3["Implementar LCES"]
-        S4["Autoridade para<br/>PARAR operacoes"]
+        S4["Autoridade para<br/>PARAR operações"]
     end
 
-    subgraph OIP["OFICIAL DE INFORMACOES"]
+    subgraph OIP["OFICIAL DE INFORMAÇÕES"]
         direction TB
-        I1["Comunicados<br/>a imprensa"]
-        I2["Informacoes ao<br/>publico"]
+        I1["Comunicados<br/>à imprensa"]
+        I2["Informações ao<br/>público"]
         I3["Coordenar<br/>entrevistas"]
         I4["Aprovar com CI"]
     end
 
-    subgraph OLIG["OFICIAL DE LIGACAO"]
+    subgraph OLIG["OFICIAL DE LIGAÇÃO"]
         direction TB
-        L1["Contato com<br/>outras agencias"]
+        L1["Contato com<br/>outras agências"]
         L2["Coordenar<br/>recursos externos"]
         L3["Manter lista<br/>de contatos"]
         L4["Representar CI"]
@@ -131,27 +131,27 @@ const diagramStaffComando: Diagram = {
 
 const diagramSecaoOperacoes: Diagram = {
   id: 'secao-operacoes',
-  title: 'Secao de Operacoes - Estrutura',
+  title: 'Seção de Operações - Estrutura',
   type: 'flowchart',
-  description: 'Organizacao da Secao de Operacoes com Divisoes e Grupos',
+  description: 'Organização da Seção de Operações com Divisões e Grupos',
   code: `flowchart TB
-    CSOP["Chefe da Secao<br/>de Operacoes<br/>(CSOp)"]
+    CSOP["Chefe da Seção<br/>de Operações<br/>(CSOp)"]
 
-    subgraph DIVISOES["DIVISOES GEOGRAFICAS"]
+    subgraph DIVISOES["DIVISÕES GEOGRÁFICAS"]
         direction LR
-        DN["Divisao<br/>Norte"]
-        DS["Divisao<br/>Sul"]
-        DL["Divisao<br/>Leste"]
+        DN["Divisão<br/>Norte"]
+        DS["Divisão<br/>Sul"]
+        DL["Divisão<br/>Leste"]
     end
 
     subgraph GRUPOS["GRUPOS FUNCIONAIS"]
         direction LR
-        GA["Grupo<br/>Aereo"]
-        GM["Grupo<br/>Maquinas"]
+        GA["Grupo<br/>Aéreo"]
+        GM["Grupo<br/>Máquinas"]
         GR["Grupo<br/>Rescaldo"]
     end
 
-    subgraph RECURSOS["RECURSOS TATICOS"]
+    subgraph RECURSOS["RECURSOS TÁTICOS"]
         direction LR
         IRT1["IRT 01"]
         IRT2["IRT 02"]
@@ -177,37 +177,37 @@ const diagramSecaoOperacoes: Diagram = {
 
 const diagramSecaoPlanejamento: Diagram = {
   id: 'secao-planejamento',
-  title: 'Secao de Planejamento - Unidades',
+  title: 'Seção de Planejamento - Unidades',
   type: 'flowchart',
-  description: 'As 4 unidades da Secao de Planejamento',
+  description: 'As 4 unidades da Seção de Planejamento',
   code: `flowchart TB
-    CSPLAN["Chefe da Secao<br/>de Planejamento<br/>(CSPlan)"]
+    CSPLAN["Chefe da Seção<br/>de Planejamento<br/>(CSPlan)"]
 
     subgraph UNIDADES["UNIDADES"]
         direction TB
 
         subgraph UREC["UNIDADE DE RECURSOS"]
             UR1["Check-in de recursos"]
-            UR2["Cartoes T"]
+            UR2["Cartões T"]
             UR3["Status de recursos"]
         end
 
-        subgraph USIT["UNIDADE DE SITUACAO"]
-            US1["Mapas de situacao"]
-            US2["Projecoes"]
+        subgraph USIT["UNIDADE DE SITUAÇÃO"]
+            US1["Mapas de situação"]
+            US2["Projeções"]
             US3["Coleta de dados"]
         end
 
-        subgraph UDOC["UNIDADE DE DOCUMENTACAO"]
+        subgraph UDOC["UNIDADE DE DOCUMENTAÇÃO"]
             UD1["Arquivos do incidente"]
             UD2["SCI 214 - Registro"]
-            UD3["Historico"]
+            UD3["Histórico"]
         end
 
-        subgraph UDEM["UNIDADE DE DESMOBILIZACAO"]
+        subgraph UDEM["UNIDADE DE DESMOBILIZAÇÃO"]
             UDM1["Plano de desmob"]
             UDM2["Check-out"]
-            UDM3["Liberacao"]
+            UDM3["Liberação"]
         end
     end
 
@@ -225,23 +225,23 @@ const diagramSecaoPlanejamento: Diagram = {
 
 const diagramSecaoLogistica: Diagram = {
   id: 'secao-logistica',
-  title: 'Secao de Logistica - Ramos e Unidades',
+  title: 'Seção de Logística - Ramos e Unidades',
   type: 'flowchart',
-  description: 'Organizacao da Secao de Logistica',
+  description: 'Organização da Seção de Logística',
   code: `flowchart TB
-    CSLOG["Chefe da Secao<br/>de Logistica<br/>(CSLog)"]
+    CSLOG["Chefe da Seção<br/>de Logística<br/>(CSLog)"]
 
-    subgraph RAMO_SERVICOS["RAMO DE SERVICOS"]
+    subgraph RAMO_SERVICOS["RAMO DE SERVIÇOS"]
         direction TB
-        UCOM["Unidade de<br/>Comunicacoes"]
-        UMED["Unidade<br/>Medica"]
-        UALIM["Unidade de<br/>Alimentacao"]
+        UCOM["Unidade de<br/>Comunicações"]
+        UMED["Unidade<br/>Médica"]
+        UALIM["Unidade de<br/>Alimentação"]
     end
 
     subgraph RAMO_APOIO["RAMO DE APOIO"]
         direction TB
         USUP["Unidade de<br/>Suprimentos"]
-        UINST["Unidade de<br/>Instalacoes"]
+        UINST["Unidade de<br/>Instalações"]
         UTRAN["Unidade de<br/>Transporte"]
     end
 
@@ -259,11 +259,11 @@ const diagramSecaoLogistica: Diagram = {
 
 const diagramSecaoAdmin: Diagram = {
   id: 'secao-admin',
-  title: 'Secao Administrativa/Financas',
+  title: 'Seção Administrativa/Finanças',
   type: 'flowchart',
-  description: 'Unidades da Secao Admin/Financas',
+  description: 'Unidades da Seção Admin/Finanças',
   code: `flowchart TB
-    CSADM["Chefe da Secao<br/>Admin/Financas<br/>(CSAdmin)"]
+    CSADM["Chefe da Seção<br/>Admin/Finanças<br/>(CSAdmin)"]
 
     subgraph UNIDADES["UNIDADES"]
         direction LR
@@ -274,7 +274,7 @@ const diagramSecaoAdmin: Diagram = {
             UT3["Equipamentos"]
         end
 
-        subgraph UAQUI["UNIDADE DE AQUISICOES"]
+        subgraph UAQUI["UNIDADE DE AQUISIÇÕES"]
             UA1["Compras"]
             UA2["Contratos"]
             UA3["Aluguel equip."]
@@ -282,14 +282,14 @@ const diagramSecaoAdmin: Diagram = {
 
         subgraph UCUST["UNIDADE DE CUSTOS"]
             UC1["Registro custos"]
-            UC2["Analise gastos"]
-            UC3["Relatorios"]
+            UC2["Análise gastos"]
+            UC3["Relatórios"]
         end
 
-        subgraph UCOMP["UNIDADE DE COMPENSACAO"]
+        subgraph UCOMP["UNIDADE DE COMPENSAÇÃO"]
             UCP1["Acidentes"]
             UCP2["Danos"]
-            UCP3["Reclamacoes"]
+            UCP3["Reclamações"]
         end
     end
 
@@ -309,7 +309,7 @@ const diagramAmplitudeControle: Diagram = {
   id: 'amplitude-controle',
   title: 'Amplitude de Controle Ideal',
   type: 'flowchart',
-  description: 'Razao de supervisao recomendada: 1 para 3-7',
+  description: 'Razão de supervisão recomendada: 1 para 3-7',
   code: `flowchart TB
     subgraph IDEAL["AMPLITUDE IDEAL: 1 PARA 5"]
         SUP["Supervisor"]
@@ -361,85 +361,85 @@ const diagramAmplitudeControle: Diagram = {
 };
 
 // ----------------------------------------------------------------------------
-// SECOES DA PARTE II
+// SEÇÕES DA PARTE II
 // ----------------------------------------------------------------------------
 
 const visaoGeralEor: Section = {
   id: 'visao-geral-eor',
   slug: 'visao-geral-eor',
-  title: '2.1 Visao Geral da Estrutura Organizacional',
+  title: '2.1 Visão Geral da Estrutura Organizacional',
   part: 2,
   order: 1,
   content: `## Estrutura Organizacional de Resposta (EOR)
 
-A Estrutura Organizacional de Resposta e a forma como o incidente e organizado para permitir uma gestao eficiente. O SCI utiliza uma estrutura modular que se expande ou contrai conforme a necessidade.
+A Estrutura Organizacional de Resposta é a forma como o incidente é organizado para permitir uma gestão eficiente. O SCI utiliza uma estrutura modular que se expande ou contrai conforme a necessidade.
 
 ---
 
 ### Os Elementos Funcionais do SCI
 
-O SCI e composto pelo **Comando**, o **Staff do Comando** e o **Staff Geral (4 Secoes)**, que juntos cobrem todas as necessidades de gestao de um incidente:
+O SCI é composto pelo **Comando**, o **Staff do Comando** e o **Staff Geral (4 Seções)**, que juntos cobrem todas as necessidades de gestão de um incidente:
 
 #### Comando
 
-| Elemento | Responsavel | Funcao Principal |
+| Elemento | Responsável | Função Principal |
 |----------|-------------|------------------|
-| **Comando** | Comandante do Incidente (CI) | Direcao geral e tomada de decisao |
+| **Comando** | Comandante do Incidente (CI) | Direção geral e tomada de decisão |
 
 #### Staff do Comando
 
-O Staff do Comando e composto por **tres posicoes individuais** que se reportam diretamente ao CI. Cada funcao e desempenhada por **uma unica pessoa**:
+O Staff do Comando é composto por **três posições individuais** que se reportam diretamente ao CI. Cada função é desempenhada por **uma única pessoa**:
 
-| Posicao | Funcao Principal |
+| Posição | Função Principal |
 |---------|------------------|
-| **Oficial de Seguranca (OSeg)** | Monitorar seguranca, autoridade para parar operacoes inseguras |
-| **Oficial de Informacao Publica (OIP)** | Comunicacao com midia e publico |
-| **Oficial de Ligacao (OLig)** | Contato com outras agencias e instituicoes |
+| **Oficial de Segurança (OSeg)** | Monitorar segurança, autoridade para parar operações inseguras |
+| **Oficial de Informação Pública (OIP)** | Comunicação com mídia e público |
+| **Oficial de Ligação (OLig)** | Contato com outras agências e instituições |
 
-> **Diferenca fundamental:** O Staff do Comando e composto por **funcoes individuais** (uma pessoa por posicao), diferente das Secoes que sao **escalonaveis** e compostas por multiplas pessoas trabalhando em conjunto.
+> **Diferença fundamental:** O Staff do Comando é composto por **funções individuais** (uma pessoa por posição), diferente das Seções que são **escalonáveis** e compostas por múltiplas pessoas trabalhando em conjunto.
 
-#### Staff Geral (Secoes)
+#### Staff Geral (Seções)
 
-As Secoes sao **estruturas escalonaveis**, compostas por varias pessoas que desempenham a funcao em conjunto, podendo ser subdivididas em Divisoes, Grupos e Unidades conforme a demanda:
+As Seções são **estruturas escalonáveis**, compostas por várias pessoas que desempenham a função em conjunto, podendo ser subdivididas em Divisões, Grupos e Unidades conforme a demanda:
 
-| Secao | Responsavel | Funcao Principal |
+| Seção | Responsável | Função Principal |
 |-------|-------------|------------------|
-| **Operacoes** | Chefe de Operacoes (CSOp) | Execucao tatica das acoes |
-| **Planejamento** | Chefe de Planejamento (CSPlan) | Coleta de informacoes e planejamento |
-| **Logistica** | Chefe de Logistica (CSLog) | Suporte e recursos |
-| **Admin/Financas** | Chefe Admin (CSAdmin) | Custos e aspectos administrativos |
+| **Operações** | Chefe de Operações (CSOp) | Execução tática das ações |
+| **Planejamento** | Chefe de Planejamento (CSPlan) | Coleta de informações e planejamento |
+| **Logística** | Chefe de Logística (CSLog) | Suporte e recursos |
+| **Admin/Finanças** | Chefe Admin (CSAdmin) | Custos e aspectos administrativos |
 
 ---
 
-### Principio da Modularidade
+### Princípio da Modularidade
 
 A estrutura se adapta ao tamanho do incidente:
 
-**Incidente Simples (Nivel 1)**
-- Apenas o CI, que acumula todas as funcoes
+**Incidente Simples (Nível 1)**
+- Apenas o CI, que acumula todas as funções
 
-**Incidente em Crescimento (Nivel 2)**
-- CI delega funcoes conforme necessario
-- Primeiro a ser delegado: Operacoes
+**Incidente em Crescimento (Nível 2)**
+- CI delega funções conforme necessário
+- Primeiro a ser delegado: Operações
 
-**Incidente Complexo (Nivel 3-4)**
+**Incidente Complexo (Nível 3-4)**
 - Estrutura completa ativada
-- Divisoes e Grupos criados
-- Todas as secoes com pessoal designado
+- Divisões e Grupos criados
+- Todas as seções com pessoal designado
 
 ---
 
-### Nomenclatura Padrao
+### Nomenclatura Padrão
 
-| Nivel | Titulo | Funcao |
+| Nível | Título | Função |
 |-------|--------|--------|
-| Comando | Comandante | Responsavel geral |
-| Staff do Comando | Oficial | Funcao individual (OSeg, OIP, OLig) |
-| Secao | Chefe | Coordena uma area funcional (escalonavel) |
-| Divisao/Grupo | Supervisor | Area geografica ou funcional |
-| Unidade | Lider | Tarefa especifica |
+| Comando | Comandante | Responsável geral |
+| Staff do Comando | Oficial | Função individual (OSeg, OIP, OLig) |
+| Seção | Chefe | Coordena uma área funcional (escalonável) |
+| Divisão/Grupo | Supervisor | Área geográfica ou funcional |
+| Unidade | Líder | Tarefa específica |
 
-> **IMPORTANTE:** A nomenclatura padronizada garante que todos saibam exatamente quem faz o que, independentemente da instituicao de origem.`,
+> **IMPORTANTE:** A nomenclatura padronizada garante que todos saibam exatamente quem faz o que, independentemente da instituição de origem.`,
   diagrams: [diagramEorCompleta]
 };
 
@@ -451,7 +451,7 @@ const comando: Section = {
   order: 2,
   content: `## O Comandante do Incidente (CI)
 
-O Comandante do Incidente e a pessoa com autoridade geral sobre o incidente. E a unica posicao que sempre deve estar preenchida.
+O Comandante do Incidente é a pessoa com autoridade geral sobre o incidente. É a única posição que sempre deve estar preenchida.
 
 ---
 
@@ -460,54 +460,54 @@ O Comandante do Incidente e a pessoa com autoridade geral sobre o incidente. E a
 O Comandante do Incidente tem autoridade para:
 
 1. **Estabelecer objetivos** do incidente
-2. **Aprovar** o Plano de Acao do Incidente (PAI)
-3. **Designar** pessoal-chave da organizacao
-4. **Autorizar** liberacao de informacoes publicas
-5. **Ordenar** desmobilizacao de recursos
+2. **Aprovar** o Plano de Ação do Incidente (PAI)
+3. **Designar** pessoal-chave da organização
+4. **Autorizar** liberação de informações públicas
+5. **Ordenar** desmobilização de recursos
 
 ---
 
 ### Responsabilidades Principais
 
-| Responsabilidade | Descricao |
+| Responsabilidade | Descrição |
 |-----------------|-----------|
-| **Seguranca** | Garantir a seguranca de todos os envolvidos |
-| **Avaliacao** | Avaliar prioridades do incidente |
-| **Estrategia** | Determinar estrategias e taticas |
-| **Coordenacao** | Coordenar todas as acoes |
-| **Recursos** | Gerenciar alocacao de recursos |
-| **Documentacao** | Garantir documentacao adequada |
+| **Segurança** | Garantir a segurança de todos os envolvidos |
+| **Avaliação** | Avaliar prioridades do incidente |
+| **Estratégia** | Determinar estratégias e táticas |
+| **Coordenação** | Coordenar todas as ações |
+| **Recursos** | Gerenciar alocação de recursos |
+| **Documentação** | Garantir documentação adequada |
 
 ---
 
-### Transferencia de Comando
+### Transferência de Comando
 
-A transferencia de comando ocorre quando:
+A transferência de comando ocorre quando:
 
 - Chega um oficial mais qualificado
-- Mudanca de ciclo operacional
-- Incidente muda de jurisdicao
-- Complexidade exige mudanca
+- Mudança de ciclo operacional
+- Incidente muda de jurisdição
+- Complexidade exige mudança
 
-**Procedimento de Transferencia:**
+**Procedimento de Transferência:**
 
 1. O CI que sai prepara um briefing completo
-2. Transferencia formal e comunicada a todos
-3. Novo CI assume e e apresentado a equipe
+2. Transferência formal é comunicada a todos
+3. Novo CI assume e é apresentado à equipe
 4. Registro no SCI 201 (Briefing do Incidente)
 
 ---
 
 ### Comando Unificado
 
-Quando multiplas agencias tem autoridade sobre o incidente, utiliza-se o **Comando Unificado**:
+Quando múltiplas agências têm autoridade sobre o incidente, utiliza-se o **Comando Unificado**:
 
-- Varios comandantes trabalham juntos
-- Decisoes sao tomadas em conjunto
-- Um unico PAI e desenvolvido
-- Evita duplicacao de esforcos
+- Vários comandantes trabalham juntos
+- Decisões são tomadas em conjunto
+- Um único PAI é desenvolvido
+- Evita duplicação de esforços
 
-> **NOTA:** No CBMMT, o Comando Unificado e comum em incidentes que envolvem ICMBio, SEMA, Defesa Civil e outras instituicoes.`,
+> **NOTA:** No CBMMT, o Comando Unificado é comum em incidentes que envolvem ICMBio, SEMA, Defesa Civil e outras instituições.`,
   diagrams: [diagramComando]
 };
 
@@ -519,200 +519,200 @@ const staffComando: Section = {
   order: 3,
   content: `## Staff do Comando
 
-O Staff do Comando e composto por tres posicoes que se reportam diretamente ao CI e nao fazem parte das Secoes.
+O Staff do Comando é composto por três posições que se reportam diretamente ao CI e não fazem parte das Seções.
 
 ---
 
-### Oficial de Seguranca (OSeg)
+### Oficial de Segurança (OSeg)
 
-Responsavel pela seguranca de todas as operacoes.
+Responsável pela segurança de todas as operações.
 
-**Funcoes:**
-- Desenvolver o Plano de Seguranca (SCI 208)
-- Desenvolver a Analise de Risco (SCI 215A)
-- Monitorar condicoes inseguras
+**Funções:**
+- Desenvolver o Plano de Segurança (SCI 208)
+- Desenvolver a Análise de Risco (SCI 215A)
+- Monitorar condições inseguras
 - Implementar o sistema LCES
 - Investigar acidentes
 
 **Autoridade Especial:**
-> O Oficial de Seguranca tem autoridade para **PARAR** qualquer operacao que considere insegura, sem necessidade de autorizacao previa do CI.
+> O Oficial de Segurança tem autoridade para **PARAR** qualquer operação que considere insegura, sem necessidade de autorização prévia do CI.
 
 ---
 
-### Oficial de Informacoes Publicas (OIP)
+### Oficial de Informações Públicas (OIP)
 
-Responsavel pela comunicacao com a midia e o publico.
+Responsável pela comunicação com a mídia e o público.
 
-**Funcoes:**
-- Preparar comunicados a imprensa
+**Funções:**
+- Preparar comunicados à imprensa
 - Organizar entrevistas
-- Monitorar noticias sobre o incidente
-- Coordenar com assessorias de comunicacao
-- Manter historico de comunicacoes
+- Monitorar notícias sobre o incidente
+- Coordenar com assessorias de comunicação
+- Manter histórico de comunicações
 
 **Regra Fundamental:**
-> Toda informacao liberada deve ser **aprovada pelo CI** antes da divulgacao.
+> Toda informação liberada deve ser **aprovada pelo CI** antes da divulgação.
 
 ---
 
-### Oficial de Ligacao (OLig)
+### Oficial de Ligação (OLig)
 
-Ponto de contato com outras agencias e organizacoes.
+Ponto de contato com outras agências e organizações.
 
-**Funcoes:**
-- Manter contato com agencias cooperadoras
-- Coordenar recursos de outras instituicoes
-- Representar o CI em reunioes externas
+**Funções:**
+- Manter contato com agências cooperadoras
+- Coordenar recursos de outras instituições
+- Representar o CI em reuniões externas
 - Manter lista atualizada de contatos
-- Resolver questoes interinstitucionais
+- Resolver questões interinstitucionais
 
-**Agencias Comuns em Incidentes Florestais no MT:**
+**Agências Comuns em Incidentes Florestais no MT:**
 - ICMBio
 - SEMA-MT
 - IBAMA
 - Prefeituras
 - Defesa Civil
-- Fazendeiros/Proprietarios
+- Fazendeiros/Proprietários
 
 ---
 
 ### Quando Ativar o Staff
 
-| Posicao | Ativar Quando |
+| Posição | Ativar Quando |
 |---------|---------------|
-| OSeg | Sempre, desde o inicio (seguranca e prioridade 1) |
-| OIP | Ha interesse da midia ou necessidade de comunicacao publica |
-| OLig | Mais de uma agencia esta envolvida |`,
+| OSeg | Sempre, desde o início (segurança é prioridade 1) |
+| OIP | Há interesse da mídia ou necessidade de comunicação pública |
+| OLig | Mais de uma agência está envolvida |`,
   diagrams: [diagramStaffComando]
 };
 
 const secaoOperacoes: Section = {
   id: 'secao-operacoes',
   slug: 'secao-operacoes',
-  title: '2.4 Secao de Operacoes',
+  title: '2.4 Seção de Operações',
   part: 2,
   order: 4,
-  content: `## Secao de Operacoes
+  content: `## Seção de Operações
 
-A Secao de Operacoes e responsavel pela **execucao tatica** de todas as acoes de combate ao incidente.
+A Seção de Operações é responsável pela **execução tática** de todas as ações de combate ao incidente.
 
 ---
 
-### Chefe da Secao de Operacoes (CSOp)
+### Chefe da Seção de Operações (CSOp)
 
-O CSOp e geralmente a segunda posicao a ser delegada pelo CI, apos a carga de trabalho do Comando aumentar.
+O CSOp é geralmente a segunda posição a ser delegada pelo CI, após a carga de trabalho do Comando aumentar.
 
 **Responsabilidades do CSOp:**
 - Implementar o PAI
-- Designar recursos para atribuicoes
-- Supervisar operacoes taticas
+- Designar recursos para atribuições
+- Supervisar operações táticas
 - Solicitar recursos adicionais
 - Manter CI informado do progresso
 
 ---
 
-### Organizacao Tatica
+### Organização Tática
 
-A Secao de Operacoes pode ser organizada em:
+A Seção de Operações pode ser organizada em:
 
-**Divisoes (Geograficas)**
-- Areas fisicas do incidente
-- Ex: Divisao Norte, Divisao Sul, Divisao Leste
+**Divisões (Geográficas)**
+- Áreas físicas do incidente
+- Ex: Divisão Norte, Divisão Sul, Divisão Leste
 
 **Grupos (Funcionais)**
-- Funcoes especificas independente de area
-- Ex: Grupo Aereo, Grupo de Maquinas, Grupo de Rescaldo
+- Funções específicas independente de área
+- Ex: Grupo Aéreo, Grupo de Máquinas, Grupo de Rescaldo
 
 ---
 
-### Hierarquia Tatica
+### Hierarquia Tática
 
-| Nivel | Liderado Por | Contem |
+| Nível | Liderado Por | Contém |
 |-------|--------------|--------|
-| Secao | CSOp | Ate 5 Divisoes/Grupos |
-| Divisao/Grupo | Supervisor | Ate 5 Equipes de Intervencao |
-| Forca-Tarefa | Lider | Combinacao de recursos diferentes |
-| Equipe de Intervencao | Lider | Recursos do mesmo tipo |
+| Seção | CSOp | Até 5 Divisões/Grupos |
+| Divisão/Grupo | Supervisor | Até 5 Equipes de Intervenção |
+| Força-Tarefa | Líder | Combinação de recursos diferentes |
+| Equipe de Intervenção | Líder | Recursos do mesmo tipo |
 
 ---
 
-### Operacoes Aereas
+### Operações Aéreas
 
-Em incidentes com recursos aereos, cria-se o **Grupo de Operacoes Aereas**:
+Em incidentes com recursos aéreos, cria-se o **Grupo de Operações Aéreas**:
 
-- Coordenador de Operacoes Aereas
+- Coordenador de Operações Aéreas
 - Helibase/Helispot
-- Base de Avioes
+- Base de Aviões
 
-**Formularios Especificos:**
-- SCI 220 - Resumo de Operacoes Aereas
+**Formulários Específicos:**
+- SCI 220 - Resumo de Operações Aéreas
 
 ---
 
-### Reuniao de Tatica
+### Reunião de Tática
 
-O CSOp conduz a **Reuniao Tatica** durante o Ciclo P para:
+O CSOp conduz a **Reunião Tática** durante o Ciclo P para:
 
-1. Apresentar estrategias e taticas
-2. Definir atribuicoes de trabalho
+1. Apresentar estratégias e táticas
+2. Definir atribuições de trabalho
 3. Identificar necessidades de recursos
-4. Coordenar com outras Secoes`,
+4. Coordenar com outras Seções`,
   diagrams: [diagramSecaoOperacoes]
 };
 
 const secaoPlanejamento: Section = {
   id: 'secao-planejamento',
   slug: 'secao-planejamento',
-  title: '2.5 Secao de Planejamento',
+  title: '2.5 Seção de Planejamento',
   part: 2,
   order: 5,
-  content: `## Secao de Planejamento
+  content: `## Seção de Planejamento
 
-A Secao de Planejamento e responsavel pela **coleta, avaliacao e disseminacao de informacoes** sobre o incidente, alem de preparar o PAI.
+A Seção de Planejamento é responsável pela **coleta, avaliação e disseminação de informações** sobre o incidente, além de preparar o PAI.
 
 ---
 
-### Chefe da Secao de Planejamento (CSPlan)
+### Chefe da Seção de Planejamento (CSPlan)
 
 **Responsabilidades:**
-- Coletar e analisar informacoes do incidente
-- Supervisar a preparacao do PAI
-- Conduzir reunioes de planejamento
+- Coletar e analisar informações do incidente
+- Supervisar a preparação do PAI
+- Conduzir reuniões de planejamento
 - Projetar necessidades futuras
-- Manter documentacao do incidente
-- Planejar a desmobilizacao
+- Manter documentação do incidente
+- Planejar a desmobilização
 
 ---
 
-### Unidades da Secao de Planejamento
+### Unidades da Seção de Planejamento
 
 #### Unidade de Recursos
 - Check-in de todos os recursos
-- Manutencao dos Cartoes T
+- Manutenção dos Cartões T
 - Acompanhamento do status de recursos
 
-#### Unidade de Situacao
-- Coleta de informacoes de campo
-- Atualizacao de mapas
-- Projecoes do comportamento do incidente
-- Preparacao de displays de situacao
+#### Unidade de Situação
+- Coleta de informações de campo
+- Atualização de mapas
+- Projeções do comportamento do incidente
+- Preparação de displays de situação
 
-#### Unidade de Documentacao
+#### Unidade de Documentação
 - Manter arquivos completos do incidente
 - Registro de atividades (SCI 214)
-- Duplicacao e distribuicao de documentos
-- Preservacao de historico
+- Duplicação e distribuição de documentos
+- Preservação de histórico
 
-#### Unidade de Desmobilizacao
-- Preparar Plano de Desmobilizacao
-- Coordenar liberacao de recursos
-- Garantir verificacoes de checkout
+#### Unidade de Desmobilização
+- Preparar Plano de Desmobilização
+- Coordenar liberação de recursos
+- Garantir verificações de checkout
 
 ---
 
-### Especialistas Tecnicos
+### Especialistas Técnicos
 
-O CSPlan pode solicitar **Especialistas Tecnicos** para:
+O CSPlan pode solicitar **Especialistas Técnicos** para:
 
 - Comportamento do fogo
 - Meteorologia
@@ -722,155 +722,155 @@ O CSPlan pode solicitar **Especialistas Tecnicos** para:
 
 ---
 
-### Produtos da Secao
+### Produtos da Seção
 
-| Produto | Descricao |
+| Produto | Descrição |
 |---------|-----------|
-| PAI | Plano de Acao do Incidente |
+| PAI | Plano de Ação do Incidente |
 | SCI 209 | Resumo de Status do Incidente |
-| Mapas | Situacao, operacoes, evacuacao |
-| Projecoes | Comportamento esperado do incidente |`,
+| Mapas | Situação, operações, evacuação |
+| Projeções | Comportamento esperado do incidente |`,
   diagrams: [diagramSecaoPlanejamento]
 };
 
 const secaoLogistica: Section = {
   id: 'secao-logistica',
   slug: 'secao-logistica',
-  title: '2.6 Secao de Logistica',
+  title: '2.6 Seção de Logística',
   part: 2,
   order: 6,
-  content: `## Secao de Logistica
+  content: `## Seção de Logística
 
-A Secao de Logistica e responsavel por **fornecer instalacoes, servicos e materiais** para o incidente.
+A Seção de Logística é responsável por **fornecer instalações, serviços e materiais** para o incidente.
 
 ---
 
-### Chefe da Secao de Logistica (CSLog)
+### Chefe da Seção de Logística (CSLog)
 
 **Responsabilidades:**
-- Gerenciar todas as necessidades logisticas
+- Gerenciar todas as necessidades logísticas
 - Supervisar unidades subordinadas
 - Coordenar com CSPlan sobre necessidades futuras
 - Garantir bem-estar das equipes
 
 ---
 
-### Estrutura da Secao
+### Estrutura da Seção
 
-A Secao de Logistica pode ser organizada em dois ramos:
+A Seção de Logística pode ser organizada em dois ramos:
 
-#### Ramo de Servicos
-Fornece servicos diretos ao pessoal e equipamentos.
+#### Ramo de Serviços
+Fornece serviços diretos ao pessoal e equipamentos.
 
-| Unidade | Funcao |
+| Unidade | Função |
 |---------|--------|
-| **Comunicacoes** | Radios, frequencias, manutencao |
-| **Medica** | Atendimento de emergencia, prevencao |
-| **Alimentacao** | Refeicoes, hidratacao, areas de descanso |
+| **Comunicações** | Rádios, frequências, manutenção |
+| **Médica** | Atendimento de emergência, prevenção |
+| **Alimentação** | Refeições, hidratação, áreas de descanso |
 
 #### Ramo de Apoio
 Fornece materiais e infraestrutura.
 
-| Unidade | Funcao |
+| Unidade | Função |
 |---------|--------|
 | **Suprimentos** | Pedidos, recebimento, armazenamento |
-| **Instalacoes** | Acampamentos, areas de pouso, PC |
-| **Transporte** | Veiculos, combustivel, manutencao |
+| **Instalações** | Acampamentos, áreas de pouso, PC |
+| **Transporte** | Veículos, combustível, manutenção |
 
 ---
 
-### Planos da Secao
+### Planos da Seção
 
-A Logistica produz componentes do PAI:
+A Logística produz componentes do PAI:
 
-- **SCI 205** - Plano de Comunicacoes
-- **SCI 206** - Plano Medico
+- **SCI 205** - Plano de Comunicações
+- **SCI 206** - Plano Médico
 
 ---
 
-### Consideracoes no MT
+### Considerações no MT
 
-Em operacoes de incendio florestal no Mato Grosso, considerar:
+Em operações de incêndio florestal no Mato Grosso, considerar:
 
-- Longas distancias ate pontos de apoio
-- Calor extremo exige mais hidratacao
-- Areas remotas dificultam comunicacao
-- Necessidade de pontos de pouso para helicopteros`,
+- Longas distâncias até pontos de apoio
+- Calor extremo exige mais hidratação
+- Áreas remotas dificultam comunicação
+- Necessidade de pontos de pouso para helicópteros`,
   diagrams: [diagramSecaoLogistica]
 };
 
 const secaoAdmin: Section = {
   id: 'secao-admin',
   slug: 'secao-admin',
-  title: '2.7 Secao Administrativa/Financas',
+  title: '2.7 Seção Administrativa/Finanças',
   part: 2,
   order: 7,
-  content: `## Secao Administrativa/Financas
+  content: `## Seção Administrativa/Finanças
 
-A Secao Admin/Financas e responsavel por **rastrear custos, tempos e questoes administrativas** do incidente.
+A Seção Admin/Finanças é responsável por **rastrear custos, tempos e questões administrativas** do incidente.
 
-> **NOTA:** Esta secao so e ativada quando o incidente envolve custos significativos ou questoes administrativas complexas. E opcional para incidentes menores.
+> **NOTA:** Esta seção só é ativada quando o incidente envolve custos significativos ou questões administrativas complexas. É opcional para incidentes menores.
 
 ---
 
-### Chefe da Secao Admin/Financas (CSAdmin)
+### Chefe da Seção Admin/Finanças (CSAdmin)
 
 **Responsabilidades:**
-- Gerenciar todas as questoes financeiras
+- Gerenciar todas as questões financeiras
 - Manter registros de custos
-- Processar questoes de pessoal
-- Coordenar com orgaos financeiros
+- Processar questões de pessoal
+- Coordenar com órgãos financeiros
 
 ---
 
-### Unidades da Secao
+### Unidades da Seção
 
 #### Unidade de Tempo
 - Registrar horas trabalhadas de pessoal
 - Controlar uso de equipamentos
-- Manter formularios de tempo
+- Manter formulários de tempo
 - Interface com sistemas de RH
 
-#### Unidade de Aquisicoes
-- Processar compras de emergencia
+#### Unidade de Aquisições
+- Processar compras de emergência
 - Gerenciar contratos
-- Alugar equipamentos necessarios
-- Documentar todas aquisicoes
+- Alugar equipamentos necessários
+- Documentar todas aquisições
 
 #### Unidade de Custos
-- Consolidar informacoes de custos
+- Consolidar informações de custos
 - Preparar estimativas de custos
 - Manter registro de gastos
-- Fornecer relatorios financeiros
+- Fornecer relatórios financeiros
 
-#### Unidade de Compensacao/Reclamacoes
+#### Unidade de Compensação/Reclamações
 - Investigar acidentes
-- Processar reclamacoes por danos
-- Manter registros para acoes legais
+- Processar reclamações por danos
+- Manter registros para ações legais
 - Coordenar com seguradoras
 
 ---
 
 ### Quando Ativar
 
-Ativar a Secao Admin/Financas quando:
+Ativar a Seção Admin/Finanças quando:
 
-- Incidente dura mais de um periodo operacional
-- Ha contratacao de recursos externos
-- Custos significativos estao envolvidos
-- Ha potencial para acoes legais ou compensatorias
+- Incidente dura mais de um período operacional
+- Há contratação de recursos externos
+- Custos significativos estão envolvidos
+- Há potencial para ações legais ou compensatórias
 
 ---
 
-### Integracao com CBMMT
+### Integração com CBMMT
 
-No contexto CBMMT, a Secao coordena:
+No contexto CBMMT, a Seção coordena:
 
-- Diarias de pessoal
+- Diárias de pessoal
 - Horas extras
 - Ressarcimento de fazendeiros
-- Custos de combustivel e alimentacao
-- Contratos de maquinario`,
+- Custos de combustível e alimentação
+- Contratos de maquinário`,
   diagrams: [diagramSecaoAdmin]
 };
 
@@ -882,28 +882,28 @@ const amplitudeControle: Section = {
   order: 8,
   content: `## Amplitude de Controle
 
-A amplitude de controle e o numero de subordinados que um supervisor pode gerenciar efetivamente.
+A amplitude de controle é o número de subordinados que um supervisor pode gerenciar efetivamente.
 
 ---
 
-### Razao Recomendada
+### Razão Recomendada
 
-| Situacao | Razao |
+| Situação | Razão |
 |----------|-------|
 | **Ideal** | 1 supervisor para 5 subordinados (1:5) |
-| **Aceitavel** | 1:3 a 1:7 |
-| **Problematico** | Mais de 1:7 |
+| **Aceitável** | 1:3 a 1:7 |
+| **Problemático** | Mais de 1:7 |
 
 ---
 
-### Por Que e Importante
+### Por Que é Importante
 
 Amplitude de controle adequada garante:
 
-1. **Comunicacao efetiva** entre niveis
-2. **Seguranca** atraves de supervisao adequada
-3. **Responsabilizacao** clara
-4. **Decisoes rapidas** quando necessario
+1. **Comunicação efetiva** entre níveis
+2. **Segurança** através de supervisão adequada
+3. **Responsabilização** clara
+4. **Decisões rápidas** quando necessário
 5. **Bem-estar** das equipes
 
 ---
@@ -912,12 +912,12 @@ Amplitude de controle adequada garante:
 
 Se um supervisor tem mais de 7 subordinados diretos:
 
-**Opcao 1: Criar nivel intermediario**
+**Opção 1: Criar nível intermediário**
 - Agrupar recursos em equipes
-- Designar lideres de equipe
+- Designar líderes de equipe
 
-**Opcao 2: Dividir area**
-- Criar novas Divisoes ou Grupos
+**Opção 2: Dividir área**
+- Criar novas Divisões ou Grupos
 - Redistribuir recursos
 
 ---
@@ -926,26 +926,26 @@ Se um supervisor tem mais de 7 subordinados diretos:
 
 Indicadores de amplitude excessiva:
 
-- Supervisor nao consegue acompanhar todos
-- Comunicacoes frequentemente perdidas
-- Decisoes atrasadas
+- Supervisor não consegue acompanhar todos
+- Comunicações frequentemente perdidas
+- Decisões atrasadas
 - Acidentes ou quase-acidentes aumentam
 - Moral da equipe cai
 
 ---
 
-### Exemplo Pratico
+### Exemplo Prático
 
-**Situacao Problematica:**
+**Situação Problemática:**
 Um CSOp com 12 IRTs reportando diretamente.
 
-**Solucao:**
-Criar 3 Divisoes com 4 IRTs cada, com um Supervisor de Divisao para cada.
+**Solução:**
+Criar 3 Divisões com 4 IRTs cada, com um Supervisor de Divisão para cada.
 
 | Antes | Depois |
 |-------|--------|
 | CSOp → 12 IRTs | CSOp → 3 Supervisores → 4 IRTs cada |
-| Razao 1:12 | Razao 1:3 (CSOp) e 1:4 (Supervisores) |`,
+| Razão 1:12 | Razão 1:3 (CSOp) e 1:4 (Supervisores) |`,
   diagrams: [diagramAmplitudeControle]
 };
 

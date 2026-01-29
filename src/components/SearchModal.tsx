@@ -139,7 +139,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyDown={handleKeyDown}
-                placeholder="Buscar na documentacao..."
+                placeholder="Buscar na documentação..."
                 className="flex-1 bg-transparent text-gray-900 dark:text-white placeholder-gray-400 outline-none"
               />
               <button
@@ -185,7 +185,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                 </div>
               ) : (
                 <div className="py-8 text-center text-gray-500 dark:text-gray-400">
-                  <p>Digite para buscar na documentacao</p>
+                  <p>Digite para buscar na documentação</p>
                 </div>
               )}
             </div>

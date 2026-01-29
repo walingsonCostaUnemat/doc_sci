@@ -1,7 +1,7 @@
 import type { Section, Diagram } from '@/data/types';
 
 // ============================================================
-// PARTE VI - DESMOBILIZACAO E ENCERRAMENTO
+// PARTE VI - DESMOBILIZAÇÃO E ENCERRAMENTO
 // ============================================================
 
 // ------------------------------------------------------------
@@ -10,31 +10,31 @@ import type { Section, Diagram } from '@/data/types';
 
 const diagramFasesDesmobilizacao: Diagram = {
   id: 'fases-desmobilizacao',
-  title: 'Fases da Desmobilizacao',
+  title: 'Fases da Desmobilização',
   type: 'flowchart',
-  description: 'Processo completo de desmobilizacao por fases',
+  description: 'Processo completo de desmobilização por fases',
   code: `flowchart TB
     subgraph fase1["FASE 1 - PLANEJAMENTO"]
         P1["Incidente<br/>Estabiliza"]
         P2["CI Decide<br/>Iniciar Desmob"]
-        P3["Plano de<br/>Desmobilizacao"]
+        P3["Plano de<br/>Desmobilização"]
     end
 
-    subgraph fase2["FASE 2 - PRIORIZACAO"]
+    subgraph fase2["FASE 2 - PRIORIZAÇÃO"]
         PR1["CSOp Identifica<br/>Recursos Excedentes"]
-        PR2["Definicao de<br/>Prioridades"]
-        PR3["Lista de<br/>Liberacoes"]
+        PR2["Definição de<br/>Prioridades"]
+        PR3["Lista de<br/>Liberações"]
     end
 
-    subgraph fase3["FASE 3 - EXECUCAO"]
-        E1["Notificacao<br/>aos Recursos"]
+    subgraph fase3["FASE 3 - EXECUÇÃO"]
+        E1["Notificação<br/>aos Recursos"]
         E2["Check-Out<br/>SCI 221"]
-        E3["Liberacao<br/>Autorizada"]
+        E3["Liberação<br/>Autorizada"]
     end
 
     subgraph fase4["FASE 4 - ENCERRAMENTO"]
-        EN1["Ultimas<br/>Liberacoes"]
-        EN2["Documentacao<br/>Final"]
+        EN1["Últimas<br/>Liberações"]
+        EN2["Documentação<br/>Final"]
         EN3["Encerramento<br/>Formal"]
     end
 
@@ -57,20 +57,20 @@ const diagramFasesDesmobilizacao: Diagram = {
 
 const diagramPrioridadesLiberacao: Diagram = {
   id: 'prioridades-liberacao',
-  title: 'Prioridades de Liberacao de Recursos',
+  title: 'Prioridades de Liberação de Recursos',
   type: 'flowchart',
-  description: 'Ordem tipica de liberacao por tipo de recurso',
+  description: 'Ordem típica de liberação por tipo de recurso',
   code: `flowchart LR
     subgraph p1["1a PRIORIDADE"]
         R1["Recursos Locais<br/>Respondedores Iniciais<br/>Cooperadores Locais"]
     end
 
     subgraph p2["2a PRIORIDADE"]
-        R2["Recursos Especializados<br/>EIAOPs de Outras Regioes<br/>GAvBM"]
+        R2["Recursos Especializados<br/>EIAOPs de Outras Regiões<br/>GAvBM"]
     end
 
     subgraph p3["3a PRIORIDADE"]
-        R3["Recursos de Apoio<br/>Outras Regioes"]
+        R3["Recursos de Apoio<br/>Outras Regiões"]
     end
 
     subgraph p4["4a PRIORIDADE"]
@@ -94,29 +94,29 @@ const diagramProcessoCheckout: Diagram = {
   id: 'processo-checkout',
   title: 'Processo de Check-Out (SCI 221)',
   type: 'flowchart',
-  description: 'Fluxo de liberacao de recurso',
+  description: 'Fluxo de liberação de recurso',
   code: `flowchart TB
     inicio["Recurso Recebe<br/>SCI 221"]
 
-    subgraph estacoes["ESTACOES DE CHECK-OUT"]
+    subgraph estacoes["ESTAÇÕES DE CHECK-OUT"]
         direction LR
-        E1["Comunicacoes<br/>Devolucao Radios"]
-        E2["Instalacoes<br/>Area Limpa"]
+        E1["Comunicações<br/>Devolução Rádios"]
+        E2["Instalações<br/>Área Limpa"]
         E3["Suprimentos<br/>Ferramentas"]
-        E4["Suporte Terrestre<br/>Inspecao Viatura"]
-        E5["Admin/Financas<br/>Registro Tempo"]
-        E6["OSeg<br/>Avaliacao Pessoal"]
+        E4["Suporte Terrestre<br/>Inspeção Viatura"]
+        E5["Admin/Finanças<br/>Registro Tempo"]
+        E6["OSeg<br/>Avaliação Pessoal"]
     end
 
-    verificacao["Lider Desmob<br/>Verifica SCI 221"]
-    liberacao["Liberacao<br/>Autorizada"]
+    verificacao["Líder Desmob<br/>Verifica SCI 221"]
+    liberacao["Liberação<br/>Autorizada"]
     saida["Recurso<br/>Desmobilizado"]
 
     inicio --> E1
     E1 --> E2 --> E3 --> E4 --> E5 --> E6
     E6 --> verificacao
     verificacao -->|Completo| liberacao
-    verificacao -->|Pendencias| inicio
+    verificacao -->|Pendências| inicio
     liberacao --> saida
 
     classDef inicioStyle fill:#FEF3C7,stroke:#D97706,color:#92400E
@@ -130,18 +130,18 @@ const diagramProcessoCheckout: Diagram = {
 
 const diagramResponsabilidades: Diagram = {
   id: 'responsabilidades-desmob',
-  title: 'Responsabilidades na Desmobilizacao',
+  title: 'Responsabilidades na Desmobilização',
   type: 'flowchart',
-  description: 'Papel de cada funcao no processo',
+  description: 'Papel de cada função no processo',
   code: `flowchart TB
-    subgraph DESMOB["DESMOBILIZACAO - RESPONSABILIDADES"]
+    subgraph DESMOB["DESMOBILIZAÇÃO - RESPONSABILIDADES"]
         direction TB
     end
 
     subgraph CI_RESP["CI - COMANDANTE"]
-        CI1["Aprovacao Final"]
+        CI1["Aprovação Final"]
         CI2["Define Prioridades"]
-        CI3["Autoriza Liberacoes"]
+        CI3["Autoriza Liberações"]
     end
 
     subgraph SPLAN["SPlan - PLANEJAMENTO"]
@@ -150,13 +150,13 @@ const diagramResponsabilidades: Diagram = {
         SP3["Preenche SCI 221"]
     end
 
-    subgraph SOP["SOp - OPERACOES"]
+    subgraph SOP["SOp - OPERAÇÕES"]
         SO1["Identifica Excedentes"]
         SO2["Avalia Necessidades"]
         SO3["Lista Recursos"]
     end
 
-    subgraph SLOG["SLog - LOGISTICA"]
+    subgraph SLOG["SLog - LOGÍSTICA"]
         SL1["Organiza Transporte"]
         SL2["Inspeciona Viaturas"]
         SL3["Coleta Equipamentos"]
@@ -164,14 +164,14 @@ const diagramResponsabilidades: Diagram = {
 
     subgraph SADMIN["SAdmin - ADMIN/FIN"]
         SA1["Registro de Horas"]
-        SA2["Processa Reclamacoes"]
+        SA2["Processa Reclamações"]
         SA3["Custos Finais"]
     end
 
-    subgraph OSEG["OSeg - SEGURANCA"]
+    subgraph OSEG["OSeg - SEGURANÇA"]
         OS1["Avalia Pessoal"]
         OS2["Trabalho/Descanso"]
-        OS3["Aptidao Viagem"]
+        OS3["Aptidão Viagem"]
     end
 
     DESMOB --> CI_RESP
@@ -202,28 +202,28 @@ const diagramEncerramento: Diagram = {
   type: 'flowchart',
   description: 'Etapas do encerramento formal',
   code: `flowchart TB
-    subgraph extincao["EXTINCAO FINAL"]
-        EX1["100% Perimetro<br/>Frio"]
+    subgraph extincao["EXTINÇÃO FINAL"]
+        EX1["100% Perímetro<br/>Frio"]
         EX2["Rescaldo<br/>Completo"]
-        EX3["Verificacao<br/>Final"]
+        EX3["Verificação<br/>Final"]
     end
 
-    subgraph liberacao["ULTIMAS LIBERACOES"]
+    subgraph liberacao["ÚLTIMAS LIBERAÇÕES"]
         L1["Recursos de<br/>Patrulhamento"]
         L2["Staff<br/>(CSLog, CSPlan)"]
-        L3["CI<br/>(Ultimo a Sair)"]
+        L3["CI<br/>(Último a Sair)"]
     end
 
     subgraph admin["ENCERRAMENTO ADMIN"]
-        A1["Documentacao<br/>Final"]
-        A2["Prestacao<br/>de Contas"]
-        A3["Comunicacao<br/>Encerramento"]
+        A1["Documentação<br/>Final"]
+        A2["Prestação<br/>de Contas"]
+        A3["Comunicação<br/>Encerramento"]
     end
 
-    subgraph pos["POS-INCIDENTE"]
-        P1["Reuniao<br/>Autoridades"]
-        P2["AAR<br/>Revisao Pos-Acao"]
-        P3["Licoes<br/>Aprendidas"]
+    subgraph pos["PÓS-INCIDENTE"]
+        P1["Reunião<br/>Autoridades"]
+        P2["AAR<br/>Revisão Pós-Ação"]
+        P3["Lições<br/>Aprendidas"]
     end
 
     EX1 --> EX2 --> EX3
@@ -244,25 +244,25 @@ const diagramEncerramento: Diagram = {
 
 const diagramAAR: Diagram = {
   id: 'aar-perguntas',
-  title: 'Estrutura da Revisao Pos-Acao (AAR)',
+  title: 'Estrutura da Revisão Pós-Ação (AAR)',
   type: 'flowchart',
   description: 'As 5 perguntas-chave do AAR',
   code: `flowchart TB
     subgraph aar["AFTER ACTION REVIEW - AAR"]
         direction TB
         Q1["1. O QUE ESTAVA<br/>PLANEJADO?<br/>Objetivos, plano, expectativas"]
-        Q2["2. O QUE REALMENTE<br/>ACONTECEU?<br/>Execucao, resultados"]
-        Q3["3. POR QUE HOUVE<br/>DIFERENCAS?<br/>Desvios, fatores, falhas"]
-        Q4["4. O QUE<br/>APRENDEMOS?<br/>Funcionou bem, nao funcionou"]
-        Q5["5. O QUE VAMOS<br/>FAZER?<br/>Mudancas, treinamentos"]
+        Q2["2. O QUE REALMENTE<br/>ACONTECEU?<br/>Execução, resultados"]
+        Q3["3. POR QUE HOUVE<br/>DIFERENÇAS?<br/>Desvios, fatores, falhas"]
+        Q4["4. O QUE<br/>APRENDEMOS?<br/>Funcionou bem, não funcionou"]
+        Q5["5. O QUE VAMOS<br/>FAZER?<br/>Mudanças, treinamentos"]
     end
 
     Q1 --> Q2 --> Q3 --> Q4 --> Q5
 
     subgraph resultado["RESULTADO"]
-        R1["Relatorio AAR"]
-        R2["Recomendacoes"]
-        R3["Plano de Acao"]
+        R1["Relatório AAR"]
+        R2["Recomendações"]
+        R3["Plano de Ação"]
     end
 
     Q5 --> R1 --> R2 --> R3
@@ -275,206 +275,206 @@ const diagramAAR: Diagram = {
 };
 
 // ------------------------------------------------------------
-// SECOES DE CONTEUDO
+// SEÇÕES DE CONTEÚDO
 // ------------------------------------------------------------
 
 const conceitosDesmobilizacao: Section = {
   id: 'conceitos-desmobilizacao',
   slug: 'conceitos-desmobilizacao',
-  title: '28. Conceitos de Desmobilizacao',
+  title: '28. Conceitos de Desmobilização',
   part: 6,
   order: 1,
-  content: `## O Que E Desmobilizacao
+  content: `## O Que É Desmobilização
 
-**DESMOBILIZACAO:** Liberacao ordenada, segura e eficiente de recursos empenhados em um incidente, retornando-os ao seu local e condicao originais.
+**DESMOBILIZAÇÃO:** Liberação ordenada, segura e eficiente de recursos empenhados em um incidente, retornando-os ao seu local e condição originais.
 
-### Por Que E Importante
+### Por Que É Importante
 
-| Aspecto | Importancia |
+| Aspecto | Importância |
 |---------|-------------|
-| **Eficiencia** | Recursos nao devem permanecer no incidente alem do necessario |
-| **Prontidao** | Recursos liberados podem responder a outros incidentes |
-| **Custos** | Reducao de despesas operacionais ao liberar recursos excedentes |
-| **Bem-estar** | Permite descanso e recuperacao de pessoal |
-| **Prestacao de Contas** | Documentacao adequada de emprego e custos |
+| **Eficiência** | Recursos não devem permanecer no incidente além do necessário |
+| **Prontidão** | Recursos liberados podem responder a outros incidentes |
+| **Custos** | Redução de despesas operacionais ao liberar recursos excedentes |
+| **Bem-estar** | Permite descanso e recuperação de pessoal |
+| **Prestação de Contas** | Documentação adequada de emprego e custos |
 
 ---
 
 ## Quando Iniciar o Planejamento
 
-### Sinais de Estabilizacao
+### Sinais de Estabilização
 
-**REGRA GERAL:** Planejamento de desmobilizacao deve iniciar assim que incidente estabilizar.
+**REGRA GERAL:** Planejamento de desmobilização deve iniciar assim que incidente estabilizar.
 
 **SINAIS:**
-- Perimetro contido
-- Objetivos principais alcancados
-- Progressao do incendio controlada
-- Projecao de extincao possivel
+- Perímetro contido
+- Objetivos principais alcançados
+- Progressão do incêndio controlada
+- Projeção de extinção possível
 
-**TIPICO EM INCENDIOS FLORESTAIS:**
-- Apos 70-80% de contencao
-- Quando rescaldo e atividade principal
-- Clima favoravel (chuva prevista, umidade alta)
+**TÍPICO EM INCÊNDIOS FLORESTAIS:**
+- Após 70-80% de contenção
+- Quando rescaldo é atividade principal
+- Clima favorável (chuva prevista, umidade alta)
 
-### Criterios por Nivel CBMMT
+### Critérios por Nível CBMMT
 
-| Nivel | Abordagem |
+| Nível | Abordagem |
 |-------|-----------|
-| Nivel 1-2 | Desmobilizacao informal, recursos liberados conforme conclusao |
-| Nivel 3-4 | Plano formal de desmobilizacao (SCI 221) necessario |
+| Nível 1-2 | Desmobilização informal, recursos liberados conforme conclusão |
+| Nível 3-4 | Plano formal de desmobilização (SCI 221) necessário |
 
 ---
 
 ## Tipos de Recursos
 
-### Recursos Humanos e Bens Duraveis
+### Recursos Humanos e Bens Duráveis
 
-**DEFINICAO:** Pessoas, viaturas, equipamentos permanentes.
+**DEFINIÇÃO:** Pessoas, viaturas, equipamentos permanentes.
 
 **EXEMPLOS:**
 - Bombeiros (IRTs)
-- Viaturas (caminhonetes, caminhoes-pipa)
-- Equipamentos (radios, ferramentas duraveis)
-- Maquinas (motoniveladoras, pas-carregadoras)
+- Viaturas (caminhonetes, caminhões-pipa)
+- Equipamentos (rádios, ferramentas duráveis)
+- Máquinas (motoniveladoras, pás-carregadoras)
 - Aeronaves
 
 **PROCESSO:**
-1. Inspecao antes de liberacao
-2. Manutencao se necessario
+1. Inspeção antes de liberação
+2. Manutenção se necessário
 3. Abastecimento
-4. Documentacao de danos
+4. Documentação de danos
 5. Check-out formal
 
 ### Recursos de Consumo
 
-**DEFINICAO:** Bens descartaveis utilizados e consumidos durante incidente.
+**DEFINIÇÃO:** Bens descartáveis utilizados e consumidos durante incidente.
 
 **EXEMPLOS:**
-- Agua, combustivel, alimentacao
-- Ferramentas manuais descartaveis
+- Água, combustível, alimentação
+- Ferramentas manuais descartáveis
 - EPIs danificados
-- Material medico
+- Material médico
 
 **PROCESSO:**
-- Contabilizacao completa
-- Custos arcados pela gestao do incidente
+- Contabilização completa
+- Custos arcados pela gestão do incidente
 - Reabastecimento na unidade de origem
-- Destinacao adequada de residuos`,
+- Destinação adequada de resíduos`,
   diagrams: [diagramFasesDesmobilizacao]
 };
 
 const responsabilidadesDesmob: Section = {
   id: 'responsabilidades-desmob',
   slug: 'responsabilidades-desmob',
-  title: '29. Responsabilidades na Desmobilizacao',
+  title: '29. Responsabilidades na Desmobilização',
   part: 6,
   order: 2,
   content: `## Comandante do Incidente
 
 ### Autoridade
-- **APROVACAO FINAL:** CI aprova todas as liberacoes de recursos
-- **DECISAO:** Determina quando iniciar processo formal de desmobilizacao
+- **APROVAÇÃO FINAL:** CI aprova todas as liberações de recursos
+- **DECISÃO:** Determina quando iniciar processo formal de desmobilização
 
 ### Responsabilidades
-- Estabelecer prioridades de liberacao
-- Aprovar Plano de Desmobilizacao
-- Autorizar liberacoes especificas
-- Coordenar com agencias cooperadoras
+- Estabelecer prioridades de liberação
+- Aprovar Plano de Desmobilização
+- Autorizar liberações específicas
+- Coordenar com agências cooperadoras
 
 ---
 
-## Secao de Planejamento
+## Seção de Planejamento
 
-### Lider da Unidade de Desmobilizacao
+### Líder da Unidade de Desmobilização
 
-**RESPONSAVEL PRINCIPAL:** Se ativado, desenvolve e implementa plano.
+**RESPONSÁVEL PRINCIPAL:** Se ativado, desenvolve e implementa plano.
 
 **QUANDO ATIVAR:**
-- Nivel 3 e 4 (geralmente)
-- Nivel 2 complexo com muitos recursos
-- Se nao ativado, CSPlan assume
+- Nível 3 e 4 (geralmente)
+- Nível 2 complexo com muitos recursos
+- Se não ativado, CSPlan assume
 
-### Responsabilidades da Secao
-- Desenvolver Plano de Desmobilizacao detalhado
-- Coordenar processo com todas as secoes
-- Processar liberacoes (preencher SCI 221)
-- Documentar todas as liberacoes
+### Responsabilidades da Seção
+- Desenvolver Plano de Desmobilização detalhado
+- Coordenar processo com todas as seções
+- Processar liberações (preencher SCI 221)
+- Documentar todas as liberações
 - Notificar unidades de origem sobre ETAs
 
 ---
 
-## Secao de Operacoes
+## Seção de Operações
 
-### Identificacao de Recursos Excedentes
+### Identificação de Recursos Excedentes
 
-**RESPONSABILIDADE:** CSOp identifica quais recursos taticos nao sao mais necessarios.
+**RESPONSABILIDADE:** CSOp identifica quais recursos táticos não são mais necessários.
 
 **PROCESSO:**
 1. Avalia necessidades futuras
-2. Compara com recursos disponiveis
+2. Compara com recursos disponíveis
 3. Lista recursos excedentes
-4. Prioriza liberacoes
+4. Prioriza liberações
 
-**COMUNICACAO:** Lista de recursos excedentes a Unidade de Desmobilizacao ou CSPlan (atualizada diariamente).
+**COMUNICAÇÃO:** Lista de recursos excedentes à Unidade de Desmobilização ou CSPlan (atualizada diariamente).
 
 ---
 
-## Secao de Logistica
+## Seção de Logística
 
 ### Transporte
-- Organiza transporte para recursos sem meios proprios
-- Coordena veiculos para transporte de pessoal
-- Agenda voos (se aplicavel)
+- Organiza transporte para recursos sem meios próprios
+- Coordena veículos para transporte de pessoal
+- Agenda voos (se aplicável)
 - Organiza comboios
 
-### Inspecao de Viaturas
+### Inspeção de Viaturas
 
-**VERIFICACAO:**
-- Condicoes mecanicas
+**VERIFICAÇÃO:**
+- Condições mecânicas
 - Danos causados durante incidente
-- Nivel de combustivel
+- Nível de combustível
 - Limpeza
 
-**DOCUMENTACAO:** Registro de danos para fins de compensacao.
+**DOCUMENTAÇÃO:** Registro de danos para fins de compensação.
 
-### Devolucao de Equipamentos
-- Coleta de radios, ferramentas emprestadas, EPIs
-- Verificacao de quantidade e condicao
+### Devolução de Equipamentos
+- Coleta de rádios, ferramentas emprestadas, EPIs
+- Verificação de quantidade e condição
 - Registro de danos ou perdas
 
 ---
 
-## Secao de Administracao e Financas
+## Seção de Administração e Finanças
 
 ### Registro de Horas
 - Processa registros de tempo de todo pessoal
-- Calculo de diarias e horas extras
-- Verificacao de check-in/check-out
+- Cálculo de diárias e horas extras
+- Verificação de check-in/check-out
 
-### Processamento de Reclamacoes
+### Processamento de Reclamações
 - Danos a equipamentos
-- Lesoes ocorridas durante incidente
-- Coordenacao de compensacoes devidas
+- Lesões ocorridas durante incidente
+- Coordenação de compensações devidas
 
 ---
 
-## Oficial de Ligacao
+## Oficial de Ligação
 
-- Coordena liberacao de recursos de agencias cooperadoras
-- Comunicacao com representantes de agencias
-- Pode articular realocacao de recursos para outros incidentes ativos
+- Coordena liberação de recursos de agências cooperadoras
+- Comunicação com representantes de agências
+- Pode articular realocação de recursos para outros incidentes ativos
 
 ---
 
-## Oficial de Seguranca
+## Oficial de Segurança
 
-### Condicoes de Pessoal
+### Condições de Pessoal
 
 **AVALIA:**
 - Fadiga
-- Lesoes
-- Condicoes para viajar
+- Lesões
+- Condições para viajar
 - Necessidade de descanso adicional
 
 ### Requisitos de Trabalho/Descanso
@@ -486,86 +486,86 @@ const responsabilidadesDesmob: Section = {
 const planoDesmobilizacao: Section = {
   id: 'plano-desmobilizacao',
   slug: 'plano-desmobilizacao',
-  title: '30. Plano de Desmobilizacao',
+  title: '30. Plano de Desmobilização',
   part: 6,
   order: 3,
-  content: `## Quando Necessario
+  content: `## Quando Necessário
 
-### Obrigatorio (Nivel 3 e 4)
+### Obrigatório (Nível 3 e 4)
 
-**CRITERIOS:**
-- Multiplas agencias envolvidas
-- Grande numero de recursos (30+)
-- Operacoes prolongadas (5+ dias)
-- Recursos de diferentes regioes
+**CRITÉRIOS:**
+- Múltiplas agências envolvidas
+- Grande número de recursos (30+)
+- Operações prolongadas (5+ dias)
+- Recursos de diferentes regiões
 
-### Opcional (Nivel 2)
-CI pode decidir por plano formal se julgar necessario.
+### Opcional (Nível 2)
+CI pode decidir por plano formal se julgar necessário.
 
-### Nao Necessario (Nivel 1)
-Geralmente liberacoes informais.
+### Não Necessário (Nível 1)
+Geralmente liberações informais.
 
 ---
 
 ## Estrutura do Plano
 
-### 1. Informacoes Gerais
+### 1. Informações Gerais
 - Contexto do incidente
 - Status atual
-- Projecao de encerramento
-- Processo geral de desmobilizacao
+- Projeção de encerramento
+- Processo geral de desmobilização
 
 ### 2. Responsabilidades
 - Quem faz o que
 - Pontos de contato
-- Cadeia de aprovacao
+- Cadeia de aprovação
 
-### 3. Prioridades de Liberacao
-- Ordem de liberacao de recursos
-- Criterios utilizados
-- Excecoes
+### 3. Prioridades de Liberação
+- Ordem de liberação de recursos
+- Critérios utilizados
+- Exceções
 
-### 4. Procedimentos Especificos
-- Passos detalhados para liberacao
-- Formularios necessarios
-- Inspecoes requeridas
-- Check-outs obrigatorios
+### 4. Procedimentos Específicos
+- Passos detalhados para liberação
+- Formulários necessários
+- Inspeções requeridas
+- Check-outs obrigatórios
 
-### 5. Informacoes de Viagem
+### 5. Informações de Viagem
 - Rotas
 - Requisitos de trabalho/descanso
-- Contatos de emergencia
+- Contatos de emergência
 - Mapas
 
 ---
 
-## Prioridades de Liberacao
+## Prioridades de Liberação
 
-### Ordem Tipica
+### Ordem Típica
 
-| Prioridade | Recursos | Razao |
+| Prioridade | Recursos | Razão |
 |------------|----------|-------|
-| **1a** | Recursos locais (respondedores iniciais, cooperadores locais) | Retornar a prontidao para resposta local |
-| **2a** | Recursos especializados de outras regioes (EIAOPs, GAvBM) | Custos altos, necessidade em outros locais |
-| **3a** | Recursos de apoio de outras regioes | |
-| **4a** | Recursos que continuarao ate extincao final (rescaldo) | |
+| **1a** | Recursos locais (respondedores iniciais, cooperadores locais) | Retornar à prontidão para resposta local |
+| **2a** | Recursos especializados de outras regiões (EIAOPs, GAvBM) | Custos altos, necessidade em outros locais |
+| **3a** | Recursos de apoio de outras regiões | |
+| **4a** | Recursos que continuarão até extinção final (rescaldo) | |
 
 ### Fatores que Influenciam
 
 - **Custos:** Recursos mais caros liberados primeiro
-- **Distancia:** Recursos de muito longe liberados antes
+- **Distância:** Recursos de muito longe liberados antes
 - **Necessidade em outros locais:** Recursos requisitados para outro incidente
 - **Fadiga:** Recursos muito fatigados liberados antes
-- **Legislacao trabalhista:** Limites de horas trabalhadas
-- **Acordos:** Termos com agencias cooperadoras
+- **Legislação trabalhista:** Limites de horas trabalhadas
+- **Acordos:** Termos com agências cooperadoras
 
 ---
 
 ## Exemplo de Plano (Simplificado)
 
 \`\`\`
-PLANO DE DESMOBILIZACAO
-INCIDENTE: IF Fazenda Boa Esperanca | NUMERO: IF-2025-089
+PLANO DE DESMOBILIZAÇÃO
+INCIDENTE: IF Fazenda Boa Esperança | NÚMERO: IF-2025-089
 DATA: 18/agosto/2025
 
 PREPARADO POR: Cap Oliveira (CSPlan)
@@ -573,47 +573,47 @@ APROVADO POR: Maj Silva (CI)
 
 ---
 
-1. INFORMACOES GERAIS
+1. INFORMAÇÕES GERAIS
 
-SITUACAO: 95% contido. Area total: 850 hectares.
-Operacoes principais concluidas. Rescaldo em andamento.
-Previsao de conclusao em 48h.
+SITUAÇÃO: 95% contido. Área total: 850 hectares.
+Operações principais concluídas. Rescaldo em andamento.
+Previsão de conclusão em 48h.
 
-RECURSOS: 58 bombeiros, 1 helicoptero, 2 motoniveladoras, 12 viaturas
+RECURSOS: 58 bombeiros, 1 helicóptero, 2 motoniveladoras, 12 viaturas
 
 ---
 
-2. PRIORIDADES DE LIBERACAO
+2. PRIORIDADES DE LIBERAÇÃO
 
 FASE 1 (18/agosto, 18:00):
-- GAvBM (helicoptero) - retorno Cuiaba
+- GAvBM (helicóptero) - retorno Cuiabá
 - EMec (2 motoniveladoras) - retorno SINFRA
-- EIAOP 03 - retorno Cuiaba (10 BMs)
+- EIAOP 03 - retorno Cuiabá (10 BMs)
 
 FASE 2 (19/agosto, 06:00):
-- EIAOP 05 - retorno Cuiaba (10 BMs)
+- EIAOP 05 - retorno Cuiabá (10 BMs)
 - BMM Nobres - retorno Nobres (7 BMs)
 
 FASE 3 (19/agosto, 18:00):
 - BDBM Chapada - retorno (8 BMs)
-- GCIF 1 e 2 - retorno Cuiaba (10 BMs)
+- GCIF 1 e 2 - retorno Cuiabá (10 BMs)
 
-FASE 4 (20/agosto, apos extincao):
-- BDBM Pocone - retorno (8 BMs)
+FASE 4 (20/agosto, após extinção):
+- BDBM Poconé - retorno (8 BMs)
 - Staff do Comando e Planejamento
 
 ---
 
 3. PROCEDIMENTOS
 
-CHECK-OUT OBRIGATORIO (SCI 221):
-1. Unid. Comunicacoes (devolucao radios)
-2. Unid. Suporte Terrestre (inspecao viatura)
-3. Unid. Suprimentos (devolucao ferramentas)
-4. Admin/Financas (registro tempo)
-5. Lider Desmob (liberacao final)
+CHECK-OUT OBRIGATÓRIO (SCI 221):
+1. Unid. Comunicações (devolução rádios)
+2. Unid. Suporte Terrestre (inspeção viatura)
+3. Unid. Suprimentos (devolução ferramentas)
+4. Admin/Finanças (registro tempo)
+5. Líder Desmob (liberação final)
 
-DESCANSO: 8h minimo (motoristas: 10h)
+DESCANSO: 8h mínimo (motoristas: 10h)
 \`\`\``,
   diagrams: [diagramPrioridadesLiberacao]
 };
@@ -621,63 +621,63 @@ DESCANSO: 8h minimo (motoristas: 10h)
 const formularioSci221: Section = {
   id: 'formulario-sci-221',
   slug: 'formulario-sci-221',
-  title: '31. Formulario SCI 221 - Check-Out',
+  title: '31. Formulário SCI 221 - Check-Out',
   part: 6,
   order: 4,
   content: `## Finalidade
 
-- **GARANTIR COMPLETUDE:** Recurso completou todas obrigacoes antes de sair
-- **DOCUMENTACAO:** Registro formal de liberacao
-- **COORDENACAO:** Informacao para SPlan sobre status de recursos
+- **GARANTIR COMPLETUDE:** Recurso completou todas obrigações antes de sair
+- **DOCUMENTAÇÃO:** Registro formal de liberação
+- **COORDENAÇÃO:** Informação para SPlan sobre status de recursos
 
 ---
 
 ## Quem Preenche
 
-### Inicio
-**LIDER UNIDADE DESMOBILIZACAO** inicia preenchimento do SCI 221:
-- Identificacao do recurso
+### Início
+**LÍDER UNIDADE DESMOBILIZAÇÃO** inicia preenchimento do SCI 221:
+- Identificação do recurso
 - Unidade de origem
-- Data/hora prevista de liberacao
+- Data/hora prevista de liberação
 
 ### Check-Out
-**RECURSO PERCORRE** cada unidade/secao marcada no formulario, obtendo assinaturas que confirmam:
+**RECURSO PERCORRE** cada unidade/seção marcada no formulário, obtendo assinaturas que confirmam:
 - Equipamentos devolvidos
 - Tarefas administrativas completas
-- Sem pendencias
+- Sem pendências
 
 ---
 
-## Estrutura do Formulario
+## Estrutura do Formulário
 
-### Cabecalho
+### Cabeçalho
 - Nome do incidente
-- Numero
+- Número
 - Nome do recurso (IRT, viatura, pessoa)
 - Unidade de origem
-- Data/hora de liberacao prevista
+- Data/hora de liberação prevista
 
-### Secao 1 - Informacoes de Viagem
+### Seção 1 - Informações de Viagem
 - Destino
 - Rota planejada
 - ETA (tempo estimado de chegada)
 - Meio de transporte
 
-### Secao 2 - Check-Out (6 Estacoes)
+### Seção 2 - Check-Out (6 Estações)
 
-| Estacao | Verificacoes |
+| Estação | Verificações |
 |---------|--------------|
-| **Unidade de Comunicacoes** | Radios devolvidos, equipamentos completos |
-| **Unidade de Instalacoes/Base** | Area de dormir limpa e inspecionada |
+| **Unidade de Comunicações** | Rádios devolvidos, equipamentos completos |
+| **Unidade de Instalações/Base** | Área de dormir limpa e inspecionada |
 | **Unidade de Suprimentos** | Ferramentas, EPIs, suprimentos devolvidos |
-| **Unidade de Suporte Terrestre** | Viatura inspecionada, danos registrados, combustivel |
-| **Secao Admin/Financas** | Registro de tempo completo, formularios assinados |
-| **Oficial de Seguranca** | Pessoal apto para viajar, requisitos de descanso atendidos |
+| **Unidade de Suporte Terrestre** | Viatura inspecionada, danos registrados, combustível |
+| **Seção Admin/Finanças** | Registro de tempo completo, formulários assinados |
+| **Oficial de Segurança** | Pessoal apto para viajar, requisitos de descanso atendidos |
 
-### Secao 3 - Liberacao Final
+### Seção 3 - Liberação Final
 - Supervisor do recurso assina confirmando check-out completo
-- Lider Unid. Desmob assina autorizando liberacao
-- Data/hora real de saida
+- Líder Unid. Desmob assina autorizando liberação
+- Data/hora real de saída
 
 ---
 
@@ -685,32 +685,32 @@ const formularioSci221: Section = {
 
 ### Fluxo
 
-1. **Recurso recebe SCI 221** do Lider Desmob
-2. **Percorre estacoes** marcadas no formulario
+1. **Recurso recebe SCI 221** do Líder Desmob
+2. **Percorre estações** marcadas no formulário
 3. **Cada unidade verifica** e assina se OK
-4. **Retorna a Desmobilizacao** com SCI 221 completo
-5. **Verificacao final** pelo Lider Desmob
-6. **Autorizacao** e registro de saida
+4. **Retorna à Desmobilização** com SCI 221 completo
+5. **Verificação final** pelo Líder Desmob
+6. **Autorização** e registro de saída
 7. **Recurso desmobilizado**
 
-**TEMPO TIPICO:** 30-60 minutos para completar todo check-out.
+**TEMPO TÍPICO:** 30-60 minutos para completar todo check-out.
 
 ---
 
 ## Exemplo Preenchido
 
 \`\`\`
-SCI 221 - CHECK-OUT DE DESMOBILIZACAO
+SCI 221 - CHECK-OUT DE DESMOBILIZAÇÃO
 
-INCIDENTE: IF Fazenda Boa Esperanca | NUMERO: IF-2025-089
+INCIDENTE: IF Fazenda Boa Esperança | NÚMERO: IF-2025-089
 
 RECURSO: EIAOP 03
-LIDER: Cb Carvalho
-UNIDADE ORIGEM: BEA - Cuiaba
+LÍDER: Cb Carvalho
+UNIDADE ORIGEM: BEA - Cuiabá
 PESSOAL: 10 bombeiros
 
-DATA/HORA LIBERACAO: 18/ago/2025, 18:00
-DESTINO: Cuiaba-MT
+DATA/HORA LIBERAÇÃO: 18/ago/2025, 18:00
+DESTINO: Cuiabá-MT
 ROTA: MT-XXX -> BR-ZZZ
 ETA: 21:30
 
@@ -718,13 +718,13 @@ ETA: 21:30
 
 CHECK-OUT:
 
-[X] UNIDADE DE COMUNICACOES
-    - 10 radios HT devolvidos
-    - 2 radios moveis devolvidos
+[X] UNIDADE DE COMUNICAÇÕES
+    - 10 rádios HT devolvidos
+    - 2 rádios móveis devolvidos
     Assinatura: Cb Santos | 18/ago 17:15
 
-[X] UNIDADE DE INSTALACOES
-    - Area de dormir limpa
+[X] UNIDADE DE INSTALAÇÕES
+    - Área de dormir limpa
     - Sem danos
     Assinatura: Sd Lima | 18/ago 17:20
 
@@ -736,28 +736,28 @@ CHECK-OUT:
 [X] UNIDADE DE SUPORTE TERRESTRE
     - 2 caminhonetes inspecionadas
     - Dano menor registrado
-    - Combustivel: OK
+    - Combustível: OK
     Assinatura: Cb Oliveira | 18/ago 17:35
 
-[X] ADMIN/FINANCAS
+[X] ADMIN/FINANÇAS
     - Planilhas de tempo verificadas
     - Total: 7 dias, 84 horas/BM
     Assinatura: Sgt Ferreira | 18/ago 17:40
 
-[X] OFICIAL DE SEGURANCA
-    - Pessoal em boas condicoes
+[X] OFICIAL DE SEGURANÇA
+    - Pessoal em boas condições
     - Motoristas descansados
     - APTOS PARA VIAGEM
     Assinatura: Cap Santos (OSeg) | 18/ago 17:45
 
 ---
 
-LIBERACAO FINAL:
+LIBERAÇÃO FINAL:
 
 SUPERVISOR: Cb Carvalho _________ 18/ago 17:50
-LIDER DESMOB: Cap Oliveira ______ 18/ago 17:52
+LÍDER DESMOB: Cap Oliveira ______ 18/ago 17:52
 
-SAIDA REAL: 18/ago 18:05
+SAÍDA REAL: 18/ago 18:05
 \`\`\``,
   diagrams: [diagramProcessoCheckout]
 };
@@ -768,151 +768,151 @@ const encerramentoIncidente: Section = {
   title: '32-33. Encerramento do Incidente',
   part: 6,
   order: 5,
-  content: `## Execucao da Desmobilizacao
+  content: `## Execução da Desmobilização
 
-### Comunicacao de Liberacoes
+### Comunicação de Liberações
 
-**NOTIFICACAO AO RECURSO:**
-- Antecedencia minima: 4-8 horas
-- Informacoes: horario, destino, procedimentos, requisitos
+**NOTIFICAÇÃO AO RECURSO:**
+- Antecedência mínima: 4-8 horas
+- Informações: horário, destino, procedimentos, requisitos
 
-**NOTIFICACAO A UNIDADE DE ORIGEM:**
-- Identificacao do recurso
-- Horario de saida
+**NOTIFICAÇÃO À UNIDADE DE ORIGEM:**
+- Identificação do recurso
+- Horário de saída
 - ETA na unidade de origem
-- Condicoes do recurso
+- Condições do recurso
 
-### Preparacao do Recurso
+### Preparação do Recurso
 
 **TEMPO ADEQUADO PARA:**
 - Banho e troca de roupa
-- Refeicao completa
-- Descanso final (se necessario)
-- Organizacao de equipamentos
-- Preparacao de viatura (limpeza, verificacao, abastecimento)
+- Refeição completa
+- Descanso final (se necessário)
+- Organização de equipamentos
+- Preparação de viatura (limpeza, verificação, abastecimento)
 
-### Check-Out Fisico
+### Check-Out Físico
 
-**PERCURSO PELAS ESTACOES:**
-- Comunicacoes (devolucao radios)
-- Suprimentos (devolucao ferramentas)
-- Suporte Terrestre (inspecao viatura)
-- Admin/Financas (acerto de contas)
-- OSeg (avaliacao final)
+**PERCURSO PELAS ESTAÇÕES:**
+- Comunicações (devolução rádios)
+- Suprimentos (devolução ferramentas)
+- Suporte Terrestre (inspeção viatura)
+- Admin/Finanças (acerto de contas)
+- OSeg (avaliação final)
 
-**RESOLUCAO DE PENDENCIAS:** Recurso resolve antes de prosseguir.
+**RESOLUÇÃO DE PENDÊNCIAS:** Recurso resolve antes de prosseguir.
 
 ---
 
-## Extincao Final
+## Extinção Final
 
-### Criterios
+### Critérios
 
-**EXTINCAO DECLARADA QUANDO:**
-- 100% do perimetro esta frio (sem calor residual)
+**EXTINÇÃO DECLARADA QUANDO:**
+- 100% do perímetro está frio (sem calor residual)
 - Rescaldo completo realizado
-- Verificacao termal (se disponivel) negativa
-- Patrulhamento final sem deteccao de focos
-- Previsao meteorologica favoravel
+- Verificação termal (se disponível) negativa
+- Patrulhamento final sem detecção de focos
+- Previsão meteorológica favorável
 
-### Verificacao Final
+### Verificação Final
 
-- Ultima patrulha: inspecao completa do perimetro
-- Registro: fotos/videos da area extinta
-- Relatorio final pelo CI ou ultimo recurso
+- Última patrulha: inspeção completa do perímetro
+- Registro: fotos/vídeos da área extinta
+- Relatório final pelo CI ou último recurso
 
 ---
 
-## Ultimas Liberacoes
+## Últimas Liberações
 
-### Ordem de Saida
+### Ordem de Saída
 
 | Ordem | Recursos |
 |-------|----------|
 | 1o | Recursos de patrulhamento final |
-| 2o | CSLog (logistica ate o fim) |
-| 3o | CSPlan (documentacao final) |
-| **Ultimo** | CI (sempre ultimo) |
+| 2o | CSLog (logística até o fim) |
+| 3o | CSPlan (documentação final) |
+| **Último** | CI (sempre último) |
 
-### Desmontagem de Instalacoes
+### Desmontagem de Instalações
 
 **PC E BASE:**
-- Remocao de equipamentos
-- Limpeza de area
-- Restauracao de local (se necessario)
-- Devolucao de areas emprestadas
+- Remoção de equipamentos
+- Limpeza de área
+- Restauração de local (se necessário)
+- Devolução de áreas emprestadas
 
 ---
 
-## Transferencia de Comando (Reducao)
+## Transferência de Comando (Redução)
 
 ### Quando Ocorre
 - Incidente estabilizado
 - Complexidade reduz
-- Estrutura grande nao mais necessaria
+- Estrutura grande não mais necessária
 
-**EXEMPLO:** Maj Silva (CI Nivel 3) transfere para Sgt Santos (CI local) para operacoes finais de rescaldo.
+**EXEMPLO:** Maj Silva (CI Nível 3) transfere para Sgt Santos (CI local) para operações finais de rescaldo.
 
 ### Procedimento
 - Briefing usando SCI 201
-- Transferencia formal
-- Comunicacao a todos
-- Atualizacao de documentos
+- Transferência formal
+- Comunicação a todos
+- Atualização de documentos
 - Novo CI opera com estrutura menor
 
 ---
 
 ## Encerramento Administrativo
 
-### Documentacao Final
+### Documentação Final
 
-**COMPILACAO (Unid. Documentacao):**
+**COMPILAÇÃO (Unid. Documentação):**
 - Todos os PAIs
-- Todos formularios SCI
-- Relatorios de combate
-- Fotos/videos
+- Todos formulários SCI
+- Relatórios de combate
+- Fotos/vídeos
 - Mapas
 - Registros de custos
-- Plano de Desmobilizacao
+- Plano de Desmobilização
 - SCI 221 de todos recursos
 
-**ARQUIVO:** Para prestacao de contas, analise futura, licoes aprendidas.
+**ARQUIVO:** Para prestação de contas, análise futura, lições aprendidas.
 
-### Prestacao de Contas
+### Prestação de Contas
 
-**RELATORIO FINANCEIRO FINAL:**
-- Horas trabalhadas (diarias)
-- Combustivel consumido
-- Alimentacao
-- Contratacoes
+**RELATÓRIO FINANCEIRO FINAL:**
+- Horas trabalhadas (diárias)
+- Combustível consumido
+- Alimentação
+- Contratações
 - Danos compensados
 - **CUSTO TOTAL DO INCIDENTE**
 
-### Comunicacao de Encerramento
+### Comunicação de Encerramento
 
 **CI COMUNICA:**
 - SSC: incidente encerrado
-- DOp: relatorio executivo
-- Agencias cooperadoras: agradecimentos formais
-- Proprietarios/comunidade: agradecimento, informacoes finais`,
+- DOp: relatório executivo
+- Agências cooperadoras: agradecimentos formais
+- Proprietários/comunidade: agradecimento, informações finais`,
   diagrams: [diagramEncerramento]
 };
 
 const reunioesEncerramento: Section = {
   id: 'reunioes-encerramento',
   slug: 'reunioes-encerramento',
-  title: '34. Reunioes de Encerramento e AAR',
+  title: '34. Reuniões de Encerramento e AAR',
   part: 6,
   order: 6,
-  content: `## Reuniao com Administracao (Autoridades)
+  content: `## Reunião com Administração (Autoridades)
 
 ### Quando Realizar
 
-**INDICACOES:**
-- Incidentes graves com repercussao midiatica
-- Incidentes com escrutinio publico
-- Esforcos de recuperacao de longo prazo
-- Licoes importantes aprendidas
+**INDICAÇÕES:**
+- Incidentes graves com repercussão midiática
+- Incidentes com escrutínio público
+- Esforços de recuperação de longo prazo
+- Lições importantes aprendidas
 
 ### Participantes
 
@@ -920,46 +920,46 @@ const reunioesEncerramento: Section = {
 - Comando-Geral CBMMT
 - DOp
 - Comandantes Regionais
-- Representantes de agencias cooperadoras
+- Representantes de agências cooperadoras
 
 **EQUIPE DO INCIDENTE:**
 - CI
-- Chefes de Secao principais
+- Chefes de Seção principais
 
-### Conteudo
+### Conteúdo
 
-**APRESENTACAO:**
+**APRESENTAÇÃO:**
 - Resumo do incidente e cronologia
 - Recursos empenhados
-- Resultados alcancados
+- Resultados alcançados
 - Custos
 - Desafios enfrentados
-- Licoes aprendidas
-- Recomendacoes
+- Lições aprendidas
+- Recomendações
 
 ---
 
-## Revisao Pos-Acao (After Action Review - AAR)
+## Revisão Pós-Ação (After Action Review - AAR)
 
 ### Finalidade
 
 **APRENDIZADO:** Identificar o que funcionou e o que precisa melhorar.
 
-> **NAO E** sessao de culpa ou punicao.
-> **E** oportunidade de aprendizado organizacional.
+> **NÃO É** sessão de culpa ou punição.
+> **É** oportunidade de aprendizado organizacional.
 
 ### Quando Realizar
 
-**LOGO APOS INCIDENTE:** Dentro de 1-2 semanas apos encerramento, enquanto memorias estao frescas.
+**LOGO APÓS INCIDENTE:** Dentro de 1-2 semanas após encerramento, enquanto memórias estão frescas.
 
 ### Participantes
 
 **EQUIPE DO INCIDENTE:**
 - CI e todo Staff do Comando
 - Todo Staff Geral
-- Supervisores de Divisao/Grupo
-- Lideres de IRTs
-- Representantes de agencias cooperadoras
+- Supervisores de Divisão/Grupo
+- Líderes de IRTs
+- Representantes de agências cooperadoras
 
 **FACILITADOR:** CSPlan geralmente conduz.
 
@@ -970,93 +970,93 @@ const reunioesEncerramento: Section = {
 ### 1. O QUE ESTAVA PLANEJADO?
 - Quais eram os objetivos?
 - Qual era o plano?
-- O que esperavamos alcancar?
+- O que esperávamos alcançar?
 
 ### 2. O QUE REALMENTE ACONTECEU?
 - O que fizemos?
 - Como executamos?
 - Quais foram os resultados?
 
-### 3. POR QUE HOUVE DIFERENCAS?
+### 3. POR QUE HOUVE DIFERENÇAS?
 - O que causou desvios do plano?
-- Quais fatores nao foram previstos?
+- Quais fatores não foram previstos?
 - Onde o plano falhou?
 
 ### 4. O QUE APRENDEMOS?
 - O que funcionou bem?
-- O que nao funcionou?
-- O que fariamos diferente?
-- Quais boas praticas identificamos?
+- O que não funcionou?
+- O que faríamos diferente?
+- Quais boas práticas identificamos?
 
 ### 5. O QUE VAMOS FAZER?
-- Quais mudancas implementaremos?
-- Quais treinamentos sao necessarios?
-- Quais procedimentos precisam atualizacao?
+- Quais mudanças implementaremos?
+- Quais treinamentos são necessários?
+- Quais procedimentos precisam atualização?
 - Quais equipamentos precisamos?
 
 ---
 
-## Documentacao do AAR
+## Documentação do AAR
 
-### Relatorio de AAR
+### Relatório de AAR
 
 **CSPlan COMPILA:**
 - Resumo do incidente
-- Principais decisoes tomadas
+- Principais decisões tomadas
 - O que funcionou (sustain)
 - O que precisa melhorar (improve)
-- Recomendacoes especificas
-- Plano de acao para implementacao
+- Recomendações específicas
+- Plano de ação para implementação
 
-### Distribuicao
+### Distribuição
 - Participantes
 - DOp
 - BEA
 - Comando-Geral
-- Arquivo de licoes aprendidas
+- Arquivo de lições aprendidas
 
 ### Seguimento
 
-- **IMPLEMENTACAO:** BEA ou DOp designa responsaveis
-- **MONITORAMENTO:** Acompanhamento de implementacao
-- **COMPARTILHAMENTO:** Licoes aprendidas compartilhadas com todo CBMMT
+- **IMPLEMENTAÇÃO:** BEA ou DOp designa responsáveis
+- **MONITORAMENTO:** Acompanhamento de implementação
+- **COMPARTILHAMENTO:** Lições aprendidas compartilhadas com todo CBMMT
 
 ---
 
-## Transicao para Recuperacao
+## Transição para Recuperação
 
-### Diferenca Entre Resposta e Recuperacao
+### Diferença Entre Resposta e Recuperação
 
-| Aspecto | Resposta | Recuperacao |
+| Aspecto | Resposta | Recuperação |
 |---------|----------|-------------|
-| Foco | Acoes imediatas | Acoes de medio/longo prazo |
-| Objetivo | Salvar vidas, proteger, conter | Restaurar area afetada |
-| Exemplo | Combate ao incendio | Replantio, controle erosao |
+| Foco | Ações imediatas | Ações de médio/longo prazo |
+| Objetivo | Salvar vidas, proteger, conter | Restaurar área afetada |
+| Exemplo | Combate ao incêndio | Replantio, controle erosão |
 
-### Papel do CBMMT na Recuperacao
+### Papel do CBMMT na Recuperação
 
 **ASSESSORIA:**
-- Mapas de area queimada
-- Avaliacao de intensidade do fogo
-- Areas de maior preocupacao
-- Recomendacoes iniciais
+- Mapas de área queimada
+- Avaliação de intensidade do fogo
+- Áreas de maior preocupação
+- Recomendações iniciais
 
-**COORDENACAO:**
-- Participar de reuniao de transicao
-- Apresentar situacao final
-- Recomendar acoes de recuperacao
-- Transferir informacoes para agencia responsavel
+**COORDENAÇÃO:**
+- Participar de reunião de transição
+- Apresentar situação final
+- Recomendar ações de recuperação
+- Transferir informações para agência responsável
 
-**DOCUMENTACAO UTIL:**
+**DOCUMENTAÇÃO ÚTIL:**
 - Mapas de severidade do fogo
 - Fotos antes/depois
-- Relatorios de danos
+- Relatórios de danos
 - Dados de custos de combate`,
   diagrams: [diagramAAR]
 };
 
 // ------------------------------------------------------------
-// EXPORTACOES
+// EXPORTAÇÕES
 // ------------------------------------------------------------
 
 export const parteVISections: Section[] = [

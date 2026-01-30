@@ -132,7 +132,7 @@ export function Sidebar({ isOpen, onClose, isMobile }: SidebarProps) {
         <div className="text-xs">
           <p className="font-medium">CBMMT - Corpo de Bombeiros</p>
           <p>Militar do Mato Grosso</p>
-          <p className="mt-2">SCI-ARGOS v1.0.0</p>
+          <p className="mt-2">SCI-ARGOS v2.0.0</p>
         </div>
       </div>
     </div>
